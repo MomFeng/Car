@@ -1,4 +1,4 @@
-package com.example.administrator.car.view;
+﻿package com.example.administrator.car.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -13,6 +13,7 @@ import static android.R.attr.defaultValue;
 
 /**
  * Created by Administrator on 2017/4/23 0023.
+ * git
  */
 
 public class MyCircleView extends View{
