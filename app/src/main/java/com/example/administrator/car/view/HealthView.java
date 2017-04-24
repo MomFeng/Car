@@ -13,6 +13,7 @@ import android.view.View;
 
 /**
  * Created by Administrator on 2017/4/13 0013.
+ * 这是在LX分支上对其进行的修改
  */
 
 public class HealthView extends View {
