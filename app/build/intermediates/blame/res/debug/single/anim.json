@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_slide_in_top.xml"
+    }
+]
