@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:background="#ccc">
+
+        <com.example.administrator.car.view.MycarView
+            android:layout_width="250dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <com.example.administrator.car.view.LinechartView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eee"/>
+
+    <com.example.administrator.car.view.ThemometerView
+        android:background="#ccc"
+        android:layout_width="100dp"
+        android:layout_height="200dp" />
+
+</LinearLayout>
+
+    </ScrollView>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ethan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- <TextView
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+         android:background="#4af"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#4Af"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/ic_title_left" />
+
+        <TextView
+            android:id="@+id/tv_title_mian"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/index"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/ic_title_right" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpg_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <com.example.administrator.car.view.MyView
+                android:id="@+id/tv_tab_main"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                ethan:bottomBitmap="@mipmap/ic_tab_one_ccc"
+                ethan:text="@string/index"
+                ethan:textsize="12sp"
+                ethan:topBitmap="@mipmap/ic_tab_one" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <com.example.administrator.car.view.MyView
+                android:id="@+id/tv_tab_two"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                ethan:bottomBitmap="@mipmap/ic_tab_two_ccc"
+                ethan:text="@string/free"
+                ethan:textsize="12sp"
+                ethan:topBitmap="@mipmap/ic_tab_two" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <com.example.administrator.car.view.MyView
+                android:id="@+id/tv_tab_three"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                ethan:bottomBitmap="@mipmap/ic_tab_three_ccc"
+                ethan:text="@string/commodity"
+                ethan:textsize="12sp"
+                ethan:topBitmap="@mipmap/ic_tab_three" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <com.example.administrator.car.view.MyView
+                android:id="@+id/tv_tab_four"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                ethan:bottomBitmap="@mipmap/ic_tab_four_ccc"
+                ethan:text="@string/my"
+                ethan:textsize="12sp"
+                ethan:topBitmap="@mipmap/ic_tab_four" />
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:id="@+id/btn_main"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imgb_tab_main"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_tab_one"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/tv_tab_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#4af"
+                android:text="@string/index"
+                />
+        </LinearLayout>-->
+
+        <!--<LinearLayout
+            android:id="@+id/btn_two"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imgb_tab_two"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_tab_two_ccc"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/tv_tab_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ccc"
+                android:text="@string/free"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imgb_tab_three"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_tab_three_ccc"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/tv_tab_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ccc"
+                android:text="@string/commodity"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_four"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imgb_tab_four"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_tab_four_ccc"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/tv_tab_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ccc"
+                android:text="@string/my"
+                />
+        </LinearLayout>-->
+
+    </LinearLayout>
+
+</LinearLayout>
