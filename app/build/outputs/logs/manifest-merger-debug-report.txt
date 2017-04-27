@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:2:1-28:1
 		INJECTED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml
 		INJECTED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml
 application
-ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:5:5-26:19
+ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:5:5-31:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator.SC-201703201458\.android\build-cache\cbc0dc2c1eff6702de1467f3de31686560019a7b\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\739307084f93065442adb7340c65051f18544af2\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\8202c1e702629032a01720c88efbb0df86263b78\output\AndroidManifest.xml:29:5-20
@@ -68,9 +68,19 @@ ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:22:9-71
 	android:name
 		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:22:18-59
 activity#com.example.administrator.car.activity.LockscreenActivity
-ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:23:9-25:25
+ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:23:9-30:25
+	android:screenOrientation
+		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:28:13-49
+	android:excludeFromRecents
+		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:25:13-46
+	android:launchMode
+		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:27:13-48
+	android:exported
+		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:26:13-37
 	android:theme
 		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:24:13-50
+	android:taskAffinity
+		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:29:13-63
 	android:name
 		ADDED from E:\android_studio_study\Car\app\src\main\AndroidManifest.xml:23:19-62
 uses-sdk

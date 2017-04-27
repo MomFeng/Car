@@ -11,14 +11,7 @@
                     "endOffset": 134
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 742,
-                        "endColumn": 83,
-                        "endOffset": 821
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -30,14 +23,7 @@
                     "endOffset": 174
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1203,
-                        "endColumn": 39,
-                        "endOffset": 1238
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -49,14 +35,7 @@
                     "endOffset": 220
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 1311,
-                        "endColumn": 45,
-                        "endOffset": 1352
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -68,14 +47,7 @@
                     "endOffset": 261
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 1,
-                        "startColumn": 4,
-                        "startOffset": 17,
-                        "endColumn": 40,
-                        "endOffset": 53
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -87,14 +59,7 @@
                     "endOffset": 399
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 934,
-                        "endColumn": 137,
-                        "endOffset": 1067
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -106,14 +71,7 @@
                     "endOffset": 459
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 461,
-                        "endColumn": 59,
-                        "endOffset": 516
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -125,14 +83,7 @@
                     "endOffset": 521
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 579,
-                        "endColumn": 61,
-                        "endOffset": 636
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -144,14 +95,7 @@
                     "endOffset": 573
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 100,
-                        "endColumn": 51,
-                        "endOffset": 147
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -163,14 +107,7 @@
                     "endOffset": 621
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 247,
-                        "endColumn": 47,
-                        "endOffset": 290
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -178,17 +115,17 @@
                     "startLine": 11,
                     "startColumn": 4,
                     "startOffset": 626,
-                    "endColumn": 81,
-                    "endOffset": 703
+                    "endColumn": 61,
+                    "endOffset": 683
                 },
                 "from": {
                     "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 26,
                         "startColumn": 4,
-                        "startOffset": 1120,
-                        "endColumn": 81,
-                        "endOffset": 1197
+                        "startOffset": 1503,
+                        "endColumn": 61,
+                        "endOffset": 1560
                     }
                 }
             },
@@ -196,265 +133,198 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 708,
-                    "endColumn": 37,
-                    "endOffset": 741
+                    "startOffset": 688,
+                    "endColumn": 81,
+                    "endOffset": 765
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 208,
-                        "endColumn": 37,
-                        "endOffset": 241
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 746,
-                    "endColumn": 65,
-                    "endOffset": 807
+                    "startOffset": 770,
+                    "endColumn": 37,
+                    "endOffset": 803
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1244,
-                        "endColumn": 65,
-                        "endOffset": 1305
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 812,
-                    "endColumn": 39,
-                    "endOffset": 847
+                    "startOffset": 808,
+                    "endColumn": 65,
+                    "endOffset": 869
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 59,
-                        "endColumn": 39,
-                        "endOffset": 94
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 852,
-                    "endColumn": 41,
-                    "endOffset": 889
+                    "startOffset": 874,
+                    "endColumn": 39,
+                    "endOffset": 909
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 699,
-                        "endColumn": 41,
-                        "endOffset": 736
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 894,
-                    "endColumn": 45,
-                    "endOffset": 935
+                    "startOffset": 914,
+                    "endColumn": 41,
+                    "endOffset": 951
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1073,
-                        "endColumn": 45,
-                        "endOffset": 1114
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 940,
-                    "endColumn": 53,
-                    "endOffset": 989
+                    "startOffset": 956,
+                    "endColumn": 45,
+                    "endOffset": 997
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 153,
-                        "endColumn": 53,
-                        "endOffset": 202
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 994,
-                    "endColumn": 33,
-                    "endOffset": 1023
+                    "startOffset": 1002,
+                    "endColumn": 53,
+                    "endOffset": 1051
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 296,
-                        "endColumn": 33,
-                        "endOffset": 325
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1028,
-                    "endColumn": 55,
-                    "endOffset": 1079
+                    "startOffset": 1056,
+                    "endColumn": 33,
+                    "endOffset": 1085
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 522,
-                        "endColumn": 55,
-                        "endOffset": 573
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1084,
-                    "endColumn": 105,
-                    "endOffset": 1185
+                    "startOffset": 1090,
+                    "endColumn": 55,
+                    "endOffset": 1141
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 827,
-                        "endColumn": 105,
-                        "endOffset": 928
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1190,
-                    "endColumn": 45,
-                    "endOffset": 1231
+                    "startOffset": 1146,
+                    "endColumn": 105,
+                    "endOffset": 1247
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 4,
-                        "startOffset": 1417,
-                        "endColumn": 45,
-                        "endOffset": 1458
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1236,
-                    "endColumn": 55,
-                    "endOffset": 1287
+                    "startOffset": 1252,
+                    "endColumn": 45,
+                    "endOffset": 1293
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 642,
-                        "endColumn": 55,
-                        "endOffset": 693
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 1292,
-                    "endColumn": 57,
-                    "endOffset": 1345
+                    "startOffset": 1298,
+                    "endColumn": 55,
+                    "endOffset": 1349
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 4,
-                        "startOffset": 1358,
-                        "endColumn": 57,
-                        "endOffset": 1411
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 1350,
-                    "endColumn": 67,
-                    "endOffset": 1413
+                    "startOffset": 1354,
+                    "endColumn": 57,
+                    "endOffset": 1407
                 },
                 "from": {
-                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 392,
-                        "endColumn": 67,
-                        "endOffset": 455
-                    }
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1418,
+                    "startOffset": 1412,
+                    "endColumn": 67,
+                    "endOffset": 1475
+                },
+                "from": {
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1480,
                     "endColumn": 59,
-                    "endOffset": 1473
+                    "endOffset": 1535
+                },
+                "from": {
+                    "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1540,
+                    "endColumn": 37,
+                    "endOffset": 1573
                 },
                 "from": {
                     "file": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 25,
                         "startColumn": 4,
-                        "startOffset": 331,
-                        "endColumn": 59,
-                        "endOffset": 386
+                        "startOffset": 1464,
+                        "endColumn": 37,
+                        "endOffset": 1497
                     }
                 }
             }

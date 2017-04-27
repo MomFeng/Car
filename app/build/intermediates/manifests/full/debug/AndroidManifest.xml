@@ -34,6 +34,11 @@
 
         <activity
             android:name="com.example.administrator.car.activity.LockscreenActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.package.name.lockscreen"
             android:theme="@style/LockScreenBase" >
             >
         </activity>

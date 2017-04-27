@@ -9,6 +9,7 @@
     <string name="browsing_history">Browsing history</string>
     <string name="case_of_car">Case of car</string>
     <string name="commodity">Commodity</string>
+    <string name="cool_lock_screen">Cool lock screen</string>
     <string name="follow_the_system_language">Follow the system language</string>
     <string name="free">Free</string>
     <string name="help_with_feedback">Help with feedback</string>
@@ -24,4 +25,5 @@
     <string name="switch_account">Switch account</string>
     <string name="system_notification">System Notification</string>
     <string name="system_settings">System Settings</string>
+    <string name="tool">tool</string>
 </resources>

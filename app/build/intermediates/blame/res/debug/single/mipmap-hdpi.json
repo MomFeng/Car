@@ -92,11 +92,11 @@
         "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_tab_one_ccc.png"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_four_message.png",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_four_message.png"
-    },
-    {
         "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_tab_one.png",
         "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_tab_one.png"
+    },
+    {
+        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_four_message.png",
+        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_four_message.png"
     }
 ]
