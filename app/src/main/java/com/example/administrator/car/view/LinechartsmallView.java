@@ -1,7 +1,8 @@
 package com.example.administrator.car.view;
 
 /**
- * Created by Administrator on 2017/4/22 0022.
+ * 画用于卡片旋转显示的折线图
+ * Created by MomFeng on 2017/4/22 0022.
  */
 
 import android.content.Context;

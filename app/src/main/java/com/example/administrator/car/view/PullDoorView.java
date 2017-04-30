@@ -24,10 +24,8 @@ import com.example.administrator.car.R;
 import com.example.administrator.car.activity.LockscreenActivity;
 
 /**
- * 锁屏界面
- *
- * @author zihao
- *
+ * 画锁屏界面的自定义View
+ * Created by MomFeng on 2017/4/26 0026.
  */
 public class PullDoorView extends RelativeLayout {
 

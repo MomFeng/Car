@@ -8,7 +8,8 @@ import com.example.administrator.car.activity.LockscreenActivity;
 import com.example.administrator.car.service.LockscreenService;
 
 /**
- * Created by Administrator on 2017/4/26 0026.
+ * 用于监听锁屏事件的一个广播
+ * Created by MomFeng on 2017/4/26 0026.
  */
 
 public class LockdcreenReceiver extends BroadcastReceiver{

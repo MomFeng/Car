@@ -8,7 +8,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by Administrator on 2017/4/23 0023.
+ * 画温度计的自定义view
+ * Created by MomFeng on 2017/4/23 0023.
  */
 
 public class ThemometerView extends View {

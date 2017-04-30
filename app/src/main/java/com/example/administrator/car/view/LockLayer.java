@@ -7,10 +7,8 @@ import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 
 /**
- * 锁屏操作页
- *
- * @author zihao
- *
+ * 锁屏操作页（暂时无用）
+ * Created by MomFeng on 2017/4/26 0026.
  */
 public class LockLayer {
 	private Context mContext;

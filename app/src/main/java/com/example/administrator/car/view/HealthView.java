@@ -12,7 +12,8 @@ import android.view.SurfaceView;
 import android.view.View;
 
 /**
- * Created by Administrator on 2017/4/13 0013.
+ * 画APP入口的图（车辆健康指数那个）
+ * Created by MomFeng on 2017/4/13 0013.
  */
 
 public class HealthView extends View {

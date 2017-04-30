@@ -7,6 +7,14 @@
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="25" />
+    <!-- 允许程序读取或写入系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 允许程序访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序写入但不读取用户联系人数据 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 允许一个程序修改当前设置，如本地化 -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -29,6 +37,7 @@
         </activity>
         <activity android:name="com.example.administrator.car.activity.SettingActivity" />
         <activity android:name="com.example.administrator.car.carrealtime.CarrealtimeActivity" />
+        <activity android:name="com.example.administrator.car.activity.PhotoActivity" />
 
         <service android:name="com.example.administrator.car.service.LockscreenService" />
 

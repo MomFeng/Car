@@ -11,6 +11,10 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+/**
+ * 画仿IOS开关的自定义View
+ * Created by MomFeng on 2017/4/22 0022.
+ */
 public class SwitchView extends View {
 
     private final Paint paint = new Paint();

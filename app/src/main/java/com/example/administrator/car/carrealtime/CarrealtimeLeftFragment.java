@@ -16,7 +16,8 @@ import android.widget.LinearLayout;
 import com.example.administrator.car.R;
 
 /**
- * Created by Administrator on 2017/4/21 0021.
+ * 实时车况Activity的左边的数字显示的Fragment
+ * Created by MomFeng on 2017/4/21 0021.
  */
 
 public class CarrealtimeLeftFragment extends Fragment implements View.OnClickListener {

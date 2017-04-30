@@ -12,7 +12,8 @@ import android.view.View;
 import static android.R.attr.defaultValue;
 
 /**
- * Created by Administrator on 2017/4/23 0023.
+ * 画用于展示平均耗油的自定义View
+ * Created by MomFeng on 2017/4/23 0023.
  */
 
 public class MyCircleView extends View{

@@ -19,7 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/4/19 0019.
+ * 实时车况Activity的主界面
+ * Created by MomFeng on 2017/4/19 0019.
  */
 
 public class CarrealtimeActivity extends FragmentActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {

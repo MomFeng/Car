@@ -17,7 +17,8 @@ import android.view.SurfaceView;
 import android.view.View;
 
 /**
- * Created by Administrator on 2017/4/12 0012.
+ * 画用于展示速度的仪表盘
+ * Created by MomFeng on 2017/4/12 0012.
  */
 
 public class MycarView extends View{

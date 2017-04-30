@@ -14,7 +14,8 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 /**
- * Created by Administrator on 2017/4/12 0012.
+ * 用Surfaceview画图的一个图自定义视图
+ * Created by MomFeng on 2017/4/12 0012.
  */
 
 public class CarView extends SurfaceView implements SurfaceHolder.Callback,Runnable{

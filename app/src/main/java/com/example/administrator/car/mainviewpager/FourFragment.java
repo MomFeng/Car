@@ -13,7 +13,8 @@ import com.example.administrator.car.R;
 import com.example.administrator.car.activity.SettingActivity;
 
 /**
- * Created by Administrator on 2017/4/14 0014.
+ * APP主界面的第四个Fragment（我的）
+ * Created by MomFeng on 2017/4/14 0014.
  */
 
 public class FourFragment extends Fragment implements View.OnClickListener {

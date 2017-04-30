@@ -12,7 +12,8 @@ import com.example.administrator.car.service.LockscreenService;
 import java.util.Locale;
 
 /**
- * Created by Administrator on 2017/4/17 0017.
+ * 全局的一个变量，方法
+ * Created by MomFeng on 2017/4/17 0017.
  */
 
 public class MyApplication extends Application{

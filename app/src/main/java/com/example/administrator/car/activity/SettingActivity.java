@@ -20,7 +20,8 @@ import com.example.administrator.car.view.SwitchView;
 import java.util.Locale;
 
 /**
- * Created by Administrator on 2017/4/16 0016.
+ * 设置的Activity
+ * Created by MomFeng on 2017/4/16 0016.
  */
 
 public class SettingActivity extends Activity implements View.OnClickListener {

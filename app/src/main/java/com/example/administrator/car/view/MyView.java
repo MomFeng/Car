@@ -15,7 +15,8 @@ import android.view.View;
 import com.example.administrator.car.R;
 
 /**
- * Created by Administrator on 2017/4/20 0020.
+ * 画APP主界面下方导航条渐变效果的自定义View
+ * Created by MomFeng on 2017/4/20 0020.
  */
 
 public class MyView extends View {

@@ -1,7 +1,8 @@
 package com.example.administrator.car.view;
 
 /**
- * Created by Administrator on 2017/4/22 0022.
+ * 画在仪表显示界面里面直接用来显示的折线图
+ * Created by MomFeng on 2017/4/22 0022.
  */
 import java.util.ArrayList;
 import java.util.List;

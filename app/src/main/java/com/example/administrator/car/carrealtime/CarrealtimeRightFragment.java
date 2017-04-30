@@ -10,7 +10,8 @@ import android.view.ViewGroup;
 import com.example.administrator.car.R;
 
 /**
- * Created by Administrator on 2017/4/21 0021.
+ * 实时车况Activity的右边的仪表显示的Fragment
+ * Created by MomFeng on 2017/4/21 0021.
  */
 
 public class CarrealtimeRightFragment extends Fragment{

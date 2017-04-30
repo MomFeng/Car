@@ -4,6 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.SeekBar;
 
+/**
+ * 一个测试surfaceview画图性能的Activity
+ * Created by MomFeng on 2017/4/12 0012.
+ */
 public class Text extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
 
     private CarView sur_carview, sur_carview1;

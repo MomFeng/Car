@@ -26,7 +26,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/4/13 0013.
+ * 程序入口的Activity
+ * Created by MomFeng on 2017/4/13 0013.
  */
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener {

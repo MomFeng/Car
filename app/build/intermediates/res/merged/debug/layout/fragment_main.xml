@@ -49,6 +49,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lea_wallpaper_main"
                     android:background="#fff"
                     android:layout_marginRight="1dp"
                     android:layout_width="0dp"
@@ -67,7 +68,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="@string/car_wallpaper"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>

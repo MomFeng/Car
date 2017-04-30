@@ -9,19 +9,23 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.administrator.car.R;
+import com.example.administrator.car.activity.PhotoActivity;
 import com.example.administrator.car.application.MyApplication;
 import com.example.administrator.car.carrealtime.CarrealtimeActivity;
+import com.example.administrator.car.util.SimpleUtil;
 import com.example.administrator.car.view.HealthView;
 
 /**
- * Created by Administrator on 2017/4/14 0014.
+ * PP主界面的第一个Fragment（首页）
+ * Created by MomFeng on 2017/4/14 0014.
  */
 
 public class MainFragment extends Fragment implements View.OnClickListener {
 
     private HealthView sur_health;
     private MyApplication app;
-    private LinearLayout lea_car_main;
+    //实时车况，汽车壁纸
+    private LinearLayout lea_car_main,lea_wallpaper_main;
     private View view_main;
 
     @Override
@@ -38,6 +42,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private void initEvent() {
 
         lea_car_main.setOnClickListener(this);
+        lea_wallpaper_main.setOnClickListener(this);
 
         app = (MyApplication) getActivity().getApplication();
         if(app.isStart()){
@@ -68,15 +73,24 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private void initView() {
         sur_health = (HealthView) view_main.findViewById(R.id.sur_health);
         lea_car_main = (LinearLayout) view_main.findViewById(R.id.lea_car_main);
+        lea_wallpaper_main = (LinearLayout) view_main.findViewById(R.id.lea_wallpaper_main);
     }
 
     @Override
     public void onClick(View v) {
+
+        Intent i;
+
         switch(v.getId()){
             case R.id.lea_car_main:
-                System.out.println("-----------------------------执行到了CarrealtimeActivity");
-                Intent i = new Intent(getContext() , CarrealtimeActivity.class);
-                startActivity(i);
+                SimpleUtil.ToIntent(getContext() , CarrealtimeActivity.class);
+                /*i = new Intent(getContext() , CarrealtimeActivity.class);
+                startActivity(i);*/
+                break;
+            case R.id.lea_wallpaper_main:
+                SimpleUtil.ToIntent(getContext() , PhotoActivity.class);
+                /*i = new Intent(getContext() , PhotoActivity.class);
+                startActivity(i);*/
                 break;
         }
     }

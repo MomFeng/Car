@@ -12,7 +12,8 @@ import com.example.administrator.car.BroadcastReceiver.LockdcreenReceiver;
 import com.example.administrator.car.activity.LockscreenActivity;
 
 /**
- * Created by Administrator on 2017/4/26 0026.
+ * 用于动态注册监听锁屏广播的一个Service
+ * Created by MomFeng on 2017/4/26 0026.
  */
 
 public class LockscreenService extends Service{

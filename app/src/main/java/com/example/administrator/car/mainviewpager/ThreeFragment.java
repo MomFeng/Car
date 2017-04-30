@@ -15,7 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/4/14 0014.
+ * APP主界面的第三个Fragment（商品）
+ * Created by MomFeng on 2017/4/14 0014.
  */
 
 public class ThreeFragment extends Fragment {
