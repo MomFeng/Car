@@ -1,18 +1,18 @@
 [
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_iny.xml",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\animator\\anim_iny.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_outx.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\animator\\anim_outx.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_outx.xml",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\animator\\anim_outx.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_outy.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\animator\\anim_outy.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_inx.xml",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\animator\\anim_inx.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_iny.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\animator\\anim_iny.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_outy.xml",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\animator\\anim_outy.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_inx.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\animator\\anim_inx.xml"
     }
 ]

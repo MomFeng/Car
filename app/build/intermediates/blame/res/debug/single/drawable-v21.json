@@ -1,42 +1,42 @@
 [
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ripple_bg.xml",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\drawable-v21\\ripple_bg.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\drawable-v21\\avd_show_password.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ripple_bg1.xml",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\drawable-v21\\ripple_bg1.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ripple_bg.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable-v21\\ripple_bg.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\drawable-v21\\avd_hide_password.xml"
-    },
-    {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\drawable-v21\\design_password_eye.xml"
-    },
-    {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\drawable-v21\\avd_show_password.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ripple_bg1.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable-v21\\ripple_bg1.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\drawable-v21\\design_password_eye.xml"
     }
 ]

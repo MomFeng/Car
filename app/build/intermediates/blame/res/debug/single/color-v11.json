@@ -1,10 +1,10 @@
 [
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     }
 ]

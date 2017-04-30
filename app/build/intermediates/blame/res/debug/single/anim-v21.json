@@ -1,10 +1,10 @@
 [
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     }
 ]

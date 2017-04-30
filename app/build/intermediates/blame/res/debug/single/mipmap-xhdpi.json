@@ -1,26 +1,26 @@
 [
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\slider_arrow_1.png",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\slider_arrow_1.png"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\slider_arrow_1.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\slider_arrow_1.png"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\wallpaper.png",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\wallpaper.png"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\slider_arrow_2.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\slider_arrow_2.png"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher_round.png",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\slider_arrow_3.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\slider_arrow_3.png"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\slider_arrow_2.png",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\slider_arrow_2.png"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\slider_arrow_3.png",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\slider_arrow_3.png"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\wallpaper.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\wallpaper.png"
     },
     {
-        "merged": "E:\\android_studio_study\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
-        "source": "E:\\android_studio_study\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher_round.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     }
 ]
