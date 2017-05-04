@@ -11,6 +11,7 @@ import android.util.Log;
 import com.example.administrator.car.Adapter.RecyclerViewSimpleAdapter;
 import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
+import com.example.administrator.car.util.SpacesItemDecoration;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -60,7 +61,9 @@ public class PhotoActivity extends MyActivity {
                     //rv_photo_view.setLayoutManager(new LinearLayoutManager(PhotoActivity.this));
                     //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(PhotoActivity.this, LinearLayoutManager.VERTICAL, false);
                     //rv_photo_view.setLayoutManager(linearLayoutManager);
-                    adapter = new RecyclerViewSimpleAdapter(PhotoActivity.this, strurl);
+                    /*SpacesItemDecoration decoration=new SpacesItemDecoration(15);
+                    rv_photo_view.addItemDecoration(decoration);*/
+                    adapter = new RecyclerViewSimpleAdapter(PhotoActivity.this, strurl ,rv_photo_view );
                     rv_photo_view.setAdapter(adapter);
                     break;
                 case 1:

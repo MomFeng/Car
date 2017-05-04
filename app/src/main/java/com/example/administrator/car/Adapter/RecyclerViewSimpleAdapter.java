@@ -4,10 +4,12 @@ import android.content.Context;
 import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.administrator.car.R;
@@ -25,6 +27,8 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 	private Context context;
 	protected List<String> mDatas;
 	private NetUtil net;
+	public static String[] URLS;
+	private List<Integer> heights;
 
 	public interface OnItemClickListener
 	{
@@ -38,13 +42,17 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 	}
 
 	
-	public RecyclerViewSimpleAdapter(Context context, List<String> datas){
+	public RecyclerViewSimpleAdapter(Context context, List<String> datas , RecyclerView recyclerView){
 		this.context = context;
-		net = new NetUtil();
+		net = new NetUtil(recyclerView);
 		mInflater = LayoutInflater.from(context);
 		this.mDatas = datas;
+		URLS = new String[datas.size()];
+		for(int i=0;i< datas.size();i++){
+			URLS[i] = datas.get(i);
+		}
 	}
-	
+
 	@Override
 	public int getItemCount() {	
 		// TODO Auto-generated method stub
@@ -54,7 +62,18 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 	@Override
 	public void onBindViewHolder(final MyViewHolder holder, final int position) {
 		// TODO Auto-generated method stub
+		holder.img.setAdjustViewBounds(true);
+		ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
+		layoutParams.height = LinearLayout.LayoutParams.WRAP_CONTENT;
+		/*ViewGroup.LayoutParams params =  holder.itemView.getLayoutParams();//得到item的LayoutParams布局参数
+		params.height = heights.get(position);//把随机的高度赋予itemView布局
+		holder.itemView.setLayoutParams(params);//把params设置给itemView布局*/
+
+		/*LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) holder.img.getLayoutParams();
+		float itemwidth = holder.itemView.getContext()*/
+
 		holder.img.setImageResource(R.mipmap.ic_launcher);
+		holder.img.setTag(mDatas.get(position));
 		net.setimagefromnet(holder.img , mDatas.get(position));
 		setUpItemEvent(holder);
 	}

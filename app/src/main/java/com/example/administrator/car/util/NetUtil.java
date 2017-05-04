@@ -2,8 +2,10 @@ package com.example.administrator.car.util;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -28,7 +30,7 @@ import okhttp3.Response;
 public class NetUtil {
 
     public List<Bitmap> listbitmap = new ArrayList<>();
-    private ImageView img;
+    private RecyclerView recyclerView;
 
 
     Handler handler = new Handler(){
@@ -41,10 +43,14 @@ public class NetUtil {
                     byte[] Picture = (byte[]) msg.obj;
                     //使用BitmapFactory工厂，把字节数组转化为bitmap
                     Bitmap bitmap = BitmapFactory.decodeByteArray(Picture, 0, Picture.length);
+                    Bundle b = msg.getData();
+                    String url = b.getString("url");
                     //通过imageview，设置图片
-                    if(img != null && Picture != null){
+                    ImageView imageView = (ImageView) recyclerView.findViewWithTag(url);
+                    //imageView.setImageBitmap(bitmap);
+                    if(imageView != null && Picture != null){
                         System.out.println("------执行到了设置图片------" + Picture.toString());
-                        img.setImageBitmap(bitmap);
+                        imageView.setImageBitmap(bitmap);
                     }
 
                     //Toast.makeText(, "", Toast.LENGTH_SHORT).show();
@@ -55,6 +61,10 @@ public class NetUtil {
             }
         }
     };
+
+    public NetUtil(RecyclerView recyclerView){
+        this.recyclerView = recyclerView;
+    }
 
     /**
      * 从网络的图片链接加载图片并返回
@@ -92,8 +102,7 @@ public class NetUtil {
      * @param img
      * @param url
      */
-    public void setimagefromnet(ImageView img , String url){
-        this.img = img;
+    public void setimagefromnet(ImageView img , final String url){
         //1.创建一个okhttpclient对象
         OkHttpClient okHttpClient = new OkHttpClient();
         //2.创建Request.Builder对象，设置参数，请求方式如果是Get，就不用设置，默认就是Get
@@ -118,7 +127,11 @@ public class NetUtil {
                 Message message = handler.obtainMessage();
                 message.obj = Picture_bt;
                 message.what = 0;
-                handler.sendMessage(message);
+                Bundle b = new Bundle();
+                b.putString("url", url);
+                message.setData(b);
+                message.sendToTarget();
+                //handler.sendMessage(message);
                 //Bitmap bitmap = BitmapFactory.decodeByteArray(Picture_bt, 0, Picture_bt.length);
             }
         });
