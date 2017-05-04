@@ -26,4 +26,7 @@
     <string name="tool">工具</string>
     <string name="cool_lock_screen">炫酷锁屏</string>
     <string name="car_wallpaper">汽车壁纸</string>
+    <string name="local">本地</string>
+    <string name="clean_up_cache">清理缓存</string>
+    <string name="download_path">下载路径</string>
 </resources>

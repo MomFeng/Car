@@ -706,14 +706,17 @@
     <string name="car_wallpaper">汽车壁纸</string>
     <string name="case_of_car">实时车况</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="clean_up_cache">清理缓存</string>
     <string name="commodity">商品</string>
     <string name="cool_lock_screen">炫酷锁屏</string>
+    <string name="download_path">下载路径</string>
     <string name="follow_the_system_language">跟随系统语言</string>
     <string name="free">免费</string>
     <string name="help_with_feedback">帮助与反馈</string>
     <string name="index">首页</string>
     <string name="intent">网络</string>
     <string name="language">语言</string>
+    <string name="local">本地</string>
     <string name="more_content">更多内容</string>
     <string name="my">我的</string>
     <string name="my_collection">我的收藏</string>

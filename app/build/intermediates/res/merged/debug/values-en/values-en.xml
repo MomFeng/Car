@@ -9,14 +9,17 @@
     <string name="browsing_history">Browsing history</string>
     <string name="car_wallpaper">Car wallpaper</string>
     <string name="case_of_car">Case of car</string>
+    <string name="clean_up_cache">Clean up cache</string>
     <string name="commodity">Commodity</string>
     <string name="cool_lock_screen">Cool lock screen</string>
+    <string name="download_path">Download path</string>
     <string name="follow_the_system_language">Follow the system language</string>
     <string name="free">Free</string>
     <string name="help_with_feedback">Help with feedback</string>
     <string name="index">Index</string>
     <string name="intent">Intent</string>
     <string name="language">Language</string>
+    <string name="local">Local</string>
     <string name="more_content">More content</string>
     <string name="my">My</string>
     <string name="my_collection">My collection</string>

@@ -26,4 +26,7 @@
     <string name="tool">tool</string>
     <string name="cool_lock_screen">Cool lock screen</string>
     <string name="car_wallpaper">Car wallpaper</string>
+    <string name="local">Local</string>
+    <string name="clean_up_cache">Clean up cache</string>
+    <string name="download_path">Download path</string>
 </resources>
