@@ -23,7 +23,6 @@ public class LockscreenService extends Service{
 
     @Override
     public void onCreate() {
-        System.out.println("service------------1");
         super.onCreate();
         //1.创建广播接收者对象
         mReceiver = new LockdcreenReceiver();
@@ -34,19 +33,16 @@ public class LockscreenService extends Service{
 
         //3.注册广播接收者
         registerReceiver(mReceiver, filter);
-        System.out.println("service------------1--finish");
     }
 
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        System.out.println("service------------2");
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
     public void onDestroy() {
-        System.out.println("------------3");
         super.onDestroy();
         unregisterReceiver(mReceiver);
     }

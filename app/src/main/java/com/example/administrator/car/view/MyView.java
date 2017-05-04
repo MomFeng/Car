@@ -124,15 +124,11 @@ public class MyView extends View {
         //拿到测量宽高
         int width = getMeasuredWidth();
         int height = getMeasuredHeight();
-        System.out.println("width ----------" + width);
-        System.out.println("height ----------" + height);
         //270--150
         //初始化bitmap的绘制区域
-        System.out.println("------------------");
         int a = ((int)(height*1.4) / 2 - mBitmapHeight / 2 - mTextBounds.height() / 2) - ((int)(height*0.45 / 2) + mBitmapHeight / 2 - mTextBounds.height() / 2);
         mBitmapRect = new Rect( (int)(width*1.5) / 2 - mBitmapWidth / 2 ,(int)(height*1.4) / 2 - mBitmapHeight / 2 - mTextBounds.height() / 2  ,
                 (int)(width*0.5 / 2) + mBitmapHeight / 2  ,  (int)(height*0.45 / 2) + mBitmapHeight / 2 - mTextBounds.height() / 2);
-        System.out.println("++++++++++++++++++");
         xText = width / 2 - mTextBounds.width() / 2;
         yText = mBitmapRect.bottom + mTextBounds.height();
     }

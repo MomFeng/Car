@@ -42,6 +42,7 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 		this.context = context;
 		net = new NetUtil();
 		mInflater = LayoutInflater.from(context);
+		this.mDatas = datas;
 	}
 	
 	@Override
@@ -53,13 +54,8 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 	@Override
 	public void onBindViewHolder(final MyViewHolder holder, final int position) {
 		// TODO Auto-generated method stub
-		//holder.img.setText(mDatas.get(position));
-		net.getphotofromurl(mDatas.get(0));
-		if(net.listbitmap.get(0) != null){
-			holder.img.setImageBitmap(net.listbitmap.get(0));
-		}else{
-			holder.img.setImageResource(R.mipmap.ic_launcher);
-		}
+		holder.img.setImageResource(R.mipmap.ic_launcher);
+		net.setimagefromnet(holder.img , mDatas.get(position));
 		setUpItemEvent(holder);
 	}
 

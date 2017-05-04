@@ -2,7 +2,11 @@ package com.example.administrator.car.util;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,8 +28,33 @@ import okhttp3.Response;
 public class NetUtil {
 
     public List<Bitmap> listbitmap = new ArrayList<>();
-    public String html;
-    public List<String> strurl = new ArrayList<>();
+    private ImageView img;
+
+
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                //加载网络成功进行UI的更新,处理得到的图片资源
+                case 0:
+                    //通过message，拿到字节数组
+                    byte[] Picture = (byte[]) msg.obj;
+                    //使用BitmapFactory工厂，把字节数组转化为bitmap
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(Picture, 0, Picture.length);
+                    //通过imageview，设置图片
+                    if(img != null && Picture != null){
+                        System.out.println("------执行到了设置图片------" + Picture.toString());
+                        img.setImageBitmap(bitmap);
+                    }
+
+                    //Toast.makeText(, "", Toast.LENGTH_SHORT).show();
+                    break;
+                //当加载网络失败执行的逻辑代码
+                case 1:
+                    break;
+            }
+        }
+    };
 
     /**
      * 从网络的图片链接加载图片并返回
@@ -52,51 +81,47 @@ public class NetUtil {
                 //得到从网上获取资源，转换成我们想要的类型
                 byte[] Picture_bt = response.body().bytes();
                 //使用BitmapFactory工厂，把字节数组转化为bitmap
-                listbitmap.add(BitmapFactory.decodeByteArray(Picture_bt, 0, Picture_bt.length));
+                //listbitmap.add(BitmapFactory.decodeByteArray(Picture_bt, 0, Picture_bt.length));
+                Bitmap bitmap = BitmapFactory.decodeByteArray(Picture_bt, 0, Picture_bt.length);
             }
         });
     }
 
     /**
-     * get请求方式
-     * 请求百度图片的源码数据并解析出来
+     *
+     * @param img
+     * @param url
      */
-    public void gethttpfromokhttp() {
-        //创建网络处理的对象
-        OkHttpClient client = new OkHttpClient.Builder()
-                //设置读取数据的时间
-                .readTimeout(5, TimeUnit.SECONDS)
-                //对象的创建
-                .build();
-        //创建一个网络请求的对象，如果没有写请求方式，默认的是get
-        //在请求对象里面传入链接的URL地址
+    public void setimagefromnet(ImageView img , String url){
+        this.img = img;
+        //1.创建一个okhttpclient对象
+        OkHttpClient okHttpClient = new OkHttpClient();
+        //2.创建Request.Builder对象，设置参数，请求方式如果是Get，就不用设置，默认就是Get
         Request request = new Request.Builder()
-                .url("http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=star.cate&fr=&sf=1&fmq=&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=%E6%B1%BD%E8%BD%A6&oq=%E6%B1%BD%E8%BD%A6&rsp=-1").build();
-
-        //call就是我们可以执行的请求类
-        Call call = client.newCall(request);
-        //异步方法，来执行任务的处理，一般都是使用异步方法执行的
+                .url(url)
+                .build();
+        //3.创建一个Call对象，参数是request对象，发送请求
+        Call call = okHttpClient.newCall(request);
+        //4.异步请求，请求加入调度
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                //失败
-                Log.e("okhttp",Thread.currentThread().getName() + "结果  " + e.toString());
+
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                //成功
-                //Log.e("okhttp",Thread.currentThread().getName() + "结果  " + response.body().string().trim());
-                //"thumbURL":[\d\D\s\S]*?gp=0.jpg
-                html = response.body().string().trim();
-                Pattern pattern = Pattern.compile("\"middleURL\":[\\d\\D\\s\\S]*?0.jpg");
-                Matcher matcher = pattern.matcher(html);
-                while(matcher.find()) {
-                    System.out.println(matcher.group());
-                    strurl.add(matcher.group());
-                }
+                //得到从网上获取资源，转换成我们想要的类型
+                byte[] Picture_bt = response.body().bytes();
+                //使用BitmapFactory工厂，把字节数组转化为bitmap
+                //listbitmap.add(BitmapFactory.decodeByteArray(Picture_bt, 0, Picture_bt.length));
+                Message message = handler.obtainMessage();
+                message.obj = Picture_bt;
+                message.what = 0;
+                handler.sendMessage(message);
+                //Bitmap bitmap = BitmapFactory.decodeByteArray(Picture_bt, 0, Picture_bt.length);
             }
         });
-
     }
+
 }

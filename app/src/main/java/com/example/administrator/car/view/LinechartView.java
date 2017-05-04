@@ -67,7 +67,6 @@ public class LinechartView extends View{
                         data.remove(0);
                     }
                     data.add(new Random().nextInt(4000) + 1000);
-                    System.out.println("随机数 -------------" + (new Random().nextInt(4000) + 1000) + "");
                     handler.sendEmptyMessage(0x1234);
                 }
             }

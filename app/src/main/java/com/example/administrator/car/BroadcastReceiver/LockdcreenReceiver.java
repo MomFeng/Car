@@ -18,7 +18,6 @@ public class LockdcreenReceiver extends BroadcastReceiver{
         String action = intent.getAction();
 
         if (action.equals(Intent.ACTION_SCREEN_OFF)) {
-            System.out.println("service----------------5");
             Intent lockscreen = new Intent(context, LockscreenActivity.class);
 
             lockscreen.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
