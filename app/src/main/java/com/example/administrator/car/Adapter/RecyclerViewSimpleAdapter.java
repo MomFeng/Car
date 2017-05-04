@@ -54,6 +54,7 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 	@Override
 	public void onBindViewHolder(final MyViewHolder holder, final int position) {
 		// TODO Auto-generated method stub
+		//11
 		holder.img.setImageResource(R.mipmap.ic_launcher);
 		net.setimagefromnet(holder.img , mDatas.get(position));
 		setUpItemEvent(holder);
