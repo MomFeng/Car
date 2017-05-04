@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21fb32a6-5d7d-47f8-9d76-1ae37930800e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/car/Adapter/RecyclerViewSimpleAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/car/Adapter/RecyclerViewSimpleAdapter.java" />
     </list>
     <ignored path="Car.iws" />
@@ -62,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/car/Adapter/RecyclerViewSimpleAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+              <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -3450,7 +3449,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.49357602" order="6" side_tool="false" content_ui="tabs" />
@@ -3913,7 +3912,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/car/Adapter/RecyclerViewSimpleAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
           <folding />
         </state>
       </provider>
