@@ -58,9 +58,6 @@ public class PhotoActivity extends MyActivity {
             switch (msg.what){
                 case 0:
                     rv_photo_view.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
-                    //rv_photo_view.setLayoutManager(new LinearLayoutManager(PhotoActivity.this));
-                    //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(PhotoActivity.this, LinearLayoutManager.VERTICAL, false);
-                    //rv_photo_view.setLayoutManager(linearLayoutManager);
                     /*SpacesItemDecoration decoration=new SpacesItemDecoration(15);
                     rv_photo_view.addItemDecoration(decoration);*/
                     adapter = new RecyclerViewSimpleAdapter(PhotoActivity.this, strurl ,rv_photo_view );
