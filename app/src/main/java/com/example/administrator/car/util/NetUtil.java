@@ -1,5 +1,6 @@
 package com.example.administrator.car.util;
 
+import android.app.Application;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +35,10 @@ public class NetUtil {
     private RecyclerView recyclerView;
 
 
-    Handler handler = new Handler(){
+    Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            switch (msg.what){
+            switch (msg.what) {
                 //加载网络成功进行UI的更新,处理得到的图片资源
                 case 0:
                     //通过message，拿到字节数组
@@ -46,9 +48,10 @@ public class NetUtil {
                     Bundle b = msg.getData();
                     String url = b.getString("url");
                     //通过imageview，设置图片
+                    System.out.println("---------执行了展示图片------------" + url);
                     ImageView imageView = (ImageView) recyclerView.findViewWithTag(url);
                     //imageView.setImageBitmap(bitmap);
-                    if(imageView != null && Picture != null){
+                    if (imageView != null) {
                         System.out.println("------执行到了设置图片------" + Picture.toString());
                         imageView.setImageBitmap(bitmap);
                     }
@@ -62,15 +65,16 @@ public class NetUtil {
         }
     };
 
-    public NetUtil(RecyclerView recyclerView){
+    public NetUtil(RecyclerView recyclerView) {
         this.recyclerView = recyclerView;
     }
 
     /**
      * 从网络的图片链接加载图片并返回
+     *
      * @return
      */
-    public void getphotofromurl(String url){
+    public void getphotofromurl(String url) {
         //1.创建一个okhttpclient对象
         OkHttpClient okHttpClient = new OkHttpClient();
         //2.创建Request.Builder对象，设置参数，请求方式如果是Get，就不用设置，默认就是Get
@@ -98,11 +102,9 @@ public class NetUtil {
     }
 
     /**
-     *
-     * @param img
      * @param url
      */
-    public void setimagefromnet(ImageView img , final String url){
+    public void setimagefromnet(final String url) {
         //1.创建一个okhttpclient对象
         OkHttpClient okHttpClient = new OkHttpClient();
         //2.创建Request.Builder对象，设置参数，请求方式如果是Get，就不用设置，默认就是Get

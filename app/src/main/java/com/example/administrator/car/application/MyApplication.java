@@ -21,6 +21,7 @@ public class MyApplication extends Application{
     private boolean isStart;
     private float mHealth;
     private int mHealth_int;
+    public static Application instance;
 
     @Override
     public void onCreate() {

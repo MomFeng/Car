@@ -11,6 +11,7 @@ import android.util.Log;
 import com.example.administrator.car.Adapter.RecyclerViewSimpleAdapter;
 import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
+import com.example.administrator.car.util.GlideCacheUtil;
 import com.example.administrator.car.util.SpacesItemDecoration;
 
 import java.io.IOException;
@@ -45,6 +46,7 @@ public class PhotoActivity extends MyActivity {
         initViews();
         //获取网络数据
         gethttpfromokhttp();
+        System.out.println(GlideCacheUtil.getInstance().getCacheSize(this));
     }
 
     private void initViews(){

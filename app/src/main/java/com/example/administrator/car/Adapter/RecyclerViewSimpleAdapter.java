@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.administrator.car.R;
 import com.example.administrator.car.util.NetUtil;
 
@@ -28,7 +29,7 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 	protected List<String> mDatas;
 	private NetUtil net;
 	public static String[] URLS;
-	private List<Integer> heights;
+	private Context mContext;
 
 	public interface OnItemClickListener
 	{
@@ -44,6 +45,7 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 	
 	public RecyclerViewSimpleAdapter(Context context, List<String> datas , RecyclerView recyclerView){
 		this.context = context;
+		this.mContext = context;
 		net = new NetUtil(recyclerView);
 		mInflater = LayoutInflater.from(context);
 		this.mDatas = datas;
@@ -72,9 +74,23 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 		/*LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) holder.img.getLayoutParams();
 		float itemwidth = holder.itemView.getContext()*/
 
-		holder.img.setImageResource(R.mipmap.ic_launcher);
-		holder.img.setTag(mDatas.get(position));
-		net.setimagefromnet(holder.img , mDatas.get(position));
+		/**
+		 * 自己的图片加载库
+		 * holder.img.setImageResource(R.mipmap.ic_launcher);
+		 * holder.img.setTag(mDatas.get(position));
+		 * System.out.println("设置图片TAG----------" + mDatas.get(position));
+		 * net.setimagefromnet(mDatas.get(position));
+		 * */
+
+		/***
+		 * Glide图片加载框架
+		 */
+		Glide.with(mContext)
+				.load(mDatas.get(position))
+				.placeholder(R.mipmap.ic_launcher)
+				.crossFade()
+				.into(holder.img);
+
 		setUpItemEvent(holder);
 	}
 
