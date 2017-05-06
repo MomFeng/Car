@@ -14,6 +14,9 @@ import java.util.Locale;
 /**
  * 全局的一个变量，方法
  * Created by MomFeng on 2017/4/17 0017.
+ *
+ * 2017/5/5
+ * 3880行代码
  */
 
 public class MyApplication extends Application{
