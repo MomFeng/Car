@@ -1,6 +1,5 @@
 package com.example.administrator.car.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -9,12 +8,17 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.example.administrator.car.Interface.BindLayout;
+import com.example.administrator.car.Interface.BindView;
+import com.example.administrator.car.Interface.BindonClick;
+import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
+import com.example.administrator.car.util.GlideCacheUtil;
 import com.example.administrator.car.view.SwitchView;
 
 import java.util.Locale;
@@ -24,25 +28,59 @@ import java.util.Locale;
  * Created by MomFeng on 2017/4/16 0016.
  */
 
-public class SettingActivity extends Activity implements View.OnClickListener {
+@BindLayout(R.layout.activity_setting)
+public class SettingActivity extends MyActivity{
 
-    private Button btn_setting_back;
-    private LinearLayout lea_setting_default,lea_setting_simplechinese,lea_setting_traditionalchinese,lea_setting_english;
-    private ImageView img_setting_default,img_setting_simplechinese,img_setting_traditionalchinese,img_setting_english;
+    //返回
+    @BindView(R.id.btn_setting_back)
+    Button btn_setting_back;
+    //语言
+    @BindView(R.id.lea_setting_default)
+    LinearLayout lea_setting_default;
+    @BindView(R.id.lea_setting_simplechinese)
+    LinearLayout lea_setting_simplechinese;
+    @BindView(R.id.lea_setting_traditionalchinese)
+    LinearLayout lea_setting_traditionalchinese;
+    @BindView(R.id.lea_setting_english)
+    LinearLayout lea_setting_english;
+    //语言选择
+    @BindView(R.id.img_setting_default)
+    ImageView img_setting_default;
+    @BindView(R.id.img_setting_simplechinese)
+    ImageView img_setting_simplechinese;
+    @BindView(R.id.img_setting_traditionalchinese)
+    ImageView img_setting_traditionalchinese;
+    @BindView(R.id.img_setting_english)
+    ImageView img_setting_english;
+    //三个点击LinearLayout
+    @BindView(R.id.lea_intent_setting)
+    LinearLayout lea_intent_setting;
+    @BindView(R.id.lea_bluetooth_setting)
+    LinearLayout lea_bluetooth_setting;
+    @BindView(R.id.lin_setting_pulldoor)
+    LinearLayout lin_setting_pulldoor;
+    //仿IOS点击按钮
+    @BindView(R.id.sv_intent_setting)
+    SwitchView sv_intent_setting;
+    @BindView(R.id.sv_bluetooth_setting)
+    SwitchView sv_bluetooth_setting;
+    @BindView(R.id.sv_pulldoor_setting)
+    SwitchView sv_pulldoor_setting;
+    //缓存
+    @BindView(R.id.lea_setting_cleancache)
+    LinearLayout lea_setting_cleancache;
+    @BindView(R.id.tv_setting_cleancache)
+    TextView tv_setting_cleancache;
+
     private int[] imgs = {R.id.img_setting_default,R.id.img_setting_simplechinese,R.id.img_setting_traditionalchinese,R.id.img_setting_english};
-    private LinearLayout lea_intent_setting,lea_bluetooth_setting,lin_setting_pulldoor;
-    private SwitchView sv_intent_setting,sv_bluetooth_setting,sv_pulldoor_setting;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_setting);
         //初始化控件
         initView();
         //初始化点击事件
         initEvent();
-
     }
 
     private void initEvent() {
@@ -58,46 +96,16 @@ public class SettingActivity extends Activity implements View.OnClickListener {
             setBackcorrect(img_setting_english);
         }
 
-        btn_setting_back.setOnClickListener(this);
-        lea_setting_default.setOnClickListener(this);
-        lea_setting_simplechinese.setOnClickListener(this);
-        lea_setting_traditionalchinese.setOnClickListener(this);
-        lea_setting_english.setOnClickListener(this);
-        lea_intent_setting.setOnClickListener(this);
-        sv_intent_setting.setOnClickListener(this);
-        lea_bluetooth_setting.setOnClickListener(this);
-        sv_bluetooth_setting.setOnClickListener(this);
-        lin_setting_pulldoor.setOnClickListener(this);
-        sv_pulldoor_setting.setOnClickListener(this);
+        tv_setting_cleancache.setText(GlideCacheUtil.getInstance().getCacheSize(SettingActivity.this));
     }
 
     private void initView() {
-        //返回按键
-        btn_setting_back = (Button) findViewById(R.id.btn_setting_back);
-        //四个语言选项
-        lea_setting_default = (LinearLayout) findViewById(R.id.lea_setting_default);
-        lea_setting_simplechinese = (LinearLayout) findViewById(R.id.lea_setting_simplechinese);
-        lea_setting_traditionalchinese = (LinearLayout) findViewById(R.id.lea_setting_traditionalchinese);
-        lea_setting_english = (LinearLayout) findViewById(R.id.lea_setting_english);
-        //对应四个语言选项的勾
-        img_setting_default = (ImageView) findViewById(R.id.img_setting_default);
-        img_setting_simplechinese = (ImageView) findViewById(R.id.img_setting_simplechinese);
-        img_setting_traditionalchinese = (ImageView) findViewById(R.id.img_setting_traditionalchinese);
-        img_setting_english = (ImageView) findViewById(R.id.img_setting_english);
-        //初始化网络开关的LinearLayout
-        lea_intent_setting = (LinearLayout) findViewById(R.id.lea_intent_setting);
-        sv_intent_setting = (SwitchView) findViewById(R.id.sv_intent_setting);
-        lea_bluetooth_setting = (LinearLayout) findViewById(R.id.lea_bluetooth_setting);
-        sv_bluetooth_setting = (SwitchView) findViewById(R.id.sv_bluetooth_setting);
-        //炫酷锁屏
-        lin_setting_pulldoor = (LinearLayout) findViewById(R.id.lin_setting_pulldoor);
-        sv_pulldoor_setting = (SwitchView) findViewById(R.id.sv_pulldoor_setting);
 
     }
 
-    @Override
-    public void onClick(View v) {
-
+    @BindonClick({R.id.btn_setting_back,R.id.lea_setting_default,R.id.lea_setting_simplechinese,R.id.lea_setting_traditionalchinese,
+            R.id.lea_setting_english,R.id.lea_intent_setting,R.id.lea_bluetooth_setting,R.id.lin_setting_pulldoor,R.id.lea_setting_cleancache})
+    public void myOnClick(View v) {
         Resources resources = SettingActivity.this.getResources();
         DisplayMetrics dm = resources.getDisplayMetrics();
         Configuration config = resources.getConfiguration();
@@ -171,6 +179,10 @@ public class SettingActivity extends Activity implements View.OnClickListener {
                 }else{
                     sv_pulldoor_setting.setcheck(true);
                 }
+                break;
+            //清除缓存点击事件
+            case R.id.lea_setting_cleancache:
+                GlideCacheUtil.getInstance().clearImageAllCache(SettingActivity.this);
                 break;
         }
     }

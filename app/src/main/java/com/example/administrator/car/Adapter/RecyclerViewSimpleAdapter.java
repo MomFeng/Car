@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.administrator.car.Interface.BindView;
 import com.example.administrator.car.R;
 import com.example.administrator.car.util.NetUtil;
 

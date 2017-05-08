@@ -95,7 +95,6 @@ public class NetUtil {
                 //得到从网上获取资源，转换成我们想要的类型
                 byte[] Picture_bt = response.body().bytes();
                 //使用BitmapFactory工厂，把字节数组转化为bitmap
-                //listbitmap.add(BitmapFactory.decodeByteArray(Picture_bt, 0, Picture_bt.length));
                 Bitmap bitmap = BitmapFactory.decodeByteArray(Picture_bt, 0, Picture_bt.length);
             }
         });

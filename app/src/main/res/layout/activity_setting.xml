@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,17 +69,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
+                        android:gravity="bottom|left"
                         android:text="@string/WIFI_only_under_the_network"
                         android:textColor="#000"
-                        android:gravity="bottom|left"
                         android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
-                        android:text="@string/no_consumption_under_the_network"
                         android:gravity="top|left"
+                        android:text="@string/no_consumption_under_the_network"
                         android:textSize="10sp" />
                 </LinearLayout>
 
@@ -164,8 +165,8 @@
                 android:layout_height="45dp"
                 android:layout_marginTop="1dp"
                 android:background="@drawable/ripple_bg"
-                android:paddingLeft="15dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
 
                 <TextView
                     android:layout_width="0dp"
@@ -247,9 +248,9 @@
             </LinearLayout>
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginTop="10dp"
                 android:background="#fff"
                 android:gravity="center_vertical|left"
                 android:paddingLeft="15dp"
@@ -266,11 +267,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
                     android:layout_weight="3"
+                    android:gravity="center_vertical|left"
                     android:text="@string/cool_lock_screen"
                     android:textColor="#000"
-                    android:gravity="center_vertical|left"
-                    android:layout_marginLeft="15dp"
                     android:textSize="16sp" />
 
 
@@ -294,23 +295,43 @@
                 android:text="@string/local"
                 android:textSize="12sp" />
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/lea_setting_cleancache"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/ripple_bg"
-                android:gravity="center_vertical|left"
-                android:paddingLeft="15dp"
-                android:text="@string/clean_up_cache"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:layout_height="45sp"
+                android:orientation="horizontal"
+                android:background="@drawable/ripple_bg">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="15dp"
+                    android:text="@string/clean_up_cache"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_setting_cleancache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:background="#fff"
+                    android:gravity="center_vertical|left"
+                    android:paddingRight="20dp"
+                    android:textColor="#000"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginTop="1dp"
                 android:background="@drawable/ripple_bg"
                 android:gravity="center_vertical|left"
                 android:paddingLeft="15dp"
-                android:layout_marginTop="1dp"
                 android:text="@string/download_path"
                 android:textColor="#000"
                 android:textSize="16sp" />

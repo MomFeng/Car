@@ -9,6 +9,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 
 import com.example.administrator.car.Adapter.RecyclerViewSimpleAdapter;
+import com.example.administrator.car.Interface.BindView;
 import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
 import com.example.administrator.car.util.GlideCacheUtil;
@@ -33,6 +34,7 @@ import okhttp3.Response;
  */
 public class PhotoActivity extends MyActivity {
 
+    @BindView(R.id.rv_photo_view)
     private RecyclerView rv_photo_view;
     private RecyclerViewSimpleAdapter adapter;
     public String html;
@@ -49,20 +51,20 @@ public class PhotoActivity extends MyActivity {
         System.out.println(GlideCacheUtil.getInstance().getCacheSize(this));
     }
 
-    private void initViews(){
-        rv_photo_view = (RecyclerView) findViewById(R.id.rv_photo_view);
+    private void initViews() {
+        //rv_photo_view = (RecyclerView) findViewById(R.id.rv_photo_view);
     }
 
-    Handler handmer = new Handler(){
+    Handler handmer = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            switch (msg.what){
+            switch (msg.what) {
                 case 0:
-                    rv_photo_view.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+                    rv_photo_view.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
                     /*SpacesItemDecoration decoration=new SpacesItemDecoration(15);
                     rv_photo_view.addItemDecoration(decoration);*/
-                    adapter = new RecyclerViewSimpleAdapter(PhotoActivity.this, strurl ,rv_photo_view );
+                    adapter = new RecyclerViewSimpleAdapter(PhotoActivity.this, strurl, rv_photo_view);
                     rv_photo_view.setAdapter(adapter);
                     break;
                 case 1:
@@ -97,7 +99,7 @@ public class PhotoActivity extends MyActivity {
             @Override
             public void onFailure(Call call, IOException e) {
                 //失败
-                Log.e("okhttp",Thread.currentThread().getName() + "结果  " + e.toString());
+                Log.e("okhttp", Thread.currentThread().getName() + "结果  " + e.toString());
             }
 
             @Override
@@ -110,11 +112,11 @@ public class PhotoActivity extends MyActivity {
                 Pattern pattern_text = Pattern.compile("imgData',[\\d\\D\\s\\S]*?]");
                 Matcher matcher = pattern.matcher(html);
                 Matcher matcher_text = pattern_text.matcher(html);
-                if(matcher_text.find()){
+                if (matcher_text.find()) {
                     System.out.println("html ----------- " + matcher_text.group());
                 }
-                while(matcher.find()) {
-                    String url = matcher.group().substring(12,matcher.group().length());
+                while (matcher.find()) {
+                    String url = matcher.group().substring(12, matcher.group().length());
                     System.out.println(url);
                     strurl.add(url);
                 }

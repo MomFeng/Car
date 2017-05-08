@@ -12,6 +12,10 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.administrator.car.Interface.BindLayout;
+import com.example.administrator.car.Interface.BindView;
+import com.example.administrator.car.Interface.BindonClick;
+import com.example.administrator.car.Interface.MyFeagmentAvtivity;
 import com.example.administrator.car.R;
 import com.example.administrator.car.application.MyApplication;
 import com.example.administrator.car.mainviewpager.FourFragment;
@@ -30,33 +34,41 @@ import java.util.List;
  * Created by MomFeng on 2017/4/13 0013.
  */
 
-public class MainActivity extends FragmentActivity implements View.OnClickListener {
+@BindLayout(R.layout.activity_main)
+public class MainActivity extends MyFeagmentAvtivity{
 
     //Viewpager
-    private ViewPager vpg_pager;
+    @BindView(R.id.vpg_pager)
+    ViewPager vpg_pager;
     //viewpager适配器
-    private PagerAdapter adapter;
+    //private PagerAdapter adapter;
     //底部菜单的四个按钮
-    private LinearLayout btn_main, btn_two, btn_three, btn_four;
+    //private LinearLayout btn_main, btn_two, btn_three, btn_four;
     //底部菜单四个按钮中的图片
-    private ImageButton imgb_tab_main, imgb_tab_two, imgb_tab_three, imgb_tab_four;
+    //private ImageButton imgb_tab_main, imgb_tab_two, imgb_tab_three, imgb_tab_four;
+
     //用来存放布局
     private List<MyView> mViews = new ArrayList<>();
-    private TextView tv_title_mian;
-    //private TextView tv_tab_main , tv_tab_two , tv_tab_three , tv_tab_four;
+
+    @BindView(R.id.tv_title_mian)
+    TextView tv_title_mian;
 
     private List<Fragment> mFragment = new ArrayList<Fragment>();
     private FragmentPagerAdapter fragmentadapter;
     private SlidingMenu menu;
 
-    private MyView tv_tab_main, tv_tab_two, tv_tab_three, tv_tab_four;
+    @BindView(R.id.tv_tab_main)
+    MyView tv_tab_main;
+    @BindView(R.id.tv_tab_two)
+    MyView tv_tab_two;
+    @BindView(R.id.tv_tab_three)
+    MyView tv_tab_three;
+    @BindView(R.id.tv_tab_four)
+    MyView tv_tab_four;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
 
         //初始化控件
         initView();
@@ -77,10 +89,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     //监听事件的方法
     private void initEvent() {
 
-        tv_tab_main.setOnClickListener(this);
+        /*tv_tab_main.setOnClickListener(this);
         tv_tab_two.setOnClickListener(this);
         tv_tab_three.setOnClickListener(this);
-        tv_tab_four.setOnClickListener(this);
+        tv_tab_four.setOnClickListener(this);*/
 
         //vpg_pager的滑动事件
         vpg_pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -163,13 +175,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         //为侧滑菜单设置布局
         menu.setMenu(R.layout.leftmenu);
 
-        vpg_pager = (ViewPager) findViewById(R.id.vpg_pager);
-        tv_title_mian = (TextView) findViewById(R.id.tv_title_mian);
+        //vpg_pager = (ViewPager) findViewById(R.id.vpg_pager);
+        //tv_title_mian = (TextView) findViewById(R.id.tv_title_mian);
 
-        tv_tab_main = (MyView) findViewById(R.id.tv_tab_main);
+        /*tv_tab_main = (MyView) findViewById(R.id.tv_tab_main);
         tv_tab_two = (MyView) findViewById(R.id.tv_tab_two);
         tv_tab_three = (MyView) findViewById(R.id.tv_tab_three);
-        tv_tab_four = (MyView) findViewById(R.id.tv_tab_four);
+        tv_tab_four = (MyView) findViewById(R.id.tv_tab_four);*/
         tv_tab_main.setAlpha(1);
         //sur_health = new HealthView_view(this);
 
@@ -191,7 +203,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     //初始化viewpager
     private void initViewPager() {
-       /* //初始化四个布局
+        /* //初始化四个布局
         LayoutInflater mInflater = LayoutInflater.from(MainActivity.this);
         View view_main = mInflater.inflate(R.layout.fragment_main,null);
         View view_two = mInflater.inflate(R.layout.fragment_two,null);
@@ -246,8 +258,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         vpg_pager.setAdapter(fragmentadapter);
     }
 
-    @Override
-    public void onClick(View v) {
+    @BindonClick({R.id.tv_tab_main,R.id.tv_tab_two,R.id.tv_tab_three,R.id.tv_tab_four})
+    public void myonClick(View v) {
         switch (v.getId()) {
             case R.id.tv_tab_main:
                 vpg_pager.setCurrentItem(0);
@@ -255,16 +267,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 tv_tab_two.setAlpha(0);
                 tv_tab_three.setAlpha(0);
                 tv_tab_four.setAlpha(0);
-                //tv_tab_main.setAlpha(1);
                 break;
             case R.id.tv_tab_two:
                 vpg_pager.setCurrentItem(1);
                 tv_title_mian.setText(R.string.free);
-
                 tv_tab_main.setAlpha(0);
                 tv_tab_three.setAlpha(0);
                 tv_tab_four.setAlpha(0);
-                //tv_tab_two.setAlpha(1);
                 break;
             case R.id.tv_tab_three:
                 vpg_pager.setCurrentItem(2);
@@ -272,7 +281,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 tv_tab_two.setAlpha(0);
                 tv_tab_main.setAlpha(0);
                 tv_tab_four.setAlpha(0);
-                //tv_tab_three.setAlpha(1);
                 break;
             case R.id.tv_tab_four:
                 vpg_pager.setCurrentItem(3);
@@ -280,7 +288,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 tv_tab_two.setAlpha(0);
                 tv_tab_three.setAlpha(0);
                 tv_tab_main.setAlpha(0);
-               // tv_tab_four.setAlpha(1);
                 break;
         }
     }
