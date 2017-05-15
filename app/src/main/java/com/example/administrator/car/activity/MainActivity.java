@@ -95,7 +95,7 @@ public class MainActivity extends MyFeagmentAvtivity{
         tv_tab_four.setOnClickListener(this);*/
 
         //vpg_pager的滑动事件
-        vpg_pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        vpg_pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
             public void onPageSelected(int arg0) {

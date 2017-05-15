@@ -30,6 +30,8 @@ public class LinechartsmallView extends View {
     private Paint mPaintline;
     private Paint mPainttext;
 
+    private int roatting;
+
     private int MaxDataSize = XLength / XScale;
 
     private List<Integer> data = new ArrayList<Integer>();
@@ -69,7 +71,8 @@ public class LinechartsmallView extends View {
                     if (data.size() >= MaxDataSize) {
                         data.remove(0);
                     }
-                    data.add(new Random().nextInt(4000) + 1000);
+                    roatting = new Random().nextInt(4000) + 1000;
+                    data.add(roatting);
                     handler.sendEmptyMessage(0x1234);
                 }
             }
@@ -165,5 +168,13 @@ public class LinechartsmallView extends View {
         float multiple = 520 / num;
         number = getWidth() / multiple;
         return number;
+    }
+
+    public int getRoatting() {
+        return roatting;
+    }
+
+    public void setRoatting(int roatting) {
+        this.roatting = roatting;
     }
 }

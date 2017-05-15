@@ -9,6 +9,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 
 import com.example.administrator.car.Adapter.RecyclerViewSimpleAdapter;
+import com.example.administrator.car.Interface.BindLayout;
 import com.example.administrator.car.Interface.BindView;
 import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
@@ -32,10 +33,12 @@ import okhttp3.Response;
  * 汽车壁纸的Activity
  * Created by MomFeng on 2017/4/30 0030.
  */
+@BindLayout(R.layout.activity_photo)
 public class PhotoActivity extends MyActivity {
 
     @BindView(R.id.rv_photo_view)
     private RecyclerView rv_photo_view;
+
     private RecyclerViewSimpleAdapter adapter;
     public String html;
     public List<String> strurl = new ArrayList<>();
@@ -43,7 +46,6 @@ public class PhotoActivity extends MyActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_photo);
 
         initViews();
         //获取网络数据

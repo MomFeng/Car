@@ -4,6 +4,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#4Af"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_setting_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/car_wallpaper"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#4af" />
+    </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:background="#555"
         android:id="@+id/rv_photo_view"

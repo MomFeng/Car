@@ -20,6 +20,8 @@ public class ThemometerView extends View {
     private Paint mPaintback;
     private String[] themometer = {"0","10","20","30","40","50","60","70","80","90"};
 
+    private int themometerView = 0;
+
     public ThemometerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
@@ -54,15 +56,12 @@ public class ThemometerView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
-        System.out.println("getWidth() ----- " + getWidth());
-        System.out.println("getHeight() ----- " + getHeight());
-
+//387
         mPaint.setColor(Color.parseColor("#ff0000"));
         canvas.drawCircle(adaptation(210) , adaptation(500) , adaptation(80) , mPaint);
         canvas.drawRect(adaptation(180) , adaptation(20) , adaptation(240) , adaptation(500) , mPaintback);
-        canvas.drawRect(adaptation(180) , adaptation(220) , adaptation(240) , adaptation(500) , mPaint);
-        canvas.drawText("48" , adaptation(180) + mPainttext.measureText("48")/4 , adaptation(220) - getTxtHeight(mPainttext)/4 , mPainttext);
+        canvas.drawRect(adaptation(180) , adaptation(500-(80+(float)(themometerView*4.3))) , adaptation(240) , adaptation(500) , mPaint);
+        canvas.drawText(themometerView+"" , adaptation(180) + mPainttext.measureText(themometerView+"")/4 , adaptation(500-(80+(float)(themometerView*4.3))) - getTxtHeight(mPainttext)/4 , mPainttext);
 
         for (int i = 0; i < 10; i++) {
             canvas.drawLine(adaptation(110) , adaptation(420-43*i) , adaptation(160) , adaptation(420-43*i) , mPaintline);
@@ -71,6 +70,8 @@ public class ThemometerView extends View {
 
         mPainttext.setTextSize(adaptation(40));
         canvas.drawText("水温℃" , adaptation(210) - mPainttext.measureText("水温℃")/2 , adaptation(500) + getTxtHeight(mPainttext)/4 , mPainttext);
+
+        postInvalidate();
     }
 
     //获取文字的高度
@@ -86,4 +87,9 @@ public class ThemometerView extends View {
         number = getWidth()/multiple;
         return number;
     }
+
+    public void setThemometerView(int themometerView){
+        this.themometerView = themometerView;
+    }
+
 }
