@@ -30,6 +30,7 @@ public class CarrealtimeActivity extends FragmentActivity implements View.OnClic
     private TabLayout tab_title_carreal;
     private List<Fragment> mFragment = new ArrayList<>();
     private FragmentPagerAdapter fragmentadapter;
+    private Button btn_photo_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

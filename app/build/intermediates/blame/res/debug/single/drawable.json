@@ -12,12 +12,20 @@
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radio_white.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\radio_white.xml"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radio_red.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\radio_red.xml"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
@@ -72,12 +80,12 @@
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_vector_test.xml"
-    },
-    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_corners.xml",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\rounded_corners.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",

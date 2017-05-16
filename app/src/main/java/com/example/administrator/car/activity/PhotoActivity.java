@@ -7,10 +7,13 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.administrator.car.Adapter.RecyclerViewSimpleAdapter;
 import com.example.administrator.car.Interface.BindLayout;
 import com.example.administrator.car.Interface.BindView;
+import com.example.administrator.car.Interface.BindonClick;
 import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
 import com.example.administrator.car.util.GlideCacheUtil;
@@ -34,10 +37,12 @@ import okhttp3.Response;
  * Created by MomFeng on 2017/4/30 0030.
  */
 @BindLayout(R.layout.activity_photo)
-public class PhotoActivity extends MyActivity {
+public class PhotoActivity extends MyActivity{
 
     @BindView(R.id.rv_photo_view)
     private RecyclerView rv_photo_view;
+    @BindView(R.id.btn_photo_back)
+    private Button btn_photo_back;
 
     private RecyclerViewSimpleAdapter adapter;
     public String html;
@@ -54,7 +59,6 @@ public class PhotoActivity extends MyActivity {
     }
 
     private void initViews() {
-        //rv_photo_view = (RecyclerView) findViewById(R.id.rv_photo_view);
     }
 
     Handler handmer = new Handler() {
@@ -128,6 +132,15 @@ public class PhotoActivity extends MyActivity {
                 handmer.sendMessage(m);
             }
         });
-
     }
+
+    @BindonClick(R.id.btn_photo_back)
+    public void myonclick(View v){
+        switch(v.getId()){
+            case R.id.btn_photo_back:
+                PhotoActivity.this.finish();
+                break;
+        }
+    }
+
 }

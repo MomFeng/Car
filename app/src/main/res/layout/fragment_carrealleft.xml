@@ -261,6 +261,7 @@
                     android:orientation="vertical"
                     android:background="#fff">
                     <TextView
+                        android:id="@+id/tv_carleft_areragespeed"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:text="56"
@@ -283,6 +284,7 @@
                     android:layout_marginTop="2dp"
                     android:background="#fff">
                     <TextView
+                        android:id="@+id/tv_carleft_mileage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:text="126"
@@ -315,6 +317,7 @@
                 android:orientation="vertical"
                 android:background="#fff">
                 <TextView
+                    android:id="@+id/tv_carleft_fuel"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2"
@@ -341,6 +344,7 @@
                 android:layout_marginTop="2dp">
 
                 <TextView
+                    android:id="@+id/tv_carleft_oil"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2"

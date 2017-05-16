@@ -12,6 +12,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,6 +22,8 @@ import com.example.administrator.car.application.MyApplication;
 import com.example.administrator.car.view.LinechartsmallView;
 import com.example.administrator.car.view.MycarView;
 import com.example.administrator.car.view.ThemometerView;
+
+import java.util.Random;
 
 /**
  * 实时车况Activity的左边的数字显示的Fragment
@@ -43,7 +46,7 @@ public class CarrealtimeLeftFragment extends Fragment implements View.OnClickLis
     private Boolean mIsShowBack_themometer = true;
 
     private MycarView car_left_speed;
-    private TextView tv_carleft_speed, tv_carleft_themometer, tv_carleft_rotating;
+    private TextView tv_carleft_speed, tv_carleft_themometer, tv_carleft_rotating, tv_carleft_fuel, tv_carleft_areragespeed, tv_carleft_oil, tv_carleft_mileage;
     private ThemometerView th_carleft_themometer;
     private LinechartsmallView lc_carleft_linechar;
 
@@ -62,6 +65,10 @@ public class CarrealtimeLeftFragment extends Fragment implements View.OnClickLis
             tv_carleft_speed.setText(msg.arg1 + "");
             tv_carleft_themometer.setText(msg.arg2 + "");
             tv_carleft_rotating.setText(lc_carleft_linechar.getRoatting()+"");
+            tv_carleft_fuel.setText((float)(new Random().nextInt(200)+100)/10 + "");
+            tv_carleft_areragespeed.setText((new Random().nextInt(40)+10) + "");
+            tv_carleft_oil.setText((float)(new Random().nextInt(400)+100)/10 + "");
+            tv_carleft_mileage.setText((float)(new Random().nextInt(400)+50) + "");
         }
     };
 
@@ -91,6 +98,11 @@ public class CarrealtimeLeftFragment extends Fragment implements View.OnClickLis
 
         lc_carleft_linechar = (LinechartsmallView) view.findViewById(R.id.lc_carleft_linechar);
         tv_carleft_rotating = (TextView) view.findViewById(R.id.tv_carleft_rotating);
+
+        tv_carleft_fuel = (TextView) view.findViewById(R.id.tv_carleft_fuel);
+        tv_carleft_areragespeed = (TextView) view.findViewById(R.id.tv_carleft_areragespeed);
+        tv_carleft_oil = (TextView) view.findViewById(R.id.tv_carleft_oil);
+        tv_carleft_mileage = (TextView) view.findViewById(R.id.tv_carleft_mileage);
 
         setAnimators(); // 设置动画
         setCameraDistance(); // 设置镜头距离
@@ -127,15 +139,18 @@ public class CarrealtimeLeftFragment extends Fragment implements View.OnClickLis
                         th_carleft_themometer.setThemometerView(theme);
 
                         //Message message = handler.obtainMessage();
-                        Message m = new Message();
-                        m.what = 0;
-                        m.arg1 = i;
-                        m.arg2 = theme;
+                        if(i % 20 == 0){
+                            Message m = new Message();
+                            m.what = 0;
+                            m.arg1 = i;
+                            m.arg2 = theme;
+                            handler.sendMessage(m);
+                        }
+
                         //Bundle bundle = new Bundle();
                         //bundle.putInt();
                         //m.setData(bundle);
                         //m.sendToTarget();
-                        handler.sendMessage(m);
 
                         try {
                             Thread.sleep(40);
