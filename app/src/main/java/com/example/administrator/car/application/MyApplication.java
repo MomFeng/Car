@@ -97,9 +97,13 @@ public class MyApplication extends Application {
         }
     }
 
-    public void startService() {
+    public void StartService() {
         Intent i = new Intent(this, LockscreenService.class);
         startService(i);
     }
 
+    public void StopService(){
+        Intent i = new Intent(this, LockscreenService.class);
+        stopService(i);
+    }
 }

@@ -42,6 +42,7 @@
         <activity android:name="com.example.administrator.car.activity.glide.Glide" />
         <activity android:name="com.example.administrator.car.activity.LoginActivity" />
         <activity android:name="com.example.administrator.car.activity.RegisteredActivity" />
+        <activity android:name="com.example.administrator.car.activity.AboutUsActivity" />
 
         <service android:name="com.example.administrator.car.service.LockscreenService" />
 
@@ -52,7 +53,7 @@
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:taskAffinity="com.package.name.lockscreen"
-            android:theme="@style/LockScreenBase" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             >
         </activity>
     </application>

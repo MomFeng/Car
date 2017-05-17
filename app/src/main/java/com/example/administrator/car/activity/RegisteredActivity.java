@@ -13,6 +13,7 @@ import android.widget.EditText;
 import com.example.administrator.car.Interface.BindLayout;
 import com.example.administrator.car.Interface.BindView;
 import com.example.administrator.car.Interface.BindonClick;
+import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
 import com.example.administrator.car.util.AnnotationUtilView;
 
@@ -21,7 +22,7 @@ import com.example.administrator.car.util.AnnotationUtilView;
  * Created by MomFneg on 2017/5/16 0016.
  */
 @BindLayout(R.layout.activity_registered)
-public class RegisteredActivity extends AppCompatActivity {
+public class RegisteredActivity extends MyActivity {
 
     @BindView(R.id.ed_registered_username)
     private EditText ed_registered_username;
@@ -36,7 +37,6 @@ public class RegisteredActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        AnnotationUtilView.injectActivity(this);
         super.onCreate(savedInstanceState);
 
 

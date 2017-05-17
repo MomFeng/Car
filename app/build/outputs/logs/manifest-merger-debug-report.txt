@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from E:\git\Car\app\src\main\AndroidManifest.xml
@@ -30,7 +30,7 @@ ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:11:22-76
 application
-ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:13:5-46:19
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:13:5-47:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator.SC-201703201458\.android\build-cache\cbc0dc2c1eff6702de1467f3de31686560019a7b\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\739307084f93065442adb7340c65051f18544af2\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\8202c1e702629032a01720c88efbb0df86263b78\output\AndroidManifest.xml:29:5-20
@@ -99,26 +99,30 @@ activity#com.example.administrator.car.activity.RegisteredActivity
 ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:34:9-74
 	android:name
 		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:34:19-62
+activity#com.example.administrator.car.activity.AboutUsActivity
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:35:9-71
+	android:name
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:35:19-59
 service#com.example.administrator.car.service.LockscreenService
-ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:36:9-71
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:37:9-71
 	android:name
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:36:18-59
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:37:18-59
 activity#com.example.administrator.car.activity.LockscreenActivity
-ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:38:9-45:25
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:39:9-46:25
 	android:screenOrientation
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:43:13-49
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:44:13-49
 	android:excludeFromRecents
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:40:13-46
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:41:13-46
 	android:launchMode
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:42:13-48
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:43:13-48
 	android:exported
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:41:13-37
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:42:13-37
 	android:theme
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:39:13-50
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:40:13-69
 	android:taskAffinity
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:44:13-63
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:45:13-63
 	android:name
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:38:19-62
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:39:19-62
 uses-sdk
 INJECTED from E:\git\Car\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator.SC-201703201458\.android\build-cache\cbc0dc2c1eff6702de1467f3de31686560019a7b\output\AndroidManifest.xml:5:5-7:41

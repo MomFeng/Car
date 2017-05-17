@@ -357,6 +357,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tv_setting_aboutus"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="1dp"
@@ -368,6 +369,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tv_setting_account"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="20dp"

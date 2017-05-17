@@ -19,9 +19,7 @@ public class LockdcreenReceiver extends BroadcastReceiver{
 
         if (action.equals(Intent.ACTION_SCREEN_OFF)) {
             Intent lockscreen = new Intent(context, LockscreenActivity.class);
-
             lockscreen.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
             context.startActivity(lockscreen);
         }
     }

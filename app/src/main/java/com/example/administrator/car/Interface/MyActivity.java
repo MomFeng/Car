@@ -2,27 +2,44 @@ package com.example.administrator.car.Interface;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
+import com.example.administrator.car.util.ActivityManager;
 import com.example.administrator.car.util.AnnotationUtilView;
 
+import java.util.List;
+
 /**
- * 用于被activity类继承的基类，可以实现去除标题栏
+ * 用于被activity类继承的基类，可以实现去除标题栏，集成管理activity
  * Created by MomFeng on 2017/4/30 0030.
+ *
+ * 2017/5/17
+ * 去除主题，使seterror方法可兼容
+ * 增加管理activity
  */
-public class MyActivity extends Activity {
+public class MyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         AnnotationUtilView.injectActivity(this);
+        ActivityManager.OnCreateActivity(this); //添加到ActivityManager中
         super.onCreate(savedInstanceState);
-        setTheme(android.R.style.Theme_Light_NoTitleBar);
+        List<Activity> list = ActivityManager.GetActivityList();
+        System.out.println("list.size()---" + list.size());
+        //setTheme(android.R.style.Theme_Light_NoTitleBar);
     }
 
     @Override
     public void setContentView(int layoutResID) {
         // TODO Auto-generated method stub
         super.setContentView(layoutResID);
+    }
+
+    @Override
+    protected void onDestroy() {
+        ActivityManager.OnDestroyActivity(this); //从ActivityManager中移除
+        super.onDestroy();
     }
 }

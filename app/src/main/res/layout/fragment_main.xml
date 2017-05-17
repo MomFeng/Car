@@ -31,7 +31,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="10dp"
                     android:layout_marginRight="1dp">
 
                     <ImageView
@@ -40,8 +39,8 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
@@ -50,14 +49,13 @@
 
                 <LinearLayout
                     android:id="@+id/lea_wallpaper_main"
-                    android:background="#fff"
                     android:layout_marginRight="1dp"
+                    android:background="#fff"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -65,8 +63,8 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/car_wallpaper"
                         android:textColor="#4AF"
@@ -80,8 +78,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -89,10 +86,10 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="违章查询"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -103,8 +100,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -112,115 +108,8 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/case_of_car"
-                        android:textColor="#4AF"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:orientation="horizontal"
-                android:background="#ccc">
-
-                <LinearLayout
-                    android:background="#fff"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@mipmap/ic_car_condition" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/case_of_car"
-                        android:textColor="#4AF"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:background="#fff"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@mipmap/ic_car_condition" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/case_of_car"
-                        android:textColor="#4AF"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:background="#fff"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@mipmap/ic_car_condition" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/case_of_car"
-                        android:textColor="#4AF"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:background="#fff"
-                    android:layout_marginTop="1dp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@mipmap/ic_car_condition" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
@@ -243,8 +132,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -252,8 +140,8 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
@@ -268,8 +156,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -277,8 +164,8 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
@@ -293,8 +180,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -302,8 +188,8 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
@@ -317,8 +203,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -326,8 +211,8 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
@@ -344,14 +229,13 @@
 
                 <LinearLayout
                     android:background="#fff"
-                    android:layout_marginTop="1dp"
                     android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -359,26 +243,23 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:background="#fff"
-                    android:layout_marginTop="1dp"
                     android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingRight="1dp"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -386,25 +267,23 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:background="#fff"
-                    android:layout_marginTop="1dp"
                     android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -412,13 +291,12 @@
                         android:background="@mipmap/ic_car_condition" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/case_of_car"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -428,8 +306,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -437,13 +314,12 @@
                         android:background="@mipmap/ic_car_more" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/more_content"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
-
                 </LinearLayout>
 
             </LinearLayout>

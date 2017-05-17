@@ -1,11 +1,14 @@
 package com.example.administrator.car.activity;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
@@ -18,9 +21,13 @@ import com.example.administrator.car.Interface.BindView;
 import com.example.administrator.car.Interface.BindonClick;
 import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
+import com.example.administrator.car.application.MyApplication;
+import com.example.administrator.car.util.ActivityManager;
 import com.example.administrator.car.util.GlideCacheUtil;
+import com.example.administrator.car.util.SimpleUtil;
 import com.example.administrator.car.view.SwitchView;
 
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -71,6 +78,12 @@ public class SettingActivity extends MyActivity{
     LinearLayout lea_setting_cleancache;
     @BindView(R.id.tv_setting_cleancache)
     TextView tv_setting_cleancache;
+    @BindView(R.id.tv_setting_account)
+    TextView tv_setting_account;
+    @BindView(R.id.tv_setting_aboutus)
+    TextView tv_setting_aboutus;
+
+    private MyApplication app;
 
     private int[] imgs = {R.id.img_setting_default,R.id.img_setting_simplechinese,R.id.img_setting_traditionalchinese,R.id.img_setting_english};
 
@@ -100,11 +113,13 @@ public class SettingActivity extends MyActivity{
     }
 
     private void initView() {
-
+        app = (MyApplication) SettingActivity.this.getApplication();
+        sv_pulldoor_setting.setcheck(true);
     }
 
-    @BindonClick({R.id.btn_setting_back,R.id.lea_setting_default,R.id.lea_setting_simplechinese,R.id.lea_setting_traditionalchinese,
-            R.id.lea_setting_english,R.id.lea_intent_setting,R.id.lea_bluetooth_setting,R.id.lin_setting_pulldoor,R.id.lea_setting_cleancache})
+    @BindonClick({R.id.btn_setting_back,R.id.lea_setting_default,R.id.lea_setting_simplechinese,R.id.lea_setting_traditionalchinese,R.id.sv_pulldoor_setting,
+            R.id.lea_setting_english,R.id.lea_intent_setting,R.id.lea_bluetooth_setting,R.id.lin_setting_pulldoor,R.id.lea_setting_cleancache,R.id.tv_setting_account
+            ,R.id.tv_setting_aboutus})
     public void myOnClick(View v) {
         Resources resources = SettingActivity.this.getResources();
         DisplayMetrics dm = resources.getDisplayMetrics();
@@ -174,15 +189,56 @@ public class SettingActivity extends MyActivity{
                 break;
             //炫酷锁屏点击事件
             case R.id.lin_setting_pulldoor:
+            case R.id.sv_pulldoor_setting:
                 if(sv_pulldoor_setting.getcheck()){
+                    SimpleUtil.SetShareBoolean("config" , "islock" , false , SettingActivity.this);
+                    app.StopService();
                     sv_pulldoor_setting.setcheck(false);
                 }else{
+                    SimpleUtil.SetShareBoolean("config" , "islock" , true , SettingActivity.this);
+                    app.StartService();
                     sv_pulldoor_setting.setcheck(true);
                 }
                 break;
             //清除缓存点击事件
             case R.id.lea_setting_cleancache:
                 GlideCacheUtil.getInstance().clearImageAllCache(SettingActivity.this);
+                tv_setting_cleancache.setText("0.0Byte");
+                //tv_setting_cleancache.setText(GlideCacheUtil.getInstance().getCacheSize(SettingActivity.this));
+                break;
+            //切换账号
+            case R.id.tv_setting_account:
+                AlertDialog.Builder normalDialog = new AlertDialog.Builder(SettingActivity.this);
+                normalDialog.setIcon(R.mipmap.ic_launcher);
+                normalDialog.setTitle("");
+                normalDialog.setMessage("确定退出当前账号");
+                normalDialog.setPositiveButton("退出",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //MainActivity.this.finish();
+                                List<Activity> list = ActivityManager.GetActivityList();
+                                for (int position = 0; position < list.size(); position++) {
+                                    System.out.println("list.size()----" + list.size());
+                                    list.get(position).finish();
+                                }//关闭了其余所有的activity
+                                SettingActivity.this.finish();
+                                Intent i = new Intent(SettingActivity.this , LoginActivity.class);
+                                startActivity(i);
+                            }
+                        });
+                normalDialog.setNegativeButton("取消",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //...To-do
+                            }
+                        });
+                normalDialog.show();
+                break;
+            //关于我们点击事件
+            case R.id.tv_setting_aboutus:
+
                 break;
         }
     }

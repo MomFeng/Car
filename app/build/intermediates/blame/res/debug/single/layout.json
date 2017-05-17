@@ -148,6 +148,10 @@
         "source": "E:\\git\\Car\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_aboutus.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\layout\\activity_aboutus.xml"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },

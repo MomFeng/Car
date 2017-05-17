@@ -32,9 +32,9 @@ public class ThreeFragment extends Fragment {
         LayoutInflater mInflater = LayoutInflater.from(getActivity());
         View view_three = mInflater.inflate(R.layout.fragment_three,null);
 
-        initData();
+        //initData();
 
-        vp_pager_three = (ViewPager) view_three.findViewById(R.id.vp_pager_three);
+        //vp_pager_three = (ViewPager) view_three.findViewById(R.id.vp_pager_three);
 
         adapter = new PagerAdapter() {
 
@@ -64,7 +64,7 @@ public class ThreeFragment extends Fragment {
             }
         };
 
-        vp_pager_three.setAdapter(adapter);
+        //vp_pager_three.setAdapter(adapter);
 
         return view_three;
     }

@@ -16,6 +16,7 @@ import com.example.administrator.car.Interface.BindView;
 import com.example.administrator.car.Interface.BindonClick;
 import com.example.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
+import com.example.administrator.car.application.MyApplication;
 import com.example.administrator.car.util.AnnotationUtilView;
 
 /**
@@ -23,7 +24,7 @@ import com.example.administrator.car.util.AnnotationUtilView;
  * Created by MomFeng on 2017/5/16 0016.
  */
 @BindLayout(R.layout.activity_login)
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends MyActivity {
 
     @BindView(R.id.ed_login_username)
     private EditText ed_login_username;
@@ -33,12 +34,11 @@ public class LoginActivity extends AppCompatActivity {
     private Button btn_login_registered;
     @BindView(R.id.btn_login_login)
     private Button btn_login_login;
+    private MyApplication app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AnnotationUtilView.injectActivity(this);
         super.onCreate(savedInstanceState);
-
     }
 
     @BindonClick({R.id.btn_login_registered , R.id.btn_login_login})
@@ -69,6 +69,10 @@ public class LoginActivity extends AppCompatActivity {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
+                                    app = (MyApplication) LoginActivity.this.getApplication();
+                                    app.setStart(true);
+                                    app.setmHealth(0);
+                                    app.setmHealth_int(0);
                                     Intent i = new Intent(LoginActivity.this , RegisteredActivity.class);
                                     startActivity(i);
                                 }

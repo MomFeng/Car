@@ -32,11 +32,12 @@
         <activity android:name=".activity.glide.Glide"></activity>
         <activity android:name=".activity.LoginActivity"></activity>
         <activity android:name=".activity.RegisteredActivity"></activity>
+        <activity android:name=".activity.AboutUsActivity"></activity>
 
         <service android:name=".service.LockscreenService" ></service>
 
         <activity android:name=".activity.LockscreenActivity"
-            android:theme="@style/LockScreenBase"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:excludeFromRecents="true"
             android:exported="false"
             android:launchMode="singleInstance"

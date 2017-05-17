@@ -1,11 +1,15 @@
 package com.example.administrator.car.activity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -76,9 +80,14 @@ public class MainActivity extends MyFeagmentAvtivity{
         initViewPager();
         //所有的监听事件
         initEvent();
-        //启动服务
-        MyApplication app = (MyApplication) getApplication();
-        app.startService();
+
+        //启动锁屏服务
+        SharedPreferences sp = getSharedPreferences("config" , MODE_PRIVATE);
+        if(sp.getBoolean("islocd" , true)){
+            MyApplication app = (MyApplication) getApplication();
+            app.StartService();
+        }
+
     }
 
     /*@Override
@@ -290,5 +299,28 @@ public class MainActivity extends MyFeagmentAvtivity{
                 tv_tab_main.setAlpha(0);
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder normalDialog = new AlertDialog.Builder(MainActivity.this);
+        normalDialog.setIcon(R.mipmap.ic_launcher);
+        normalDialog.setTitle("");
+        normalDialog.setMessage("确定要离开么");
+        normalDialog.setPositiveButton("退出",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        MainActivity.this.finish();
+                    }
+                });
+        normalDialog.setNegativeButton("在玩一会",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //...To-do
+                    }
+                });
+        normalDialog.show();
     }
 }

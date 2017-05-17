@@ -24,14 +24,12 @@ public class LockscreenService extends Service{
     @Override
     public void onCreate() {
         super.onCreate();
-        //1.创建广播接收者对象
         mReceiver = new LockdcreenReceiver();
-        //2.创建intent-filter对象
+
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_SCREEN_OFF);
         filter.addAction(Intent.ACTION_SCREEN_ON);
 
-        //3.注册广播接收者
         registerReceiver(mReceiver, filter);
     }
 

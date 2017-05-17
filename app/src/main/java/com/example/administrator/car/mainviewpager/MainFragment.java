@@ -51,11 +51,12 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 public void run() {
                     super.run();
                     app.setStart(false);
-                    for (float i = 1; i <= 200; i+=0.1) {
+                    for (float i = 1; i <= 200; i+=0.5) {
+                        System.out.println("i---" + i);
                         sur_health.setmHealth(i);
-                        sur_health.setmHealth_int((int)((i+0.1)/2));
+                        sur_health.setmHealth_int((int)((i+0.5)/2));
                         app.setmHealth(i);
-                        app.setmHealth_int((int)((i+0.1)/2));
+                        app.setmHealth_int((int)((i+0.5)/2));
                         try {
                             Thread.sleep(5);
                         } catch (InterruptedException e) {
