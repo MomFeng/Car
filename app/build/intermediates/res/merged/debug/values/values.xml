@@ -697,7 +697,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="about">关于</string>
     <string name="about_us">关于我们</string>
-    <string name="app_name">Car</string>
+    <string name="app_name">汽车秘书</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="automatically_turn_on_the_Bluetooth_connection_vehicle">自动开启蓝牙连接车辆</string>
     <string name="bind_the_device">绑定设备</string>

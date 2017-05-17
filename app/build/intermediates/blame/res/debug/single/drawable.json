@@ -4,16 +4,16 @@
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radio_white.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\radio_white.xml"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\notification_bg_low.xml"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_btn_borderless_material.xml"
-    },
-    {
-        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radio_white.xml",
-        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\radio_white.xml"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
@@ -46,6 +46,10 @@
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_selector.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\edittext_selector.xml"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
@@ -128,6 +132,10 @@
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_false.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\edittext_false.xml"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
@@ -158,6 +166,10 @@
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_true.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\edittext_true.xml"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
