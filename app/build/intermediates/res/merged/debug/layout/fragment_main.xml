@@ -12,7 +12,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.example.administrator.car.view.HealthView
+            <com.hncst.administrator.car.view.HealthView
                 android:id="@+id/sur_health"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -112,7 +112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="行车记录"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>

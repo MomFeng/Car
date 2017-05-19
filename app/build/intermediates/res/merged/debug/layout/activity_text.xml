@@ -5,14 +5,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.car.Text">
+    tools:context="com.example.administrator.car.com.hncst.administrator.car.Text">
 
-    <com.example.administrator.car.CarView
+    <com.hncst.administrator.car.CarView
         android:id="@+id/sur_carview"
         android:layout_width="200dp"
         android:layout_height="200dp" />
 
-    <com.example.administrator.car.CarView
+    <com.hncst.administrator.car.CarView
         android:layout_marginTop="20dp"
         android:id="@+id/sur_carview1"
         android:layout_width="200dp"

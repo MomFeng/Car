@@ -42,7 +42,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1" />
 
-                        <com.example.administrator.car.view.MycarView
+                        <com.hncst.administrator.car.view.MycarView
                             android:id="@+id/car_left_speed"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -132,7 +132,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1" />
 
-                    <com.example.administrator.car.view.ThemometerView
+                    <com.hncst.administrator.car.view.ThemometerView
                         android:id="@+id/th_carleft_themometer"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -211,7 +211,7 @@
                         android:background="#fff"
                         android:gravity="center">
 
-                        <com.example.administrator.car.view.LinechartsmallView
+                        <com.hncst.administrator.car.view.LinechartsmallView
                             android:id="@+id/lc_carleft_linechar"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" />

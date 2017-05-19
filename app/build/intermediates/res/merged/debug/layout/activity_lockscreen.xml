@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.administrator.car.view.PullDoorView
+    <com.hncst.administrator.car.view.PullDoorView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -32,6 +32,6 @@
             android:layout_gravity="center" />
     </LinearLayout>
 
-    </com.example.administrator.car.view.PullDoorView>
+    </com.hncst.administrator.car.view.PullDoorView>
 
 </LinearLayout>

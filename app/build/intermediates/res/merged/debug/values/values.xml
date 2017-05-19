@@ -116,6 +116,10 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="cardview_dark_background">#FF424242</color>
+    <color name="cardview_light_background">#FFFFFFFF</color>
+    <color name="cardview_shadow_end_color">#03000000</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#FF21272B</color>
     <color name="colorPrimaryDark">#303F9F</color>
@@ -238,6 +242,7 @@
             <enum name="auto" value="-1"/>
         </attr><attr format="boolean" name="behavior_hideable"/><attr format="boolean" name="behavior_skipCollapsed"/></declare-styleable>
     <declare-styleable name="ButtonBarLayout"><attr format="boolean" name="allowStacking"/></declare-styleable>
+    <declare-styleable name="CardView"><attr format="color" name="cardBackgroundColor"/><attr format="dimension" name="cardCornerRadius"/><attr format="dimension" name="cardElevation"/><attr format="dimension" name="cardMaxElevation"/><attr format="boolean" name="cardUseCompatPadding"/><attr format="boolean" name="cardPreventCornerOverlap"/><attr format="dimension" name="contentPadding"/><attr format="dimension" name="contentPaddingLeft"/><attr format="dimension" name="contentPaddingRight"/><attr format="dimension" name="contentPaddingTop"/><attr format="dimension" name="contentPaddingBottom"/><attr name="android:minWidth"/><attr name="android:minHeight"/></declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/><attr format="dimension" name="scrimVisibleHeightTrigger"/><attr format="integer" name="scrimAnimationDuration"/><attr name="collapsedTitleGravity">
             
             <flag name="top" value="0x30"/>
@@ -408,6 +413,14 @@
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
     <declare-styleable name="RecycleListView"><attr format="dimension" name="paddingBottomNoButtons"/><attr format="dimension" name="paddingTopNoTitle"/></declare-styleable>
     <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr name="android:descendantFocusability"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
+    <declare-styleable name="RollViewPager"><attr name="rollviewpager_hint_mode">
+            <enum name="point" value="0"/>
+            <enum name="number" value="1"/>
+        </attr><attr name="rollviewpager_hint_gravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr><attr format="dimension" name="rollviewpager_hint_paddingRight"/><attr format="dimension" name="rollviewpager_hint_paddingLeft"/><attr format="dimension" name="rollviewpager_hint_paddingTop"/><attr format="dimension" name="rollviewpager_hint_paddingBottom"/><attr format="integer" name="rollviewpager_play_delay"/><attr format="color" name="rollviewpager_hint_color"/><attr format="integer" name="rollviewpager_hint_alpha"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Layout"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
@@ -569,6 +582,9 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="cardview_compat_inset_shadow">1dp</dimen>
+    <dimen name="cardview_default_elevation">2dp</dimen>
+    <dimen name="cardview_default_radius">2dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -654,6 +670,7 @@
     <item name="transition_scene_layoutid_cache" type="id"/>
     <item name="up" type="id"/>
     <item name="view_offset_helper" type="id"/>
+    <item name="viewpager_inner" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="app_bar_elevation_anim_duration">150</integer>
@@ -707,7 +724,6 @@
     <string name="case_of_car">实时车况</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="clean_up_cache">清理缓存</string>
-    <string name="commodity">商品</string>
     <string name="cool_lock_screen">炫酷锁屏</string>
     <string name="download_path">下载路径</string>
     <string name="follow_the_system_language">跟随系统语言</string>
@@ -715,6 +731,7 @@
     <string name="help_with_feedback">帮助与反馈</string>
     <string name="illegal_inquiries">违章查询</string>
     <string name="index">首页</string>
+    <string name="information">资讯</string>
     <string name="intent">网络</string>
     <string name="language">语言</string>
     <string name="local">本地</string>
@@ -764,6 +781,13 @@
     <style name="Base.Animation.AppCompat.DropDownUp" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/abc_grow_fade_in_from_bottom</item>
         <item name="android:windowExitAnimation">@anim/abc_shrink_fade_out_from_bottom</item>
+    </style>
+    <style name="Base.CardView" parent="android:Widget">
+        <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
+        <item name="cardElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardMaxElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardPreventCornerOverlap">true</item>
     </style>
     <style name="Base.DialogWindowTitle.AppCompat" parent="android:Widget">
         <item name="android:maxLines">1</item>
@@ -1769,6 +1793,14 @@
         <item name="tabBackground">?attr/selectableItemBackground</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <style name="CardView" parent="Base.CardView">
+    </style>
+    <style name="CardView.Dark">
+        <item name="cardBackgroundColor">@color/cardview_dark_background</item>
+    </style>
+    <style name="CardView.Light">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
     <style name="LockScreenBase" parent="AppTheme">
 

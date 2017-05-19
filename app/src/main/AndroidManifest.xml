@@ -12,32 +12,32 @@
 
     <application
         android:allowBackup="true"
-        android:name=".application.MyApplication"
+        android:name="com.hncst.administrator.car.application.MyApplication"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:supportsRtl="true">
-        <activity android:name=".activity.StartActivity">
+        <activity android:name="com.hncst.administrator.car.activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SettingActivity"></activity>
-        <activity android:name=".carrealtime.CarrealtimeActivity"></activity>
-        <activity android:name=".activity.PhotoActivity"></activity>
-        <activity android:name=".activity.MainActivity"></activity>
-        <activity android:name=".activity.glide.Glide"></activity>
-        <activity android:name=".activity.LoginActivity"></activity>
-        <activity android:name=".activity.RegisteredActivity"></activity>
-        <activity android:name=".activity.AboutUsActivity"></activity>
-        <activity android:name=".activity.IllegalAvtivity"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.SettingActivity"></activity>
+        <activity android:name="com.hncst.administrator.car.carrealtime.CarrealtimeActivity"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.PhotoActivity"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.MainActivity"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.glide.Glide"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.LoginActivity"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.RegisteredActivity"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.AboutUsActivity"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.IllegalAvtivity"></activity>
 
-        <service android:name=".service.LockscreenService" ></service>
+        <service android:name="com.hncst.administrator.car.service.LockscreenService" ></service>
 
-        <activity android:name=".activity.LockscreenActivity"
+        <activity android:name="com.hncst.administrator.car.activity.LockscreenActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:excludeFromRecents="true"
             android:exported="false"

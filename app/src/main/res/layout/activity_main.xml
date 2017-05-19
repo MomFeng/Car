@@ -55,7 +55,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal">
 
-            <com.example.administrator.car.view.MyView
+            <com.hncst.administrator.car.view.MyView
                 android:id="@+id/tv_tab_main"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
@@ -73,7 +73,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal">
 
-            <com.example.administrator.car.view.MyView
+            <com.hncst.administrator.car.view.MyView
                 android:id="@+id/tv_tab_two"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
@@ -90,12 +90,12 @@
             android:layout_weight="1"
             android:gravity="center_horizontal">
 
-            <com.example.administrator.car.view.MyView
+            <com.hncst.administrator.car.view.MyView
                 android:id="@+id/tv_tab_three"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 ethan:bottomBitmap="@mipmap/ic_tab_three_ccc"
-                ethan:text="@string/commodity"
+                ethan:text="@string/information"
                 ethan:textsize="12sp"
                 ethan:topBitmap="@mipmap/ic_tab_three" />
 
@@ -107,7 +107,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal">
 
-            <com.example.administrator.car.view.MyView
+            <com.hncst.administrator.car.view.MyView
                 android:id="@+id/tv_tab_four"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.administrator.car"
+    package="com.hncst.administrator.car"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -21,34 +21,34 @@
         android:value="25.3.0" />
 
     <application
-        android:name="com.example.administrator.car.application.MyApplication"
+        android:name="com.hncst.administrator.car.application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        <activity android:name="com.example.administrator.car.activity.StartActivity" >
+        <activity android:name="com.hncst.administrator.car.activity.StartActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.administrator.car.activity.SettingActivity" />
-        <activity android:name="com.example.administrator.car.carrealtime.CarrealtimeActivity" />
-        <activity android:name="com.example.administrator.car.activity.PhotoActivity" />
-        <activity android:name="com.example.administrator.car.activity.MainActivity" />
-        <activity android:name="com.example.administrator.car.activity.glide.Glide" />
-        <activity android:name="com.example.administrator.car.activity.LoginActivity" />
-        <activity android:name="com.example.administrator.car.activity.RegisteredActivity" />
-        <activity android:name="com.example.administrator.car.activity.AboutUsActivity" />
-        <activity android:name="com.example.administrator.car.activity.IllegalAvtivity" />
+        <activity android:name="com.hncst.administrator.car.activity.SettingActivity" />
+        <activity android:name="com.hncst.administrator.car.carrealtime.CarrealtimeActivity" />
+        <activity android:name="com.hncst.administrator.car.activity.PhotoActivity" />
+        <activity android:name="com.hncst.administrator.car.activity.MainActivity" />
+        <activity android:name="com.hncst.administrator.car.activity.glide.Glide" />
+        <activity android:name="com.hncst.administrator.car.activity.LoginActivity" />
+        <activity android:name="com.hncst.administrator.car.activity.RegisteredActivity" />
+        <activity android:name="com.hncst.administrator.car.activity.AboutUsActivity" />
+        <activity android:name="com.hncst.administrator.car.activity.IllegalAvtivity" />
 
-        <service android:name="com.example.administrator.car.service.LockscreenService" />
+        <service android:name="com.hncst.administrator.car.service.LockscreenService" />
 
         <activity
-            android:name="com.example.administrator.car.activity.LockscreenActivity"
+            android:name="com.hncst.administrator.car.activity.LockscreenActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:launchMode="singleInstance"
