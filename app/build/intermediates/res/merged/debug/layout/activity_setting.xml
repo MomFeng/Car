@@ -32,6 +32,8 @@
             android:background="#4af" />
     </LinearLayout>
 
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -83,13 +85,14 @@
                         android:textSize="10sp" />
                 </LinearLayout>
 
-                <com.example.administrator.car.view.SwitchView
+                <Switch
                     android:id="@+id/sv_intent_setting"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:layout_marginBottom="12dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="8dp" />
+
 
             </LinearLayout>
 
@@ -111,13 +114,12 @@
                     android:textColor="#000"
                     android:textSize="16sp" />
 
-                <com.example.administrator.car.view.SwitchView
+                <Switch
                     android:id="@+id/sv_bluetooth_setting"
                     android:layout_width="50dp"
                     android:layout_height="25dp"
                     android:layout_marginBottom="12dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginRight="15dp"/>
 
             </LinearLayout>
 
@@ -274,14 +276,12 @@
                     android:textColor="#000"
                     android:textSize="16sp" />
 
-
-                <com.example.administrator.car.view.SwitchView
+                <Switch
                     android:id="@+id/sv_pulldoor_setting"
                     android:layout_width="50dp"
                     android:layout_height="25dp"
                     android:layout_marginBottom="12dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginRight="15dp"/>
 
             </LinearLayout>
 

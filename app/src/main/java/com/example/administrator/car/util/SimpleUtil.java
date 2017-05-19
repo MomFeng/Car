@@ -3,6 +3,12 @@ package com.example.administrator.car.util;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.Snackbar;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.administrator.car.R;
 
 /**
  * APP的一个工具类
@@ -10,6 +16,8 @@ import android.content.SharedPreferences;
  */
 
 public class SimpleUtil {
+
+    private static Toast toast;
 
     /**
      * 一个点击事件的工具类
@@ -47,6 +55,30 @@ public class SimpleUtil {
         SharedPreferences.Editor editor = sp.edit();
         editor.putBoolean(_field , b);
         editor.commit();
+    }
+
+    /**
+     * 展示Toast的方法
+     * @param context context
+     * @param content 内容
+     */
+    public static void showToast(Context context,String content){
+        if(toast == null){
+            toast = Toast.makeText(context , content ,Toast.LENGTH_SHORT);
+        }else{
+            toast.setText(content);
+        }
+        toast.show();
+    }
+
+    /**
+     * 更改snackbar弹出消息的字体颜色
+     * @param snackbar
+     * @param color
+     */
+    public static void setSnackbarMessageTextColor(Snackbar snackbar, int color) {
+        View view = snackbar.getView();
+        ((TextView) view.findViewById(R.id.snackbar_text)).setTextColor(color);
     }
 
 }

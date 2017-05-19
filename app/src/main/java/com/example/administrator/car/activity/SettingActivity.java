@@ -1,19 +1,25 @@
 package com.example.administrator.car.activity;
 
 import android.app.Activity;
+import android.app.FragmentContainer;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.administrator.car.Interface.BindLayout;
@@ -68,11 +74,11 @@ public class SettingActivity extends MyActivity{
     LinearLayout lin_setting_pulldoor;
     //仿IOS点击按钮
     @BindView(R.id.sv_intent_setting)
-    SwitchView sv_intent_setting;
+    Switch sv_intent_setting;
     @BindView(R.id.sv_bluetooth_setting)
-    SwitchView sv_bluetooth_setting;
+    Switch sv_bluetooth_setting;
     @BindView(R.id.sv_pulldoor_setting)
-    SwitchView sv_pulldoor_setting;
+    Switch sv_pulldoor_setting;
     //缓存
     @BindView(R.id.lea_setting_cleancache)
     LinearLayout lea_setting_cleancache;
@@ -84,12 +90,20 @@ public class SettingActivity extends MyActivity{
     TextView tv_setting_aboutus;
 
     private MyApplication app;
+    //网络的Switch的状态
+    private boolean isswitchnet = false;
+    //自动开启蓝牙的Switch的状态
+    private boolean isswitchbluetooth = false;
+    //炫酷锁屏的Switch的状态
+    private boolean isswitchpulldoor;
 
     private int[] imgs = {R.id.img_setting_default,R.id.img_setting_simplechinese,R.id.img_setting_traditionalchinese,R.id.img_setting_english};
+    View v = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        v = LayoutInflater.from(this).inflate(R.layout.activity_setting , null);
         //初始化控件
         initView();
         //初始化点击事件
@@ -108,16 +122,82 @@ public class SettingActivity extends MyActivity{
         }else{
             setBackcorrect(img_setting_english);
         }
-
         tv_setting_cleancache.setText(GlideCacheUtil.getInstance().getCacheSize(SettingActivity.this));
+
+        //网络的Switch事件监听
+        sv_intent_setting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    isswitchnet = isChecked;
+                }else{
+                    isswitchnet = isChecked;
+                }
+            }
+        });
+
+        //蓝牙的Switch事件监听
+        sv_bluetooth_setting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    isswitchbluetooth = isChecked;
+                }else{
+                    isswitchbluetooth = isChecked;
+                }
+            }
+        });
+
+        //炫酷锁屏的Switch事件监听
+        sv_pulldoor_setting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    isswitchpulldoor = isChecked;
+
+                    SimpleUtil.SetShareBoolean("config" , "islock" , isChecked , SettingActivity.this);
+                    app.StartService();
+
+                    //snackbar.getView().setBackgroundColor(0xff4488ff);
+                    Snackbar snackbar = null;
+                    snackbar = Snackbar.make(buttonView ,"炫酷锁屏已开启",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                    snackbar.getView().setBackgroundColor(0xff44AAff);
+                    snackbar.setActionTextColor(Color.RED);
+                    snackbar.show();
+
+                }else{
+
+                    SimpleUtil.SetShareBoolean("config" , "islock" , isChecked , SettingActivity.this);
+                    app.StopService();
+                    isswitchpulldoor = isChecked;
+
+                    Snackbar snackbar = null;
+                    snackbar = Snackbar.make(buttonView ,"炫酷锁屏已关闭",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                    snackbar.getView().setBackgroundColor(0xff44AAff);
+                    snackbar.setActionTextColor(Color.RED);
+                    snackbar.show();
+                }
+            }
+        });
     }
 
     private void initView() {
         app = (MyApplication) SettingActivity.this.getApplication();
-        sv_pulldoor_setting.setcheck(true);
+        isswitchpulldoor = SimpleUtil.GetShareBoolean("config" , "islock" , SettingActivity.this);
+        sv_pulldoor_setting.setChecked(SimpleUtil.GetShareBoolean("config" , "islock" , SettingActivity.this));
     }
 
-    @BindonClick({R.id.btn_setting_back,R.id.lea_setting_default,R.id.lea_setting_simplechinese,R.id.lea_setting_traditionalchinese,R.id.sv_pulldoor_setting,
+    @BindonClick({R.id.btn_setting_back,R.id.lea_setting_default,R.id.lea_setting_simplechinese,R.id.lea_setting_traditionalchinese,
             R.id.lea_setting_english,R.id.lea_intent_setting,R.id.lea_bluetooth_setting,R.id.lin_setting_pulldoor,R.id.lea_setting_cleancache,R.id.tv_setting_account
             ,R.id.tv_setting_aboutus})
     public void myOnClick(View v) {
@@ -174,30 +254,60 @@ public class SettingActivity extends MyActivity{
                 break;
             //网络模块的按钮
             case R.id.lea_intent_setting:
-                if(sv_intent_setting.getcheck()){
-                    sv_intent_setting.setcheck(false);
+                if(isswitchnet){
+                    sv_intent_setting.setChecked(false);
+                    isswitchnet = false;
                 }else{
-                    sv_intent_setting.setcheck(true);
+                    sv_intent_setting.setChecked(true);
+                    isswitchnet = true;
                 }
                 break;
             case R.id.lea_bluetooth_setting:
-                if(sv_bluetooth_setting.getcheck()){
-                    sv_bluetooth_setting.setcheck(false);
+                if(isswitchbluetooth){
+                    isswitchbluetooth = false;
+                    sv_bluetooth_setting.setChecked(false);
                 }else{
-                    sv_bluetooth_setting.setcheck(true);
+                    isswitchbluetooth = true;
+                    sv_bluetooth_setting.setChecked(true);
                 }
                 break;
             //炫酷锁屏点击事件
             case R.id.lin_setting_pulldoor:
-            case R.id.sv_pulldoor_setting:
-                if(sv_pulldoor_setting.getcheck()){
+                if(isswitchpulldoor){
                     SimpleUtil.SetShareBoolean("config" , "islock" , false , SettingActivity.this);
                     app.StopService();
-                    sv_pulldoor_setting.setcheck(false);
+                    sv_pulldoor_setting.setChecked(false);
+                    isswitchpulldoor = false;
+
+
+                    //snackbar.getView().setBackgroundColor(0xff4488ff);
+                    Snackbar snackbar = null;
+                    snackbar = Snackbar.make( v ,"炫酷锁屏已关闭",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                    snackbar.getView().setBackgroundColor(0xff44AAff);
+                    snackbar.setActionTextColor(Color.RED);
+                    snackbar.show();
+
                 }else{
                     SimpleUtil.SetShareBoolean("config" , "islock" , true , SettingActivity.this);
                     app.StartService();
-                    sv_pulldoor_setting.setcheck(true);
+                    sv_pulldoor_setting.setChecked(true);
+                    isswitchpulldoor = true;
+
+                    Snackbar snackbar = null;
+                    snackbar = Snackbar.make( v ,"炫酷锁屏已开启",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                    snackbar.getView().setBackgroundColor(0xff44AAff);
+                    snackbar.setActionTextColor(Color.RED);
+                    snackbar.show();
                 }
                 break;
             //清除缓存点击事件
@@ -238,7 +348,7 @@ public class SettingActivity extends MyActivity{
                 break;
             //关于我们点击事件
             case R.id.tv_setting_aboutus:
-
+                SimpleUtil.ToIntent(SettingActivity.this , AboutUsActivity.class);
                 break;
         }
     }

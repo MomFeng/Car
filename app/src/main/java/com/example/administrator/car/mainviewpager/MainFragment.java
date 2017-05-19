@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.administrator.car.R;
+import com.example.administrator.car.activity.IllegalAvtivity;
 import com.example.administrator.car.activity.PhotoActivity;
 import com.example.administrator.car.application.MyApplication;
 import com.example.administrator.car.carrealtime.CarrealtimeActivity;
@@ -27,6 +28,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     //实时车况，汽车壁纸
     private LinearLayout lea_car_main,lea_wallpaper_main;
     private View view_main;
+    private LinearLayout lea_main_illegal;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,8 +43,12 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
     private void initEvent() {
 
+        //实时车况
         lea_car_main.setOnClickListener(this);
+        //汽车壁纸
         lea_wallpaper_main.setOnClickListener(this);
+        //违章查询
+        lea_main_illegal.setOnClickListener(this);
 
         app = (MyApplication) getActivity().getApplication();
         if(app.isStart()){
@@ -75,6 +81,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         sur_health = (HealthView) view_main.findViewById(R.id.sur_health);
         lea_car_main = (LinearLayout) view_main.findViewById(R.id.lea_car_main);
         lea_wallpaper_main = (LinearLayout) view_main.findViewById(R.id.lea_wallpaper_main);
+        lea_main_illegal = (LinearLayout) view_main.findViewById(R.id.lea_main_illegal);
     }
 
     @Override
@@ -83,15 +90,21 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         Intent i;
 
         switch(v.getId()){
+            //实时车况
             case R.id.lea_car_main:
                 SimpleUtil.ToIntent(getContext() , CarrealtimeActivity.class);
                 /*i = new Intent(getContext() , CarrealtimeActivity.class);
                 startActivity(i);*/
                 break;
+            //汽车壁纸
             case R.id.lea_wallpaper_main:
                 SimpleUtil.ToIntent(getContext() , PhotoActivity.class);
                 /*i = new Intent(getContext() , PhotoActivity.class);
                 startActivity(i);*/
+                break;
+            //违章查询
+            case R.id.lea_main_illegal:
+                SimpleUtil.ToIntent(getContext() , IllegalAvtivity.class);
                 break;
         }
     }

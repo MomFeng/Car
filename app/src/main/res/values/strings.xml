@@ -29,4 +29,5 @@
     <string name="local">本地</string>
     <string name="clean_up_cache">清理缓存</string>
     <string name="download_path">下载路径</string>
+    <string name="illegal_inquiries">违章查询</string>
 </resources>

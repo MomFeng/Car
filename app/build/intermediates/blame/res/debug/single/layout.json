@@ -256,6 +256,10 @@
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_illegal.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\layout\\activity_illegal.xml"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_start.xml",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\layout\\activity_start.xml"
     },

@@ -43,6 +43,7 @@
         <activity android:name="com.example.administrator.car.activity.LoginActivity" />
         <activity android:name="com.example.administrator.car.activity.RegisteredActivity" />
         <activity android:name="com.example.administrator.car.activity.AboutUsActivity" />
+        <activity android:name="com.example.administrator.car.activity.IllegalAvtivity" />
 
         <service android:name="com.example.administrator.car.service.LockscreenService" />
 
