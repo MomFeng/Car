@@ -22,7 +22,6 @@ import java.util.List;
 public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
 	private LayoutInflater mInflater;
-	private Context context;
 	protected List<String> mDatas;
 	private NetUtil net;
 	public static String[] URLS;
@@ -41,7 +40,6 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<MyViewHolder
 
 	
 	public RecyclerViewSimpleAdapter(Context context, List<String> datas , RecyclerView recyclerView){
-		this.context = context;
 		this.mContext = context;
 		net = new NetUtil(recyclerView);
 		mInflater = LayoutInflater.from(context);

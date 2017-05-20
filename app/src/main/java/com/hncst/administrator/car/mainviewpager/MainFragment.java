@@ -58,7 +58,6 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                     super.run();
                     app.setStart(false);
                     for (float i = 1; i <= 200; i+=0.5) {
-                        System.out.println("i---" + i);
                         sur_health.setmHealth(i);
                         sur_health.setmHealth_int((int)((i+0.5)/2));
                         app.setmHealth(i);

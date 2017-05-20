@@ -12,12 +12,20 @@
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_tab_three_ccc.png"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\timeline_trend_icon_unlike.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\timeline_trend_icon_unlike.png"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_tab_one.png",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_tab_one.png"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_four_shopping.png",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_four_shopping.png"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\composer_rating_small_icon.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\composer_rating_small_icon.png"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_chassis.png",
@@ -32,6 +40,10 @@
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\toolbar_icon_comment.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\toolbar_icon_comment.png"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_tab_two_ccc.png",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_tab_two_ccc.png"
     },
@@ -40,12 +52,20 @@
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_tab_four_ccc.png"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\timeline_trend_icon_like.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\timeline_trend_icon_like.png"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_tab_three.png",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_tab_three.png"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_title_left.png",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\ic_title_left.png"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\composer_rating_small_icon_highlighted.png",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\composer_rating_small_icon_highlighted.png"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_correct.png",
