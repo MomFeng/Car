@@ -11,7 +11,14 @@
                     "endOffset": 134
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 746,
+                        "endColumn": 83,
+                        "endOffset": 825
+                    }
                 }
             },
             {
@@ -23,7 +30,14 @@
                     "endOffset": 174
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1207,
+                        "endColumn": 39,
+                        "endOffset": 1242
+                    }
                 }
             },
             {
@@ -35,7 +49,14 @@
                     "endOffset": 220
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1315,
+                        "endColumn": 45,
+                        "endOffset": 1356
+                    }
                 }
             },
             {
@@ -47,7 +68,14 @@
                     "endOffset": 261
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 1,
+                        "startColumn": 4,
+                        "startOffset": 17,
+                        "endColumn": 40,
+                        "endOffset": 53
+                    }
                 }
             },
             {
@@ -59,7 +87,14 @@
                     "endOffset": 399
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 938,
+                        "endColumn": 137,
+                        "endOffset": 1071
+                    }
                 }
             },
             {
@@ -71,7 +106,14 @@
                     "endOffset": 459
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 465,
+                        "endColumn": 59,
+                        "endOffset": 520
+                    }
                 }
             },
             {
@@ -83,7 +125,14 @@
                     "endOffset": 521
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 583,
+                        "endColumn": 61,
+                        "endOffset": 640
+                    }
                 }
             },
             {
@@ -95,7 +144,14 @@
                     "endOffset": 577
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1570,
+                        "endColumn": 55,
+                        "endOffset": 1621
+                    }
                 }
             },
             {
@@ -107,7 +163,14 @@
                     "endOffset": 629
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endColumn": 51,
+                        "endOffset": 147
+                    }
                 }
             },
             {
@@ -119,7 +182,14 @@
                     "endOffset": 687
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1668,
+                        "endColumn": 57,
+                        "endOffset": 1721
+                    }
                 }
             },
             {
@@ -131,7 +201,14 @@
                     "endOffset": 749
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1507,
+                        "endColumn": 61,
+                        "endOffset": 1564
+                    }
                 }
             },
             {
@@ -143,7 +220,14 @@
                     "endOffset": 805
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1727,
+                        "endColumn": 55,
+                        "endOffset": 1778
+                    }
                 }
             },
             {
@@ -155,7 +239,14 @@
                     "endOffset": 887
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1124,
+                        "endColumn": 81,
+                        "endOffset": 1201
+                    }
                 }
             },
             {
@@ -167,7 +258,14 @@
                     "endOffset": 925
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 208,
+                        "endColumn": 37,
+                        "endOffset": 241
+                    }
                 }
             },
             {
@@ -179,7 +277,14 @@
                     "endOffset": 991
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1248,
+                        "endColumn": 65,
+                        "endOffset": 1309
+                    }
                 }
             },
             {
@@ -191,7 +296,14 @@
                     "endOffset": 1055
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1784,
+                        "endColumn": 63,
+                        "endOffset": 1843
+                    }
                 }
             },
             {
@@ -203,7 +315,14 @@
                     "endOffset": 1095
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 39,
+                        "endOffset": 94
+                    }
                 }
             },
             {
@@ -234,7 +353,14 @@
                     "endOffset": 1189
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 703,
+                        "endColumn": 41,
+                        "endOffset": 740
+                    }
                 }
             },
             {
@@ -246,7 +372,14 @@
                     "endOffset": 1235
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1077,
+                        "endColumn": 45,
+                        "endOffset": 1118
+                    }
                 }
             },
             {
@@ -258,7 +391,14 @@
                     "endOffset": 1275
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1627,
+                        "endColumn": 39,
+                        "endOffset": 1662
+                    }
                 }
             },
             {
@@ -270,7 +410,14 @@
                     "endOffset": 1329
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 153,
+                        "endColumn": 53,
+                        "endOffset": 202
+                    }
                 }
             },
             {
@@ -282,7 +429,14 @@
                     "endOffset": 1363
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 300,
+                        "endColumn": 33,
+                        "endOffset": 329
+                    }
                 }
             },
             {
@@ -294,7 +448,14 @@
                     "endOffset": 1419
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 526,
+                        "endColumn": 55,
+                        "endOffset": 577
+                    }
                 }
             },
             {
@@ -306,7 +467,14 @@
                     "endOffset": 1525
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 831,
+                        "endColumn": 105,
+                        "endOffset": 932
+                    }
                 }
             },
             {
@@ -318,7 +486,14 @@
                     "endOffset": 1571
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1421,
+                        "endColumn": 45,
+                        "endOffset": 1462
+                    }
                 }
             },
             {
@@ -330,7 +505,14 @@
                     "endOffset": 1627
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 646,
+                        "endColumn": 55,
+                        "endOffset": 697
+                    }
                 }
             },
             {
@@ -342,7 +524,14 @@
                     "endOffset": 1685
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1362,
+                        "endColumn": 57,
+                        "endOffset": 1415
+                    }
                 }
             },
             {
@@ -354,7 +543,14 @@
                     "endOffset": 1753
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 396,
+                        "endColumn": 67,
+                        "endOffset": 459
+                    }
                 }
             },
             {
@@ -366,7 +562,14 @@
                     "endOffset": 1813
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 335,
+                        "endColumn": 59,
+                        "endOffset": 390
+                    }
                 }
             },
             {
@@ -378,7 +581,14 @@
                     "endOffset": 1851
                 },
                 "from": {
-                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\git\\Car\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1468,
+                        "endColumn": 37,
+                        "endOffset": 1501
+                    }
                 }
             }
         ]

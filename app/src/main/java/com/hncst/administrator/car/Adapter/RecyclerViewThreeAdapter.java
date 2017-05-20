@@ -46,7 +46,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
 
     @Override
     public MyViewHolder_three onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.item_rv_three, parent,false);
+        View view = mInflater.inflate(R.layout.item_rv_three, parent, false);
         MyViewHolder_three viewHolder = new MyViewHolder_three(view);
         return viewHolder;
     }
@@ -56,6 +56,8 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
         ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
         layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
         holder.tv_title.setText(mDatas.get(position).getTitle());
+        holder.tv_three_message.setText(mDatas.get(position).getMessage());
+        holder.tv_three_star.setText(mDatas.get(position).getStar());
 
         /***
          * Glide图片加载框架
@@ -101,7 +103,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
 
 class MyViewHolder_three extends RecyclerView.ViewHolder {
 
-    TextView tv_title;
+    TextView tv_title, tv_three_star, tv_three_message;
     ImageView img_images;
 
     public MyViewHolder_three(View arg0) {
@@ -109,6 +111,8 @@ class MyViewHolder_three extends RecyclerView.ViewHolder {
 
         tv_title = (TextView) arg0.findViewById(R.id.tv_three_title);
         img_images = (ImageView) arg0.findViewById(R.id.img_three_images);
+        tv_three_star = (TextView) arg0.findViewById(R.id.tv_three_star);
+        tv_three_message = (TextView) arg0.findViewById(R.id.tv_three_message);
         // TODO Auto-generated constructor stub
     }
 }
