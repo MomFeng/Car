@@ -84,12 +84,12 @@
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_vector_test.xml"
-    },
-    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_corners.xml",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\drawable\\rounded_corners.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",

@@ -34,6 +34,7 @@
         <activity android:name="com.hncst.administrator.car.activity.RegisteredActivity"></activity>
         <activity android:name="com.hncst.administrator.car.activity.AboutUsActivity"></activity>
         <activity android:name="com.hncst.administrator.car.activity.IllegalAvtivity"></activity>
+        <activity android:name="com.hncst.administrator.car.activity.NewsActivity"></activity>
 
         <service android:name="com.hncst.administrator.car.service.LockscreenService" ></service>
 

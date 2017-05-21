@@ -1,12 +1,16 @@
 package com.hncst.administrator.car.mainviewpager;
 
 import android.app.DownloadManager;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -22,15 +26,18 @@ import com.example.administrator.car.R;
 import com.hncst.administrator.car.Adapter.RecyclerViewSimpleAdapter;
 import com.hncst.administrator.car.Adapter.RecyclerViewThreeAdapter;
 import com.hncst.administrator.car.Bean.NewsBean;
+import com.hncst.administrator.car.activity.NewsActivity;
 import com.hncst.administrator.car.util.RecyclerViewClickListener;
 import com.hncst.administrator.car.util.RecyclerViewClickListener2;
 import com.hncst.administrator.car.util.SimpleUtil;
+import com.kogitune.activity_transition.ActivityTransitionLauncher;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +48,8 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+
+import static com.example.administrator.car.R.string.intent;
 
 /**
  * APP主界面的第三个Fragment（咨讯）
@@ -78,12 +87,19 @@ public class ThreeFragment extends Fragment {
             adapter.setmOnItemClickListener(new RecyclerViewThreeAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
-                    SimpleUtil.showToast(getActivity() , "Click " + position);
+                    SimpleUtil.showToast(getActivity() , "Click---" + position);
+
+                    final Intent intent = new Intent(getActivity(), NewsActivity.class);
+
+                    String bitmapurl = mDatas.get(position).getPhotourl();
+                    intent.putExtra("bitmapurl", bitmapurl);
+q
+                    ActivityTransitionLauncher.with(getActivity()).from(view).launch(intent);
                 }
 
                 @Override
                 public void onItemLongClick(View view, int position) {
-
+                    SimpleUtil.showToast(getActivity() , "LongClick---" + position);
                 }
             });
         }
@@ -112,21 +128,6 @@ public class ThreeFragment extends Fragment {
                 }
             }
         }.start();
-
-        /*adapter.setmOnItemClickListener(new RecyclerViewThreeAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                System.out.println("执行到了点击事件" + position);
-                Toast.makeText(getActivity(), "Click " + position, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onItemLongClick(View view, int position) {
-                System.out.println("执行到了长按点击事件" + position);
-                Toast.makeText(getActivity(), "Long Click " + mDatas.get(position), Toast.LENGTH_SHORT).show();
-            }
-        });*/
-
 
         //第一种点击事件方法
         /**review_three.addOnItemTouchListener(new RecyclerViewClickListener(getActivity(),new RecyclerViewClickListener.OnItemClickListener() {

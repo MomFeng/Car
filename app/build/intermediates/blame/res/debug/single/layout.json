@@ -144,6 +144,10 @@
         "source": "E:\\git\\Car\\app\\src\\main\\res\\layout\\fragment_four.xml"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_news.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\layout\\activity_news.xml"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\layout\\activity_main.xml"
     },

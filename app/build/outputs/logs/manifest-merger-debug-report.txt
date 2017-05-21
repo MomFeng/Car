@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:2:1-50:12
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from E:\git\Car\app\src\main\AndroidManifest.xml
@@ -30,7 +30,7 @@ ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:11:22-76
 application
-ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:13:5-48:19
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:13:5-49:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator.SC-201703201458\.android\build-cache\cbc0dc2c1eff6702de1467f3de31686560019a7b\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\739307084f93065442adb7340c65051f18544af2\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:transition:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\db3bda366c8a6496ebfc2259389722b877d204ca\output\AndroidManifest.xml:26:5-20
@@ -45,6 +45,7 @@ MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Administrat
 MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\26a74ddc56b6581b1c71a5a15235e192970d6343\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\0af7046d8ff1a391a0599c0ccc3b2e0883716884\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\bf6ab977df9b8a8c9054626cfd7250092bb91001\output\AndroidManifest.xml:29:5-20
+MERGED from [com.kogitune:pre-lollipop-activity-transition:1.3.3] C:\Users\Administrator.SC-201703201458\.android\build-cache\704689012a3d56f92c2bad6391642682ece10a43\output\AndroidManifest.xml:28:5-20
 	android:label
 		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:17:9-41
 	android:supportsRtl
@@ -109,26 +110,30 @@ activity#com.hncst.administrator.car.activity.IllegalAvtivity
 ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:36:9-98
 	android:name
 		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:36:19-86
+activity#com.hncst.administrator.car.activity.NewsActivity
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:37:9-95
+	android:name
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:37:19-83
 service#com.hncst.administrator.car.service.LockscreenService
-ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:38:9-98
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:39:9-98
 	android:name
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:38:18-86
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:39:18-86
 activity#com.hncst.administrator.car.activity.LockscreenActivity
-ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:40:9-47:25
+ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:41:9-48:25
 	android:screenOrientation
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:46:13-49
 	android:excludeFromRecents
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:42:13-46
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:43:13-46
 	android:launchMode
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:44:13-48
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:45:13-48
 	android:exported
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:43:13-37
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:44:13-37
 	android:theme
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:41:13-69
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:42:13-69
 	android:taskAffinity
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:46:13-63
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:47:13-63
 	android:name
-		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:40:19-89
+		ADDED from E:\git\Car\app\src\main\AndroidManifest.xml:41:19-89
 uses-sdk
 INJECTED from E:\git\Car\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator.SC-201703201458\.android\build-cache\cbc0dc2c1eff6702de1467f3de31686560019a7b\output\AndroidManifest.xml:5:5-7:41
@@ -148,6 +153,7 @@ MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Administrat
 MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\26a74ddc56b6581b1c71a5a15235e192970d6343\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\0af7046d8ff1a391a0599c0ccc3b2e0883716884\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\bf6ab977df9b8a8c9054626cfd7250092bb91001\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.kogitune:pre-lollipop-activity-transition:1.3.3] C:\Users\Administrator.SC-201703201458\.android\build-cache\704689012a3d56f92c2bad6391642682ece10a43\output\AndroidManifest.xml:24:5-26:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.3.0] C:\Users\Administrator.SC-201703201458\.android\build-cache\739307084f93065442adb7340c65051f18544af2\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
