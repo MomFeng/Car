@@ -1,9 +1,9 @@
 package com.hncst.administrator.car.Adapter;
 
 import android.content.Context;
-import android.media.Image;
-import android.os.Handler;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.administrator.car.R;
 import com.hncst.administrator.car.Bean.NewsBean;
-import com.hncst.administrator.car.Text;
 
 import java.util.List;
 
@@ -58,7 +57,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder_three holder, int position) {
+    public void onBindViewHolder(final MyViewHolder_three holder, final int position) {
         ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
         layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
         holder.tv_title.setText(mDatas.get(position).getTitle());
@@ -81,6 +80,14 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
             }
         });
 
+       /* holder.cv_three_all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                holder.img_like.setImageResource(R.mipmap.timeline_trend_icon_like);
+                System.out.println("点击了"+position);
+            }
+        });*/
+
         setUpItemEvent(holder);
     }
 
@@ -89,24 +96,24 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
         return mDatas.size();
     }
 
-    protected void setUpItemEvent(final MyViewHolder_three holder){
+    public void setUpItemEvent(final MyViewHolder_three holder){
         if(mOnItemClickListener != null){
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
+            holder.cv_three_all.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
-                    mOnItemClickListener.onItemClick(holder.itemView, layoutPosition);
+                    mOnItemClickListener.onItemClick(holder.cv_three_all, layoutPosition);
                 }
             });
 
             //longclick
-            holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            holder.cv_three_all.setOnLongClickListener(new View.OnLongClickListener() {
 
                 @Override
                 public boolean onLongClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
-                    mOnItemClickListener.onItemLongClick(holder.itemView , layoutPosition);
+                    mOnItemClickListener.onItemLongClick(holder.cv_three_all , layoutPosition);
                     return false;
                 }
             });
@@ -114,10 +121,11 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
     }
 }
 
-class MyViewHolder_three extends RecyclerView.ViewHolder {
+class MyViewHolder_three extends ViewHolder {
 
     TextView tv_title, tv_three_star, tv_three_message;
     ImageView img_images , img_like;
+    CardView cv_three_all;
 
     public MyViewHolder_three(View arg0) {
         super(arg0);
@@ -127,6 +135,7 @@ class MyViewHolder_three extends RecyclerView.ViewHolder {
         tv_three_star = (TextView) arg0.findViewById(R.id.tv_three_star);
         tv_three_message = (TextView) arg0.findViewById(R.id.tv_three_message);
         img_like = (ImageView) arg0.findViewById(R.id.img_three_like);
+        cv_three_all = (CardView) arg0.findViewById(R.id.cv_three_all);
         // TODO Auto-generated constructor stub
     }
 }
