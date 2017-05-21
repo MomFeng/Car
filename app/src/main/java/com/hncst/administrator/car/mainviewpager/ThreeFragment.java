@@ -14,8 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.administrator.car.R;
+import com.hncst.administrator.car.Adapter.RecyclerViewSimpleAdapter;
 import com.hncst.administrator.car.Adapter.RecyclerViewThreeAdapter;
 import com.hncst.administrator.car.Bean.NewsBean;
 
@@ -83,6 +85,21 @@ public class ThreeFragment extends Fragment {
                 }
             }
         }.start();
+
+        //recyclerview点击事件
+        if(adapter != null){
+            adapter.setmOnItemClickListener(new RecyclerViewSimpleAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(View view, int position) {
+                    Toast.makeText(getActivity(),"点击了"+position,Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onItemLongClick(View view, int position) {
+
+                }
+            });
+        }
 
         return view_three;
     }
