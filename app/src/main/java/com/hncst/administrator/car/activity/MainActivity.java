@@ -76,7 +76,7 @@ public class MainActivity extends MyFeagmentAvtivity{
 
         //启动锁屏服务
         SharedPreferences sp = getSharedPreferences("config" , MODE_PRIVATE);
-        if(sp.getBoolean("islocd" , true)){
+        if(sp.getBoolean("islock" , true)){
             MyApplication app = (MyApplication) getApplication();
             app.StartService();
         }
@@ -315,5 +315,10 @@ public class MainActivity extends MyFeagmentAvtivity{
                     }
                 });
         normalDialog.show();
+    }
+
+    //整个加载完毕才会执行此方法
+    @Override public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
     }
 }

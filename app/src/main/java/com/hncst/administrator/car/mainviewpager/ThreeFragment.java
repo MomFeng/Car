@@ -11,9 +11,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.administrator.car.R;
@@ -21,6 +23,9 @@ import com.hncst.administrator.car.Adapter.RecyclerViewSimpleAdapter;
 import com.hncst.administrator.car.Adapter.RecyclerViewThreeAdapter;
 import com.hncst.administrator.car.Bean.NewsBean;
 import com.hncst.administrator.car.util.RecyclerViewClickListener;
+import com.hncst.administrator.car.util.RecyclerViewClickListener2;
+import com.hncst.administrator.car.util.SimpleUtil;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -54,6 +59,9 @@ public class ThreeFragment extends Fragment {
     private RecyclerView review_three;
     private RecyclerViewThreeAdapter adapter;
     public List<NewsBean> mDatas = new ArrayList<>();
+    private LinearLayout lin_three_loading;
+
+    private AVLoadingIndicatorView avi_three_loading;
 
     private String url = "http://news-at.zhihu.com/api/4/news/latest";
     private String url1 = "http://news-at.zhihu.com/api/4/story-extra/";
@@ -63,8 +71,21 @@ public class ThreeFragment extends Fragment {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             review_three.setLayoutManager(new LinearLayoutManager(getActivity()));
+            lin_three_loading.setVisibility(View.GONE);
             adapter = new RecyclerViewThreeAdapter(getActivity(), mDatas, review_three);
             review_three.setAdapter(adapter);
+
+            adapter.setmOnItemClickListener(new RecyclerViewThreeAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(View view, int position) {
+                    SimpleUtil.showToast(getActivity() , "Click " + position);
+                }
+
+                @Override
+                public void onItemLongClick(View view, int position) {
+
+                }
+            });
         }
     };
 
@@ -73,11 +94,14 @@ public class ThreeFragment extends Fragment {
         LayoutInflater mInflater = LayoutInflater.from(getActivity());
         View view_three = mInflater.inflate(R.layout.fragment_three, null);
 
+        lin_three_loading = (LinearLayout) view_three.findViewById(R.id.lin_three_loading);
+        avi_three_loading = (AVLoadingIndicatorView) view_three.findViewById(R.id.avi_three_loading);
         review_three = (RecyclerView) view_three.findViewById(R.id.review_three);
         //初始化
         adapter = new RecyclerViewThreeAdapter();
 
-        new Thread(){
+        //获取数据的线程
+        new Thread() {
             @Override
             public void run() {
                 super.run();
@@ -89,55 +113,64 @@ public class ThreeFragment extends Fragment {
             }
         }.start();
 
-        adapter.setmOnItemClickListener(new RecyclerViewThreeAdapter.OnItemClickListener() {
+        /*adapter.setmOnItemClickListener(new RecyclerViewThreeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 System.out.println("执行到了点击事件" + position);
-                Toast.makeText(getActivity(),"Click "+position,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Click " + position, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onItemLongClick(View view, int position) {
                 System.out.println("执行到了长按点击事件" + position);
-                Toast.makeText(getActivity() ,"Long Click "+mDatas.get(position),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Long Click " + mDatas.get(position), Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
+
 
         //第一种点击事件方法
         /**review_three.addOnItemTouchListener(new RecyclerViewClickListener(getActivity(),new RecyclerViewClickListener.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                Toast.makeText(getActivity(),"Click "+position,Toast.LENGTH_SHORT).show();
-                final ImageView img = (ImageView) view.findViewById(R.id.img_three_like);
-                img.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        img.setImageResource(R.mipmap.timeline_trend_icon_like);
-                    }
-                });
-            }
+        @Override public void onItemClick(View view, int position) {
+        Toast.makeText(getActivity(),"Click "+position,Toast.LENGTH_SHORT).show();
+        final ImageView img = (ImageView) view.findViewById(R.id.img_three_like);
+        img.setOnClickListener(new View.OnClickListener() {
+        @Override public void onClick(View v) {
+        img.setImageResource(R.mipmap.timeline_trend_icon_like);
+        }
+        });
+        }
 
-            @Override
-            public void onItemLongClick(View view, int position) {
-                Toast.makeText(getActivity() ,"Long Click "+mDatas.get(position),Toast.LENGTH_SHORT).show();
-            }
+        @Override public void onItemLongClick(View view, int position) {
+        Toast.makeText(getActivity() ,"Long Click "+mDatas.get(position),Toast.LENGTH_SHORT).show();
+        }
         }));*/
 
         /**
-         * 运用GestureDetector点击事件的方法
-         review_three.addOnItemTouchListener(new RecyclerViewClickListener2(this, review_three,
+         * 运用GestureDetector点击事件的方法*/
+        /*review_three.addOnItemTouchListener(new RecyclerViewClickListener2(getActivity(), review_three,
                 new RecyclerViewClickListener2.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        Toast.makeText(getActivity(),"Click "+mData.get(position),Toast.LENGTH_SHORT).show();
+                        SimpleUtil.showToast(getActivity() , "Click " + position);
+
+                        ImageView img = (ImageView) view.findViewById(R.id.img_three_like);
+                        img.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                SimpleUtil.showToast(getActivity() , "执行到了图片的点击事件");
+                            }
+                        });
+
+                        Toast.makeText(getActivity(), "Click " + position, Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onItemLongClick(View view, int position) {
-                        Toast.makeText(getActivity().this,"Long Click "+mData.get(position),Toast.LENGTH_SHORT).show();
+                        SimpleUtil.showToast(getActivity() , "Click " + position);
+                        //Toast.makeText(getActivity(), "Long Click " + position, Toast.LENGTH_SHORT).show();
                     }
-                }));
-         */
+                }));*/
+
 
         //recyclerview点击事件
         /*if(adapter != null){
@@ -175,7 +208,7 @@ public class ThreeFragment extends Fragment {
                 JSONArray array_images = new JSONArray(stories.getString("images"));
                 bean.setPhotourl((String) array_images.get(0));
 
-                Request request1 = new Request.Builder().url(url1+bean.getId()).build();
+                Request request1 = new Request.Builder().url(url1 + bean.getId()).build();
                 Response response1 = client.newCall(request1).execute();
                 String json1 = response1.body().string();
                 JSONObject json_c = new JSONObject(json1);
@@ -192,4 +225,5 @@ public class ThreeFragment extends Fragment {
         m.what = 1;
         handler.sendMessage(m);
     }
+
 }

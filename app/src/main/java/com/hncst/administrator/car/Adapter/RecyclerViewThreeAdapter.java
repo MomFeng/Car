@@ -2,6 +2,7 @@ package com.hncst.administrator.car.Adapter;
 
 import android.content.Context;
 import android.media.Image;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +34,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
         void onItemClick(View view, int position);
         void onItemLongClick(View view, int position);
     }
-    public RecyclerViewThreeAdapter.OnItemClickListener mOnItemClickListener;
+    public OnItemClickListener mOnItemClickListener;
 
     public RecyclerViewThreeAdapter(){
 
@@ -45,7 +46,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
         this.mDatas = datas;
     }
 
-    public void setmOnItemClickListener(RecyclerViewThreeAdapter.OnItemClickListener listener){
+    public void setmOnItemClickListener(OnItemClickListener listener){
         this.mOnItemClickListener = listener;
     }
 

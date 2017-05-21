@@ -8,35 +8,35 @@ package com.jeremyfeinstein.slidingmenu.lib;
 
 public final class R {
     public static final class attr {
-        public static final int behindOffset = 0x7f010141;
-        public static final int behindScrollScale = 0x7f010143;
-        public static final int behindWidth = 0x7f010142;
-        public static final int fadeDegree = 0x7f010149;
-        public static final int fadeEnabled = 0x7f010148;
-        public static final int mode = 0x7f01013e;
-        public static final int selectorDrawable = 0x7f01014b;
-        public static final int selectorEnabled = 0x7f01014a;
-        public static final int shadowDrawable = 0x7f010146;
-        public static final int shadowWidth = 0x7f010147;
-        public static final int touchModeAbove = 0x7f010144;
-        public static final int touchModeBehind = 0x7f010145;
-        public static final int viewAbove = 0x7f01013f;
-        public static final int viewBehind = 0x7f010140;
+        public static final int behindOffset = 0x7f010143;
+        public static final int behindScrollScale = 0x7f010145;
+        public static final int behindWidth = 0x7f010144;
+        public static final int fadeDegree = 0x7f01014b;
+        public static final int fadeEnabled = 0x7f01014a;
+        public static final int mode = 0x7f010140;
+        public static final int selectorDrawable = 0x7f01014d;
+        public static final int selectorEnabled = 0x7f01014c;
+        public static final int shadowDrawable = 0x7f010148;
+        public static final int shadowWidth = 0x7f010149;
+        public static final int touchModeAbove = 0x7f010146;
+        public static final int touchModeBehind = 0x7f010147;
+        public static final int viewAbove = 0x7f010141;
+        public static final int viewBehind = 0x7f010142;
     }
     public static final class id {
-        public static final int fullscreen = 0x7f0d004a;
-        public static final int left = 0x7f0d0036;
-        public static final int margin = 0x7f0d004b;
+        public static final int fullscreen = 0x7f0d0066;
+        public static final int left = 0x7f0d0052;
+        public static final int margin = 0x7f0d0067;
         public static final int none = 0x7f0d0019;
-        public static final int right = 0x7f0d0037;
+        public static final int right = 0x7f0d0053;
         public static final int selected_view = 0x7f0d0008;
-        public static final int slidingmenumain = 0x7f0d00fc;
+        public static final int slidingmenumain = 0x7f0d011b;
     }
     public static final class layout {
         public static final int slidingmenumain = 0x7f040053;
     }
     public static final class styleable {
-        public static final int[] SlidingMenu = { 0x7f01013e, 0x7f01013f, 0x7f010140, 0x7f010141, 0x7f010142, 0x7f010143, 0x7f010144, 0x7f010145, 0x7f010146, 0x7f010147, 0x7f010148, 0x7f010149, 0x7f01014a, 0x7f01014b };
+        public static final int[] SlidingMenu = { 0x7f010140, 0x7f010141, 0x7f010142, 0x7f010143, 0x7f010144, 0x7f010145, 0x7f010146, 0x7f010147, 0x7f010148, 0x7f010149, 0x7f01014a, 0x7f01014b, 0x7f01014c, 0x7f01014d };
         public static final int SlidingMenu_behindOffset = 3;
         public static final int SlidingMenu_behindScrollScale = 5;
         public static final int SlidingMenu_behindWidth = 4;
