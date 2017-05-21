@@ -20,6 +20,7 @@ import com.example.administrator.car.R;
 import com.hncst.administrator.car.Adapter.RecyclerViewSimpleAdapter;
 import com.hncst.administrator.car.Adapter.RecyclerViewThreeAdapter;
 import com.hncst.administrator.car.Bean.NewsBean;
+import com.hncst.administrator.car.util.RecyclerViewClickListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -73,6 +74,8 @@ public class ThreeFragment extends Fragment {
         View view_three = mInflater.inflate(R.layout.fragment_three, null);
 
         review_three = (RecyclerView) view_three.findViewById(R.id.review_three);
+        //初始化
+        adapter = new RecyclerViewThreeAdapter();
 
         new Thread(){
             @Override
@@ -86,12 +89,62 @@ public class ThreeFragment extends Fragment {
             }
         }.start();
 
+        adapter.setmOnItemClickListener(new RecyclerViewThreeAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                System.out.println("执行到了点击事件" + position);
+                Toast.makeText(getActivity(),"Click "+position,Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+                System.out.println("执行到了长按点击事件" + position);
+                Toast.makeText(getActivity() ,"Long Click "+mDatas.get(position),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //第一种点击事件方法
+        /**review_three.addOnItemTouchListener(new RecyclerViewClickListener(getActivity(),new RecyclerViewClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(getActivity(),"Click "+position,Toast.LENGTH_SHORT).show();
+                final ImageView img = (ImageView) view.findViewById(R.id.img_three_like);
+                img.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        img.setImageResource(R.mipmap.timeline_trend_icon_like);
+                    }
+                });
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+                Toast.makeText(getActivity() ,"Long Click "+mDatas.get(position),Toast.LENGTH_SHORT).show();
+            }
+        }));*/
+
+        /**
+         * 运用GestureDetector点击事件的方法
+         review_three.addOnItemTouchListener(new RecyclerViewClickListener2(this, review_three,
+                new RecyclerViewClickListener2.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        Toast.makeText(getActivity(),"Click "+mData.get(position),Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onItemLongClick(View view, int position) {
+                        Toast.makeText(getActivity().this,"Long Click "+mData.get(position),Toast.LENGTH_SHORT).show();
+                    }
+                }));
+         */
+
         //recyclerview点击事件
-        if(adapter != null){
-            adapter.setmOnItemClickListener(new RecyclerViewSimpleAdapter.OnItemClickListener() {
+        /*if(adapter != null){
+            adapter.setmOnItemClickListener(new RecyclerViewThreeAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
-                    Toast.makeText(getActivity(),"点击了"+position,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"点击到了"+position,Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
@@ -99,7 +152,7 @@ public class ThreeFragment extends Fragment {
 
                 }
             });
-        }
+        }*/
 
         return view_three;
     }

@@ -886,7 +886,6 @@ int id icon 0x7f0d0056
 int id icon_group 0x7f0d00f6
 int id ifRoom 0x7f0d0045
 int id image 0x7f0d0053
-int id imageView2 0x7f0d00e2
 int id imageview 0x7f0d0085
 int id img_photo_view 0x7f0d00df
 int id img_setting_default 0x7f0d00a6
@@ -894,6 +893,7 @@ int id img_setting_english 0x7f0d00ac
 int id img_setting_simplechinese 0x7f0d00a8
 int id img_setting_traditionalchinese 0x7f0d00aa
 int id img_three_images 0x7f0d00e0
+int id img_three_like 0x7f0d00e2
 int id info 0x7f0d00f2
 int id item_touch_helper_previous_elevation 0x7f0d0005
 int id iv_hint 0x7f0d008d

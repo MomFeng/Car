@@ -3561,7 +3561,6 @@ containing a value of this type.
         public static final int icon_group=0x7f0d00f6;
         public static final int ifRoom=0x7f0d0045;
         public static final int image=0x7f0d0053;
-        public static final int imageView2=0x7f0d00e2;
         public static final int imageview=0x7f0d0085;
         public static final int img_photo_view=0x7f0d00df;
         public static final int img_setting_default=0x7f0d00a6;
@@ -3569,6 +3568,7 @@ containing a value of this type.
         public static final int img_setting_simplechinese=0x7f0d00a8;
         public static final int img_setting_traditionalchinese=0x7f0d00aa;
         public static final int img_three_images=0x7f0d00e0;
+        public static final int img_three_like=0x7f0d00e2;
         public static final int info=0x7f0d00f2;
         public static final int item_touch_helper_previous_elevation=0x7f0d0005;
         public static final int iv_hint=0x7f0d008d;

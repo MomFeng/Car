@@ -1,6 +1,7 @@
 package com.hncst.administrator.car.Adapter;
 
 import android.content.Context;
+import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +33,11 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
         void onItemClick(View view, int position);
         void onItemLongClick(View view, int position);
     }
-    public RecyclerViewSimpleAdapter.OnItemClickListener mOnItemClickListener;
+    public RecyclerViewThreeAdapter.OnItemClickListener mOnItemClickListener;
+
+    public RecyclerViewThreeAdapter(){
+
+    }
 
     public RecyclerViewThreeAdapter(Context context, List<NewsBean> datas , RecyclerView recyclerView){
         this.mContext = context;
@@ -40,7 +45,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
         this.mDatas = datas;
     }
 
-    public void setmOnItemClickListener(RecyclerViewSimpleAdapter.OnItemClickListener listener){
+    public void setmOnItemClickListener(RecyclerViewThreeAdapter.OnItemClickListener listener){
         this.mOnItemClickListener = listener;
     }
 
@@ -52,7 +57,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder_three holder, int position) {
+    public void onBindViewHolder(final MyViewHolder_three holder, int position) {
         ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
         layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
         holder.tv_title.setText(mDatas.get(position).getTitle());
@@ -67,6 +72,13 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
                 .placeholder(R.mipmap.ic_launcher)
                 .crossFade()
                 .into(holder.img_images);
+
+        holder.img_like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                holder.img_like.setImageResource(R.mipmap.timeline_trend_icon_like);
+            }
+        });
 
         setUpItemEvent(holder);
     }
@@ -104,7 +116,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
 class MyViewHolder_three extends RecyclerView.ViewHolder {
 
     TextView tv_title, tv_three_star, tv_three_message;
-    ImageView img_images;
+    ImageView img_images , img_like;
 
     public MyViewHolder_three(View arg0) {
         super(arg0);
@@ -113,6 +125,7 @@ class MyViewHolder_three extends RecyclerView.ViewHolder {
         img_images = (ImageView) arg0.findViewById(R.id.img_three_images);
         tv_three_star = (TextView) arg0.findViewById(R.id.tv_three_star);
         tv_three_message = (TextView) arg0.findViewById(R.id.tv_three_message);
+        img_like = (ImageView) arg0.findViewById(R.id.img_three_like);
         // TODO Auto-generated constructor stub
     }
 }
