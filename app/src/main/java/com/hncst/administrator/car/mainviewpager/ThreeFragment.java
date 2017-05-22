@@ -5,6 +5,7 @@ import android.app.ActivityOptions;
 import android.app.DownloadManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -80,6 +82,7 @@ public class ThreeFragment extends Fragment {
     private LinearLayout lin_three_loading;
 
     private AVLoadingIndicatorView avi_three_loading;
+    private SwipeRefreshLayout swipe_three_refresh;
 
     private String url = "http://news-at.zhihu.com/api/4/news/latest";
     private String url1 = "http://news-at.zhihu.com/api/4/story-extra/";
@@ -149,6 +152,9 @@ public class ThreeFragment extends Fragment {
         lin_three_loading = (LinearLayout) view_three.findViewById(R.id.lin_three_loading);
         avi_three_loading = (AVLoadingIndicatorView) view_three.findViewById(R.id.avi_three_loading);
         review_three = (RecyclerView) view_three.findViewById(R.id.review_three);
+        swipe_three_refresh = (SwipeRefreshLayout) view_three.findViewById(R.id.swipe_three_refresh);
+
+        swipe_three_refresh.setColorSchemeColors(Color.parseColor("#44aaff"));
         //初始化
         adapter = new RecyclerViewThreeAdapter();
 
@@ -164,6 +170,23 @@ public class ThreeFragment extends Fragment {
                 }
             }
         }.start();
+
+        swipe_three_refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                NewsBean bean = new NewsBean();
+                bean.setStar("111");
+                bean.setMessage("15");
+                bean.setTitle("新刷新出来的");
+                bean.setId("9434365");
+                bean.setPhotourl("https://pic2.zhimg.com/v2-b2a8a66b8a369f6c7026713656b62de1.jpg");
+                mDatas.add(0,bean);
+
+                //数据重新加载完成后，提示数据发生改变，并且设置现在不在刷新
+                adapter.notifyDataSetChanged();
+                swipe_three_refresh.setRefreshing(false);
+            }
+        });
 
         //第一种点击事件方法
         /**review_three.addOnItemTouchListener(new RecyclerViewClickListener(getActivity(),new RecyclerViewClickListener.OnItemClickListener() {
