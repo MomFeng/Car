@@ -2,10 +2,13 @@ package com.hncst.administrator.car.activity;
 
 import android.content.Intent;
 import android.graphics.PointF;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.Html;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.example.administrator.car.R;
 import com.hncst.administrator.car.Interface.BindLayout;
 import com.hncst.administrator.car.Interface.BindView;
+import com.hncst.administrator.car.Interface.BindonClick;
 import com.hncst.administrator.car.Interface.MyActivity;
 import com.kogitune.activity_transition.ExitActivityTransition;
 
@@ -20,6 +24,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import jp.wasabeef.glide.transformations.CropTransformation;
@@ -44,8 +50,11 @@ public class NewsActivity extends MyActivity{
     private TextView tv_news_title;
     @BindView(R.id.tv_news_content)
     private TextView tv_news_content;
+    @BindView(R.id.btn_news_back)
+    private Button btn_news_back;
+    @BindView(R.id.tv_three_title)
+    private TextView tv_three_title;
     private ExitActivityTransition exitTransition;
-
 
     private String id;
     private String url = "http://news-at.zhihu.com/api/4/news/";
@@ -55,22 +64,30 @@ public class NewsActivity extends MyActivity{
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
 
-            JSONObject jsonObject = null;
-            String json_stories = "";
-            try {
-                jsonObject = new JSONObject((String) msg.obj);
-                json_stories = jsonObject.getString("body");
-            } catch (JSONException e1) {
-                e1.printStackTrace();
-            }
-            try {
-                Glide.with(NewsActivity.this)
-                        .load(jsonObject.getString("image"))
-                        .bitmapTransform(new CropTransformation(NewsActivity.this, 600, 300, CropTransformation.CropType.CENTER) , new VignetteFilterTransformation(NewsActivity.this, new PointF(0.5F, 0.5F), new float[]{0.0F, 0.0F, 0.0F}, 0.0F, 0.8F))
-                        .into(img_news_photo);
-                tv_news_content.setText(Html.fromHtml(json_stories));
-            } catch (JSONException e) {
-                e.printStackTrace();
+            switch(msg.what){
+                case 1:
+                    JSONObject jsonObject = null;
+                    String json_stories = "";
+                    try {
+                        jsonObject = new JSONObject((String) msg.obj);
+                        json_stories = jsonObject.getString("body");
+                    } catch (JSONException e1) {
+                        e1.printStackTrace();
+                    }
+                    try {
+                        Glide.with(NewsActivity.this)
+                                .load(jsonObject.getString("image"))
+                                .bitmapTransform(new CropTransformation(NewsActivity.this, 600, 300, CropTransformation.CropType.CENTER) , new VignetteFilterTransformation(NewsActivity.this, new PointF(0.5F, 0.5F), new float[]{0.0F, 0.0F, 0.0F}, 0.0F, 0.8F))
+                                .into(img_news_photo);
+                        //tv_news_content.setText(Html.fromHtml(json_stories));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 0x12:
+                    tv_news_content.setText(((CharSequence) msg.obj));
+                    //textview.setText((CharSequence) msg.obj);
+                    break;
             }
         }
     };
@@ -85,7 +102,7 @@ public class NewsActivity extends MyActivity{
         if(intent != null)
         {
             String bitmapurl = intent.getStringExtra("bitmapurl");
-            //Glide.with(NewsActivity.this).load(bitmapurl).into(img_news_photo);
+            tv_three_title.setText(intent.getStringExtra("title"));
             tv_news_title.setText(intent.getStringExtra("title"));
             id = intent.getStringExtra("_id");
         }
@@ -98,11 +115,11 @@ public class NewsActivity extends MyActivity{
                     getjsonfromnet();
                 } catch (IOException e) {
                     e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
             }
         }.start();
-
-        //exitTransition = ActivityTransition.with(getIntent()).to(findViewById(R.id.img_news_photo)).start(savedInstanceState);
     }
 
     /*@TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -111,12 +128,15 @@ public class NewsActivity extends MyActivity{
         NewsActivity.this.finishAfterTransition();
     }*/
 
-    public void getjsonfromnet() throws IOException {
+    public void getjsonfromnet() throws IOException, JSONException {
         OkHttpClient client = new OkHttpClient.Builder().readTimeout(5, TimeUnit.SECONDS).build();
         Request request = new Request.Builder().url(url+id).build();
         System.out.println("url+id" + url+id);
         Response response = client.newCall(request).execute();
         String json = response.body().string();
+
+        JSONObject j = new JSONObject(json);
+        htmlWebPic(j.getString("body"));
 
         Message m = new Message();
         m.what = 1;
@@ -124,4 +144,60 @@ public class NewsActivity extends MyActivity{
         handler.sendMessage(m);
 
     }
+
+    /**
+     * 加载html中图片的方法
+     */
+    public void htmlWebPic(final String htmlContent) {
+        Thread t = new Thread(new Runnable() {
+            Message msg = handler.obtainMessage();
+
+            @Override
+            public void run() {
+                Html.ImageGetter imageGetter = new Html.ImageGetter() {
+                    @Override
+                    public Drawable getDrawable(String source) {
+                        URL url = null;
+                        Drawable drawable = null;
+                        try {
+                            url = new URL(source);
+                            drawable = Drawable.createFromStream(
+                                    url.openStream(), null);
+
+                            //int screenWidth = getWindowManager().getDefaultDisplay().getWidth(); // 屏幕宽（像素，如：480px）
+                            //int screenHeight = getWindowManager().getDefaultDisplay().getHeight(); // 屏幕高（像素，
+                            //int w=screenWidth;
+                            //int h=w/(drawable.getIntrinsicWidth()/drawable.getIntrinsicHeight());
+
+                            //drawable.setBounds(0, 0,w,h);
+                            drawable.setBounds(0, 0,(drawable.getIntrinsicWidth())*5,(drawable.getIntrinsicHeight())*5);
+
+                        } catch (MalformedURLException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        return drawable;
+                    }
+                };
+                CharSequence result = Html.fromHtml(htmlContent, imageGetter, null);
+                msg.what = 0x12;
+                msg.obj = result;
+                handler.sendMessage(msg);
+            }
+        });
+        t.start();
+    }
+
+    @BindonClick({R.id.btn_news_back})
+    public void myonclick(View v){
+        switch(v.getId()){
+            case R.id.btn_news_back:
+                NewsActivity.this.finish();
+                break;
+        }
+
+    }
+
+
 }

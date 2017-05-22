@@ -1,80 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#eee"
-        android:orientation="vertical">
+        android:layout_height="50dp"
+        android:background="#4Af"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_news_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_three_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="@string/information"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/ic_title_right" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#4Af"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <Button
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@mipmap/ic_title_left" />
-
-            <TextView
-                android:id="@+id/tv_title_mian"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/information"
-                android:textColor="#fff"
-                android:textSize="18sp" />
-
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@mipmap/ic_title_right" />
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-
-            <ImageView
-                android:id="@+id/img_news_photo"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="fitXY" />
-
-            <TextView
-                android:layout_marginBottom="20dp"
-                android:id="@+id/tv_news_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="我是标题标题标题哦"
-                android:textColor="#fff"
-                android:textSize="22sp"
-                android:layout_alignParentBottom="true"/>
-
-        </RelativeLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_news_content"
-                android:layout_width="wrap_content"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/img_news_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tv_news_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp"
+                    android:text="我是标题标题标题哦"
+                    android:textColor="#fff"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="我是正我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文"
-                android:textSize="16sp" />
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/tv_news_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
         </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>
