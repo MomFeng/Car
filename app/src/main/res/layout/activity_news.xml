@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -39,6 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -47,7 +50,35 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="200dp"
+                android:background="#ccc">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rel_news_loading">
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avi_news_loading"
+                    android:layout_width="60dp"
+                    android:layout_height="37dp"
+                    app:indicator="BallTrianglePath"
+                    app:indicator_color="#4af"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#4af"
+                    android:text="图片加载中......"
+                    android:layout_below="@id/avi_news_loading"
+                    android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
 
                 <ImageView
                     android:id="@+id/img_news_photo"

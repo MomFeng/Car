@@ -10,6 +10,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -54,6 +55,8 @@ public class NewsActivity extends MyActivity{
     private Button btn_news_back;
     @BindView(R.id.tv_three_title)
     private TextView tv_three_title;
+    @BindView(R.id.rel_news_loading)
+    private RelativeLayout rel_news_loading;
     private ExitActivityTransition exitTransition;
 
     private String id;
@@ -79,6 +82,8 @@ public class NewsActivity extends MyActivity{
                                 .load(jsonObject.getString("image"))
                                 .bitmapTransform(new CropTransformation(NewsActivity.this, 600, 300, CropTransformation.CropType.CENTER) , new VignetteFilterTransformation(NewsActivity.this, new PointF(0.5F, 0.5F), new float[]{0.0F, 0.0F, 0.0F}, 0.0F, 0.8F))
                                 .into(img_news_photo);
+                        rel_news_loading.setVisibility(View.GONE);
+                        tv_news_title.setVisibility(View.VISIBLE);
                         //tv_news_content.setText(Html.fromHtml(json_stories));
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -97,7 +102,7 @@ public class NewsActivity extends MyActivity{
         super.onCreate(savedInstanceState);
 
         //ActivityTransition.with(getIntent()).to(findViewById(R.id.img_news_photo)).start(savedInstanceState);
-
+        tv_news_title.setVisibility(View.GONE);
         Intent intent=getIntent();
         if(intent != null)
         {

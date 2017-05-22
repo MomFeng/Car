@@ -22,63 +22,81 @@ import java.util.List;
  * Created by MomFeng on 2017/5/20 0020.
  */
 
-public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_three>{
+public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_three> {
 
     private LayoutInflater mInflater;
     protected List<NewsBean> mDatas;
     private Context mContext;
 
-    public interface OnItemClickListener
-    {
+    public interface OnItemClickListener {
         void onItemClick(View view, int position);
+
         void onItemLongClick(View view, int position);
     }
+
     public OnItemClickListener mOnItemClickListener;
 
-    public RecyclerViewThreeAdapter(){
+    public RecyclerViewThreeAdapter() {
 
     }
 
-    public RecyclerViewThreeAdapter(Context context, List<NewsBean> datas , RecyclerView recyclerView){
+    public RecyclerViewThreeAdapter(Context context, List<NewsBean> datas, RecyclerView recyclerView) {
         this.mContext = context;
         mInflater = LayoutInflater.from(context);
         this.mDatas = datas;
     }
 
-    public void setmOnItemClickListener(OnItemClickListener listener){
+    public void setmOnItemClickListener(OnItemClickListener listener) {
         this.mOnItemClickListener = listener;
     }
 
     @Override
     public MyViewHolder_three onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.item_rv_three, parent, false);
-        MyViewHolder_three viewHolder = new MyViewHolder_three(view);
+
+        View view = null;
+        MyViewHolder_three viewHolder = null;
+        switch (viewType) {
+            case 0:
+                view = LayoutInflater.from(mContext).inflate(R.layout.item_rv_three, parent, false);
+                viewHolder = new MyViewHolder_three(view);
+                break;
+            case 1:
+                view = LayoutInflater.from(mContext).inflate(R.layout.item_rv_three_button, parent, false);
+                viewHolder = new MyViewHolder_three(view);
+                break;
+        }
+
+        //View view = mInflater.inflate(R.layout.item_rv_three, parent, false);
+        //MyViewHolder_three viewHolder = new MyViewHolder_three(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder_three holder, final int position) {
-        ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
-        layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
-        holder.tv_title.setText(mDatas.get(position).getTitle());
-        holder.tv_three_message.setText(mDatas.get(position).getMessage());
-        holder.tv_three_star.setText(mDatas.get(position).getStar());
 
-        /***
-         * Glide图片加载框架
-         */
-        Glide.with(mContext)
-                .load(mDatas.get(position).getPhotourl())
-                .placeholder(R.mipmap.ic_launcher)
-                .crossFade()
-                .into(holder.img_images);
+        switch (getItemViewType(position)) {
+            case 0:
+                ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
+                layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
+                holder.tv_title.setText(mDatas.get(position).getTitle());
+                holder.tv_three_message.setText(mDatas.get(position).getMessage());
+                holder.tv_three_star.setText(mDatas.get(position).getStar());
 
-        holder.img_like.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                holder.img_like.setImageResource(R.mipmap.timeline_trend_icon_like);
-            }
-        });
+                /***
+                 * Glide图片加载框架
+                 */
+                Glide.with(mContext)
+                        .load(mDatas.get(position).getPhotourl())
+                        .placeholder(R.mipmap.ic_launcher)
+                        .crossFade()
+                        .into(holder.img_images);
+
+                holder.img_like.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        holder.img_like.setImageResource(R.mipmap.timeline_trend_icon_like);
+                    }
+                });
 
        /* holder.cv_three_all.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,16 +106,32 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
             }
         });*/
 
-        setUpItemEvent(holder);
+                setUpItemEvent(holder);
+                break;
+            case 1:
+
+                break;
+        }
+
+
     }
 
     @Override
     public int getItemCount() {
-        return mDatas.size();
+        return mDatas.size() + 1;
     }
 
-    public void setUpItemEvent(final MyViewHolder_three holder){
-        if(mOnItemClickListener != null){
+    @Override
+    public int getItemViewType(int position) {
+        int result = 0;
+        if (position == mDatas.size()) {
+            result = 1;
+        }
+        return result;
+    }
+
+    public void setUpItemEvent(final MyViewHolder_three holder) {
+        if (mOnItemClickListener != null) {
             holder.cv_three_all.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -113,7 +147,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
                 @Override
                 public boolean onLongClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
-                    mOnItemClickListener.onItemLongClick(holder.cv_three_all , layoutPosition);
+                    mOnItemClickListener.onItemLongClick(holder.cv_three_all, layoutPosition);
                     return false;
                 }
             });
@@ -124,7 +158,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
 class MyViewHolder_three extends ViewHolder {
 
     TextView tv_title, tv_three_star, tv_three_message;
-    ImageView img_images , img_like;
+    ImageView img_images, img_like;
     CardView cv_three_all;
 
     public MyViewHolder_three(View arg0) {
