@@ -103,7 +103,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
                 @Override
                 public void onClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
-                    mOnItemClickListener.onItemClick(holder.cv_three_all, layoutPosition);
+                    mOnItemClickListener.onItemClick(holder.img_images, layoutPosition);
                 }
             });
 

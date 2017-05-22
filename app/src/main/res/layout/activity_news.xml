@@ -1,40 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#4Af"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_height="match_parent"
+        android:background="#eee"
+        android:orientation="vertical">
 
-        <Button
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@mipmap/ic_title_left" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4Af"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-        <TextView
-            android:id="@+id/tv_title_mian"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/information"
-            android:textColor="#fff"
-            android:textSize="18sp" />
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@mipmap/ic_title_left" />
 
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@mipmap/ic_title_right" />
+            <TextView
+                android:id="@+id/tv_title_mian"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/information"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_title_right" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/img_news_photo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:id="@+id/tv_news_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="我是标题标题标题哦"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_news_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="我是正我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文我是正文正文牛正文"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/img_news_photo"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#f00"/>
-
-</LinearLayout>
+</ScrollView>

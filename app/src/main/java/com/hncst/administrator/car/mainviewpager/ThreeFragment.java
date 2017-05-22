@@ -1,12 +1,17 @@
 package com.hncst.administrator.car.mainviewpager;
 
+import android.annotation.TargetApi;
+import android.app.ActivityOptions;
 import android.app.DownloadManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -14,10 +19,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.transition.Explode;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -61,6 +68,8 @@ import static com.example.administrator.car.R.string.intent;
  * popularity : 点赞总数
  * short_comments : 短评论总数
  * comments : 评论总数
+ *
+ * 采用ActivityOptions下的方法进行跳转，6.0手机闪退，4.4测试通过，暂时放弃。
  */
 
 public class ThreeFragment extends Fragment {
@@ -76,25 +85,50 @@ public class ThreeFragment extends Fragment {
     private String url1 = "http://news-at.zhihu.com/api/4/story-extra/";
 
     final Handler handler = new Handler() {
+        @TargetApi(Build.VERSION_CODES.LOLLIPOP)
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
+
             review_three.setLayoutManager(new LinearLayoutManager(getActivity()));
             lin_three_loading.setVisibility(View.GONE);
             adapter = new RecyclerViewThreeAdapter(getActivity(), mDatas, review_three);
             review_three.setAdapter(adapter);
 
             adapter.setmOnItemClickListener(new RecyclerViewThreeAdapter.OnItemClickListener() {
+                @TargetApi(Build.VERSION_CODES.LOLLIPOP)
                 @Override
                 public void onItemClick(View view, int position) {
                     SimpleUtil.showToast(getActivity() , "Click---" + position);
 
-                    final Intent intent = new Intent(getActivity(), NewsActivity.class);
-
+                    /**
+                     * google的MD风格方案
+                     */
+                    Intent intent = new Intent(getActivity(), NewsActivity.class);
+                    // shareView: 需要共享的视图
+                    // "shareName": 设置的android:transitionName="shareName"
                     String bitmapurl = mDatas.get(position).getPhotourl();
                     intent.putExtra("bitmapurl", bitmapurl);
-q
-                    ActivityTransitionLauncher.with(getActivity()).from(view).launch(intent);
+                    intent.putExtra("title" , mDatas.get(position).getTitle());
+                    intent.putExtra("_id" , mDatas.get(position).getId());
+
+                    /*ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                            getActivity(), view, "shareName");
+                    ActivityCompat.startActivity(getActivity(), intent,
+                            options.toBundle());*/
+                    startActivity(intent);
+
+                    /*ActivityOptions options = ActivityOptions
+                            .makeSceneTransitionAnimation(getActivity(), view, "shareName");
+                    startActivity(intent, options.toBundle());*/
+
+                    /**
+                     * 第三方的方案
+                     */
+                    /*final Intent intent = new Intent(getActivity(), NewsActivity.class);
+                    String bitmapurl = mDatas.get(position).getPhotourl();
+                    intent.putExtra("bitmapurl", bitmapurl);
+                    ActivityTransitionLauncher.with(getActivity()).from(view).launch(intent);*/
                 }
 
                 @Override
@@ -105,8 +139,10 @@ q
         }
     };
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         LayoutInflater mInflater = LayoutInflater.from(getActivity());
         View view_three = mInflater.inflate(R.layout.fragment_three, null);
 

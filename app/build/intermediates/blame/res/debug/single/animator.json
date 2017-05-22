@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\slide_in.xml",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\animator\\slide_in.xml"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\animator\\anim_outx.xml",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\animator\\anim_outx.xml"
     },

@@ -5,6 +5,38 @@
     android:layout_height="match_parent"
     android:background="#eee">
 
+    <!--
+    loading动画样式
+    BallPulse
+    BallGridPulse
+    BallClipRotate
+    BallClipRotatePulse
+    SquareSpin
+    BallClipRotateMultiple
+    BallPulseRise
+    BallRotate
+    CubeTransition
+    BallZigZag
+    BallZigZagDeflect
+    BallTrianglePath
+    BallScale
+    LineScale
+    LineScaleParty
+    BallScaleMultiple
+    BallPulseSync
+    BallBeat
+    LineScalePulseOut
+    LineScalePulseOutRapid
+    BallScaleRipple
+    BallScaleRippleMultiple
+    BallSpinFadeLoader
+    LineSpinFadeLoader
+    TriangleSkewSpin
+    Pacman
+    BallGridBeat
+    SemiCircleSpin
+    -->
+
     <LinearLayout
         android:id="@+id/lin_three_loading"
         android:layout_width="match_parent"
