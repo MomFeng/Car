@@ -25,6 +25,8 @@ public final class R {
         public static final int design_fab_out=0x7f05000d;
         public static final int design_snackbar_in=0x7f05000e;
         public static final int design_snackbar_out=0x7f05000f;
+        public static final int top_in=0x7f050010;
+        public static final int top_out=0x7f050011;
     }
     public static final class animator {
         public static final int anim_inx=0x7f060000;
@@ -3909,6 +3911,8 @@ containing a value of this type.
         public static final int select_dialog_singlechoice_material=0x7f040054;
         public static final int slidingmenumain=0x7f040055;
         public static final int support_simple_spinner_dropdown_item=0x7f040056;
+        public static final int tsnackbar_layout=0x7f040057;
+        public static final int tsnackbar_layout_include=0x7f040058;
     }
     public static final class mipmap {
         public static final int background=0x7f030000;

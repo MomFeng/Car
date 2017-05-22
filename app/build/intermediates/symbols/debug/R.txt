@@ -14,6 +14,8 @@ int anim design_fab_in 0x7f05000c
 int anim design_fab_out 0x7f05000d
 int anim design_snackbar_in 0x7f05000e
 int anim design_snackbar_out 0x7f05000f
+int anim top_in 0x7f050010
+int anim top_out 0x7f050011
 int animator anim_inx 0x7f060000
 int animator anim_iny 0x7f060001
 int animator anim_outx 0x7f060002
@@ -1186,6 +1188,8 @@ int layout select_dialog_multichoice_material 0x7f040053
 int layout select_dialog_singlechoice_material 0x7f040054
 int layout slidingmenumain 0x7f040055
 int layout support_simple_spinner_dropdown_item 0x7f040056
+int layout tsnackbar_layout 0x7f040057
+int layout tsnackbar_layout_include 0x7f040058
 int mipmap background 0x7f030000
 int mipmap composer_rating_small_icon 0x7f030001
 int mipmap composer_rating_small_icon_highlighted 0x7f030002

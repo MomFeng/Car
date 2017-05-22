@@ -116,6 +116,23 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
 
     }
 
+    public void addDatalot(int positionStart, int itemCount){
+        notifyItemRangeInserted(positionStart, itemCount);
+    }
+
+
+    //添加数据的方法
+    public void addData(int pos , NewsBean bean){
+        mDatas.add(pos , bean);
+        notifyItemInserted(pos);
+    }
+
+    //删除数据的方法
+    public void deleteDate(int pos){
+        mDatas.remove(pos);
+        notifyItemRemoved(pos);
+    }
+
     @Override
     public int getItemCount() {
         return mDatas.size() + 1;

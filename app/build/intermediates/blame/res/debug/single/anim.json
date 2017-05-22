@@ -8,6 +8,14 @@
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\8202c1e702629032a01720c88efbb0df86263b78\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\top_in.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\2a0ad00f605204e56a90c24611e184005f463995\\output\\res\\anim\\top_in.xml"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\top_out.xml",
+        "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\2a0ad00f605204e56a90c24611e184005f463995\\output\\res\\anim\\top_out.xml"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
         "source": "C:\\Users\\Administrator.SC-201703201458\\.android\\build-cache\\739307084f93065442adb7340c65051f18544af2\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
