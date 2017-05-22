@@ -368,6 +368,18 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:layout_marginTop="1dp"
+                android:id="@+id/tv_setting_update"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/ripple_bg"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="15dp"
+                android:text="更新介绍"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/tv_setting_aboutus"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"

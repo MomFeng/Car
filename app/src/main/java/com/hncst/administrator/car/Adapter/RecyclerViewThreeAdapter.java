@@ -28,6 +28,10 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
     protected List<NewsBean> mDatas;
     private Context mContext;
 
+    /**
+     * 点击事件接口回调
+     * 长按事件接口回调
+     */
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
 
@@ -94,6 +98,7 @@ public class RecyclerViewThreeAdapter extends RecyclerView.Adapter<MyViewHolder_
                 holder.img_like.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        System.out.println("holder.img_like----" + position);
                         holder.img_like.setImageResource(R.mipmap.timeline_trend_icon_like);
                     }
                 });

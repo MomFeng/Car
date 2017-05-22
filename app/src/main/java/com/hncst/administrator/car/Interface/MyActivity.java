@@ -3,10 +3,12 @@ package com.hncst.administrator.car.Interface;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.Window;
 
 import com.hncst.administrator.car.util.ActivityManager;
 import com.hncst.administrator.car.util.AnnotationUtilView;
+import com.hncst.administrator.car.util.TouchHelepr;
 
 import java.util.List;
 
@@ -19,6 +21,7 @@ import java.util.List;
  * 增加管理activity
  */
 public class MyActivity extends AppCompatActivity {
+    private TouchHelepr mTouchHelepr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,5 +44,15 @@ public class MyActivity extends AppCompatActivity {
     protected void onDestroy() {
         ActivityManager.OnDestroyActivity(this); //从ActivityManager中移除
         super.onDestroy();
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if(mTouchHelepr==null)
+            mTouchHelepr=new TouchHelepr(getWindow());
+        boolean consume=mTouchHelepr.processTouchEvent(ev);
+        if(!consume) return super.dispatchTouchEvent(ev);
+        return false;
+        //return super.dispatchTouchEvent(ev)||mTouchHelepr.processTouchEvent(ev);
     }
 }

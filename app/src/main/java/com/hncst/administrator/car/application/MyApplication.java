@@ -8,6 +8,7 @@ import android.content.res.Resources;
 import android.util.DisplayMetrics;
 
 import com.hncst.administrator.car.service.LockscreenService;
+import com.hncst.administrator.car.util.ActivityLifeCycleHelper;
 
 import java.util.Locale;
 
@@ -27,11 +28,16 @@ public class MyApplication extends Application {
     private boolean isrunleft = true;
     private boolean isrunright = true;
 
+    private ActivityLifeCycleHelper mHelper;
+
     public static Application instance;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        mHelper=new ActivityLifeCycleHelper();
+        //store all the activities
+        registerActivityLifecycleCallbacks(mHelper);
         setLanguage();
         setStart(true);
     }
@@ -97,13 +103,26 @@ public class MyApplication extends Application {
         }
     }
 
+    /**
+     * 开启锁屏服务
+     */
     public void StartService() {
         Intent i = new Intent(this, LockscreenService.class);
         startService(i);
     }
 
+
+    /**
+     * 关闭锁屏服务
+     */
     public void StopService(){
         Intent i = new Intent(this, LockscreenService.class);
         stopService(i);
     }
+
+    public ActivityLifeCycleHelper getHelper() {
+        return mHelper;
+    }
+
+
 }

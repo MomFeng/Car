@@ -86,6 +86,8 @@ public class SettingActivity extends MyActivity {
     TextView tv_setting_account;
     @BindView(R.id.tv_setting_aboutus)
     TextView tv_setting_aboutus;
+    @BindView(R.id.tv_setting_update)
+    TextView tv_setting_update;
 
     private MyApplication app;
     //网络的Switch的状态
@@ -197,7 +199,7 @@ public class SettingActivity extends MyActivity {
 
     @BindonClick({R.id.btn_setting_back,R.id.lea_setting_default,R.id.lea_setting_simplechinese,R.id.lea_setting_traditionalchinese,
             R.id.lea_setting_english,R.id.lea_intent_setting,R.id.lea_bluetooth_setting,R.id.lin_setting_pulldoor,R.id.lea_setting_cleancache,R.id.tv_setting_account
-            ,R.id.tv_setting_aboutus})
+            ,R.id.tv_setting_aboutus,R.id.tv_setting_update})
     public void myOnClick(View v) {
         Resources resources = SettingActivity.this.getResources();
         DisplayMetrics dm = resources.getDisplayMetrics();
@@ -359,6 +361,19 @@ public class SettingActivity extends MyActivity {
             //关于我们点击事件
             case R.id.tv_setting_aboutus:
                 SimpleUtil.ToIntent(SettingActivity.this , AboutUsActivity.class);
+                break;
+            //更新介绍点击事件
+            case R.id.tv_setting_update:
+                AlertDialog.Builder updateDialog = new AlertDialog.Builder(SettingActivity.this);
+                updateDialog.setTitle("更新介绍");
+                updateDialog.setMessage("1.新增了更新介绍功能\n2.修复了加载咨讯的几个bug\n3.增加了部分功能的用户体验效果\n4.修复了Android6.0跳转闪退问题");
+                updateDialog.setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        });
+                updateDialog.show();
                 break;
         }
     }

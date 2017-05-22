@@ -185,6 +185,9 @@ public class ThreeFragment extends Fragment {
         LayoutInflater mInflater = LayoutInflater.from(getActivity());
         View view_three = mInflater.inflate(R.layout.fragment_three, null);
 
+        //清除数据
+        mDatas.clear();
+
         lin_three_loading = (LinearLayout) view_three.findViewById(R.id.lin_three_loading);
         avi_three_loading = (AVLoadingIndicatorView) view_three.findViewById(R.id.avi_three_loading);
         review_three = (RecyclerView) view_three.findViewById(R.id.review_three);
@@ -349,6 +352,7 @@ public class ThreeFragment extends Fragment {
             JSONArray array = new JSONArray(json_stories);
             //如果有新的数据
             if (array.length() > refresh_one) {
+                refresh_one+=1;
                 JSONObject stories = (JSONObject) array.get(0);
                 NewsBean bean = new NewsBean();
                 bean.setId(stories.getString("id"));
