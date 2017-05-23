@@ -15,6 +15,7 @@ import com.hncst.administrator.car.Interface.BindonClick;
 import com.hncst.administrator.car.Interface.MyActivity;
 import com.example.administrator.car.R;
 import com.hncst.administrator.car.application.MyApplication;
+import com.hncst.administrator.car.util.SimpleUtil;
 
 /**
  * 登入
@@ -36,6 +37,17 @@ public class LoginActivity extends MyActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        /**
+         * 做个判断用户是否是第一次启动程序
+         * 是的话就让他看更新说明
+         */
+        if(!SimpleUtil.GetShareBoolean("config" , "isupdate"  , this)){
+            //弹出更新说明
+            update();
+            SimpleUtil.SetShareBoolean("config" , "isupdate" , true , this);
+        }
+
     }
 
     @BindonClick({R.id.btn_login_registered , R.id.btn_login_login})
@@ -86,10 +98,24 @@ public class LoginActivity extends MyActivity {
 
                 break;
             case R.id.btn_login_registered:
-                i = new Intent(LoginActivity.this , MainActivity.class);
+                i = new Intent(LoginActivity.this , RegisteredActivity.class);
                 startActivity(i);
                 break;
-
         }
     }
+
+    private void update(){
+        AlertDialog.Builder updateDialog = new AlertDialog.Builder(LoginActivity.this);
+        updateDialog.setTitle("更新介绍");
+        updateDialog.setMessage("2017/5/23更新 ----> V1.0.1\n\n1.新增了更新介绍功能\n2.修复了加载咨讯的几个bug\n3.增加了部分功能的用户体验效果\n4.修复了Android6.0跳转闪退问题" +
+                "\n5.增加了滑动返回\n6.修复了滑动返回文字错乱bug\n7.修复了滑动导致页面显示不完整的bug\n8.采用了Kotlin跟Java混编技术");
+        updateDialog.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+        updateDialog.show();
+    }
+
 }

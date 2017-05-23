@@ -159,7 +159,9 @@ public class TouchHelepr {
     private void sliding(float rawX) {
         xx = rawX;
         if (preActivity == null) return;
-        curView.setX(rawX);
+        if(curView != null){
+            curView.setX(rawX);
+        }
         preView.setX(-preView.getWidth() / 3 + rawX / 3);
         mShadowView.setX(-SHADOW_WIDTH + rawX);
     }

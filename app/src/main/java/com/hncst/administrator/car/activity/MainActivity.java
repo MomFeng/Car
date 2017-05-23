@@ -38,7 +38,6 @@ public class MainActivity extends MyFeagmentAvtivity{
     @BindView(R.id.vpg_pager)
     ViewPager vpg_pager;
     //viewpager适配器
-    //private PagerAdapter adapter;
     //底部菜单的四个按钮
     //private LinearLayout btn_main, btn_two, btn_three, btn_four;
     //底部菜单四个按钮中的图片
@@ -66,6 +65,7 @@ public class MainActivity extends MyFeagmentAvtivity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         //初始化控件
         initView();
@@ -321,4 +321,5 @@ public class MainActivity extends MyFeagmentAvtivity{
     @Override public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
     }
+
 }
