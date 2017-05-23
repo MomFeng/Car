@@ -409,7 +409,7 @@ public class ThreeFragment extends Fragment {
      */
     private void showsnackbar() {
         TSnackbar snackbar = TSnackbar
-                .make(getActivity().findViewById(android.R.id.content), "没有可以刷新的数据", TSnackbar.LENGTH_SHORT);
+                .make(getActivity().findViewById(android.R.id.content), "暂无新内容!", TSnackbar.LENGTH_SHORT);
         View snackbarView = snackbar.getView();
         ((TextView) snackbarView.findViewById(R.id.snackbar_text)).setTextColor(Color.parseColor("#ffffff"));
         snackbar.setAction("cancel", new View.OnClickListener() {

@@ -84,12 +84,9 @@ public class LoginActivity extends MyActivity {
                     normalDialog.show();
                 }
 
-
-
-
                 break;
             case R.id.btn_login_registered:
-                i = new Intent(LoginActivity.this , RegisteredActivity.class);
+                i = new Intent(LoginActivity.this , MainActivity.class);
                 startActivity(i);
                 break;
 

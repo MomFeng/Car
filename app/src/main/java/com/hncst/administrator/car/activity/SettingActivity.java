@@ -97,13 +97,13 @@ public class SettingActivity extends MyActivity {
     //炫酷锁屏的Switch的状态
     private boolean isswitchpulldoor;
 
-    private int[] imgs = {R.id.img_setting_default,R.id.img_setting_simplechinese,R.id.img_setting_traditionalchinese,R.id.img_setting_english};
+    private int[] imgs = {R.id.img_setting_default, R.id.img_setting_simplechinese, R.id.img_setting_traditionalchinese, R.id.img_setting_english};
     View v = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        v = LayoutInflater.from(this).inflate(R.layout.activity_setting , null);
+        v = LayoutInflater.from(this).inflate(R.layout.activity_setting, null);
         //初始化控件
         initView();
         //初始化点击事件
@@ -111,15 +111,15 @@ public class SettingActivity extends MyActivity {
     }
 
     private void initEvent() {
-        SharedPreferences sp = getSharedPreferences("config" , MODE_PRIVATE);
-        int dex = sp.getInt("Language" , 0);
-        if(dex == 0){
+        SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
+        int dex = sp.getInt("Language", 0);
+        if (dex == 0) {
             setBackcorrect(img_setting_default);
-        }else if(dex == 1){
+        } else if (dex == 1) {
             setBackcorrect(img_setting_simplechinese);
-        }else if(dex == 2){
+        } else if (dex == 2) {
             setBackcorrect(img_setting_traditionalchinese);
-        }else{
+        } else {
             setBackcorrect(img_setting_english);
         }
         tv_setting_cleancache.setText(GlideCacheUtil.getInstance().getCacheSize(SettingActivity.this));
@@ -128,9 +128,9 @@ public class SettingActivity extends MyActivity {
         sv_intent_setting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
+                if (isChecked) {
                     isswitchnet = isChecked;
-                }else{
+                } else {
                     isswitchnet = isChecked;
                 }
             }
@@ -140,9 +140,9 @@ public class SettingActivity extends MyActivity {
         sv_bluetooth_setting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
+                if (isChecked) {
                     isswitchbluetooth = isChecked;
-                }else{
+                } else {
                     isswitchbluetooth = isChecked;
                 }
             }
@@ -152,37 +152,37 @@ public class SettingActivity extends MyActivity {
         sv_pulldoor_setting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
+                if (isChecked) {
                     isswitchpulldoor = isChecked;
 
-                    SimpleUtil.SetShareBoolean("config" , "islock" , isChecked , SettingActivity.this);
+                    SimpleUtil.SetShareBoolean("config", "islock", isChecked, SettingActivity.this);
                     app.StartService();
 
                     //snackbar.getView().setBackgroundColor(0xff4488ff);
                     Snackbar snackbar = null;
-                    snackbar = Snackbar.make(buttonView ,"炫酷锁屏已开启",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                    snackbar = Snackbar.make(buttonView, "炫酷锁屏已开启", Snackbar.LENGTH_LONG).setAction("cancel", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                         }
                     });
-                    SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                    SimpleUtil.setSnackbarMessageTextColor(snackbar, Color.parseColor("#FFFFFF"));
                     snackbar.getView().setBackgroundColor(0xff44AAff);
                     snackbar.setActionTextColor(Color.RED);
                     snackbar.show();
 
-                }else{
+                } else {
 
-                    SimpleUtil.SetShareBoolean("config" , "islock" , isChecked , SettingActivity.this);
+                    SimpleUtil.SetShareBoolean("config", "islock", isChecked, SettingActivity.this);
                     app.StopService();
                     isswitchpulldoor = isChecked;
 
                     Snackbar snackbar = null;
-                    snackbar = Snackbar.make(buttonView ,"炫酷锁屏已关闭",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                    snackbar = Snackbar.make(buttonView, "炫酷锁屏已关闭", Snackbar.LENGTH_LONG).setAction("cancel", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                         }
                     });
-                    SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                    SimpleUtil.setSnackbarMessageTextColor(snackbar, Color.parseColor("#FFFFFF"));
                     snackbar.getView().setBackgroundColor(0xff44AAff);
                     snackbar.setActionTextColor(Color.RED);
                     snackbar.show();
@@ -193,20 +193,20 @@ public class SettingActivity extends MyActivity {
 
     private void initView() {
         app = (MyApplication) SettingActivity.this.getApplication();
-        isswitchpulldoor = SimpleUtil.GetShareBoolean("config" , "islock" , SettingActivity.this);
-        sv_pulldoor_setting.setChecked(SimpleUtil.GetShareBoolean("config" , "islock" , SettingActivity.this));
+        isswitchpulldoor = SimpleUtil.GetShareBoolean("config", "islock", SettingActivity.this);
+        sv_pulldoor_setting.setChecked(SimpleUtil.GetShareBoolean("config", "islock", SettingActivity.this));
     }
 
-    @BindonClick({R.id.btn_setting_back,R.id.lea_setting_default,R.id.lea_setting_simplechinese,R.id.lea_setting_traditionalchinese,
-            R.id.lea_setting_english,R.id.lea_intent_setting,R.id.lea_bluetooth_setting,R.id.lin_setting_pulldoor,R.id.lea_setting_cleancache,R.id.tv_setting_account
-            ,R.id.tv_setting_aboutus,R.id.tv_setting_update})
+    @BindonClick({R.id.btn_setting_back, R.id.lea_setting_default, R.id.lea_setting_simplechinese, R.id.lea_setting_traditionalchinese,
+            R.id.lea_setting_english, R.id.lea_intent_setting, R.id.lea_bluetooth_setting, R.id.lin_setting_pulldoor, R.id.lea_setting_cleancache, R.id.tv_setting_account
+            , R.id.tv_setting_aboutus, R.id.tv_setting_update})
     public void myOnClick(View v) {
         Resources resources = SettingActivity.this.getResources();
         DisplayMetrics dm = resources.getDisplayMetrics();
         Configuration config = resources.getConfiguration();
         Intent intent;
 
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_setting_back:
                 SettingActivity.this.finish();
                 break;
@@ -254,27 +254,27 @@ public class SettingActivity extends MyActivity {
                 break;
             //网络模块的按钮
             case R.id.lea_intent_setting:
-                if(isswitchnet){
+                if (isswitchnet) {
                     sv_intent_setting.setChecked(false);
                     isswitchnet = false;
-                }else{
+                } else {
                     sv_intent_setting.setChecked(true);
                     isswitchnet = true;
                 }
                 break;
             case R.id.lea_bluetooth_setting:
-                if(isswitchbluetooth){
+                if (isswitchbluetooth) {
                     isswitchbluetooth = false;
                     sv_bluetooth_setting.setChecked(false);
-                }else{
+                } else {
                     isswitchbluetooth = true;
                     sv_bluetooth_setting.setChecked(true);
                 }
                 break;
             //炫酷锁屏点击事件
             case R.id.lin_setting_pulldoor:
-                if(isswitchpulldoor){
-                    SimpleUtil.SetShareBoolean("config" , "islock" , false , SettingActivity.this);
+                if (isswitchpulldoor) {
+                    SimpleUtil.SetShareBoolean("config", "islock", false, SettingActivity.this);
                     app.StopService();
                     sv_pulldoor_setting.setChecked(false);
                     isswitchpulldoor = false;
@@ -282,29 +282,29 @@ public class SettingActivity extends MyActivity {
 
                     //snackbar.getView().setBackgroundColor(0xff4488ff);
                     Snackbar snackbar = null;
-                    snackbar = Snackbar.make( v ,"炫酷锁屏已关闭",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                    snackbar = Snackbar.make(v, "炫酷锁屏已关闭", Snackbar.LENGTH_LONG).setAction("cancel", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                         }
                     });
-                    SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                    SimpleUtil.setSnackbarMessageTextColor(snackbar, Color.parseColor("#FFFFFF"));
                     snackbar.getView().setBackgroundColor(0xff44AAff);
                     snackbar.setActionTextColor(Color.RED);
                     snackbar.show();
 
-                }else{
-                    SimpleUtil.SetShareBoolean("config" , "islock" , true , SettingActivity.this);
+                } else {
+                    SimpleUtil.SetShareBoolean("config", "islock", true, SettingActivity.this);
                     app.StartService();
                     sv_pulldoor_setting.setChecked(true);
                     isswitchpulldoor = true;
 
                     Snackbar snackbar = null;
-                    snackbar = Snackbar.make( v ,"炫酷锁屏已开启",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                    snackbar = Snackbar.make(v, "炫酷锁屏已开启", Snackbar.LENGTH_LONG).setAction("cancel", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                         }
                     });
-                    SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                    SimpleUtil.setSnackbarMessageTextColor(snackbar, Color.parseColor("#FFFFFF"));
                     snackbar.getView().setBackgroundColor(0xff44AAff);
                     snackbar.setActionTextColor(Color.RED);
                     snackbar.show();
@@ -315,12 +315,12 @@ public class SettingActivity extends MyActivity {
                 GlideCacheUtil.getInstance().clearImageAllCache(SettingActivity.this);
 
                 Snackbar snackbar = null;
-                snackbar = Snackbar.make( v ,"缓存已清理",Snackbar.LENGTH_LONG).setAction("cancel",new View.OnClickListener() {
+                snackbar = Snackbar.make(v, "缓存已清理", Snackbar.LENGTH_LONG).setAction("cancel", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                     }
                 });
-                SimpleUtil.setSnackbarMessageTextColor(snackbar , Color.parseColor("#FFFFFF"));
+                SimpleUtil.setSnackbarMessageTextColor(snackbar, Color.parseColor("#FFFFFF"));
                 snackbar.getView().setBackgroundColor(0xff44AAff);
                 snackbar.setActionTextColor(Color.RED);
                 snackbar.show();
@@ -345,7 +345,7 @@ public class SettingActivity extends MyActivity {
                                     list.get(position).finish();
                                 }//关闭了其余所有的activity
                                 SettingActivity.this.finish();
-                                Intent i = new Intent(SettingActivity.this , LoginActivity.class);
+                                Intent i = new Intent(SettingActivity.this, LoginActivity.class);
                                 startActivity(i);
                             }
                         });
@@ -360,13 +360,14 @@ public class SettingActivity extends MyActivity {
                 break;
             //关于我们点击事件
             case R.id.tv_setting_aboutus:
-                SimpleUtil.ToIntent(SettingActivity.this , AboutUsActivity.class);
+                SimpleUtil.ToIntent(SettingActivity.this, AboutUsActivity.class);
                 break;
             //更新介绍点击事件
             case R.id.tv_setting_update:
                 AlertDialog.Builder updateDialog = new AlertDialog.Builder(SettingActivity.this);
                 updateDialog.setTitle("更新介绍");
-                updateDialog.setMessage("1.新增了更新介绍功能\n2.修复了加载咨讯的几个bug\n3.增加了部分功能的用户体验效果\n4.修复了Android6.0跳转闪退问题");
+                updateDialog.setMessage("1.新增了更新介绍功能\n2.修复了加载咨讯的几个bug\n3.增加了部分功能的用户体验效果\n4.修复了Android6.0跳转闪退问题" +
+                        "\n5.增加了滑动返回\n6.修复了滑动返回文字错乱bug\n7.修复了滑动导致页面显示不完整的bug");
                 updateDialog.setPositiveButton("OK",
                         new DialogInterface.OnClickListener() {
                             @Override
@@ -379,7 +380,7 @@ public class SettingActivity extends MyActivity {
     }
 
     //修改视图显示的方法
-    public void setBackcorrect(ImageView img){
+    public void setBackcorrect(ImageView img) {
         for (int i = 0; i < imgs.length; i++) {
             ImageView img_white = (ImageView) findViewById(imgs[i]);
             img_white.setImageResource(R.drawable.ic_white);
@@ -388,10 +389,10 @@ public class SettingActivity extends MyActivity {
     }
 
     //写入SharedPreferences文件的方法
-    public void setshapepreferences(int language){
-        SharedPreferences sp = getSharedPreferences("config" , MODE_PRIVATE);
-        SharedPreferences.Editor  editor = sp.edit();
-        editor.putInt("Language" , language);
+    public void setshapepreferences(int language) {
+        SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("Language", language);
         editor.commit();
     }
 }

@@ -3,10 +3,12 @@ package com.hncst.administrator.car.Interface;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.MotionEvent;
 import android.view.Window;
 
 import com.hncst.administrator.car.util.ActivityManager;
 import com.hncst.administrator.car.util.AnnotationUtilView;
+import com.hncst.administrator.car.util.TouchHelepr;
 
 import java.util.List;
 
@@ -16,6 +18,7 @@ import java.util.List;
  */
 
 public class MyFeagmentAvtivity extends FragmentActivity{
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -38,4 +41,5 @@ public class MyFeagmentAvtivity extends FragmentActivity{
         ActivityManager.OnDestroyActivity(this); //从ActivityManager中移除
         super.onDestroy();
     }
+
 }

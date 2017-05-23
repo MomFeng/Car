@@ -22,15 +22,16 @@ import com.hncst.administrator.car.application.MyApplication;
 
 public class TouchHelepr {
     //定义当前所处的状态
-    private boolean isIdle=true;
-    private boolean isSlinding=false;
-    private boolean isAnimating=false;
+    private boolean isIdle = true;
+    private boolean isSlinding = false;
+    private boolean isAnimating = false;
 
     //左边触发的宽度
-    private int triggerWidth=50;
+    private int triggerWidth = 50;
 
-    private int SHADOW_WIDTH=30;
+    private int SHADOW_WIDTH = 30;
 
+    private float xx;
 
     private Window mWindow;
     private ViewGroup preContentView;
@@ -42,45 +43,44 @@ public class TouchHelepr {
     private ShadowView mShadowView;
 
 
-
-    public TouchHelepr(Window window){
-        mWindow=window;
+    public TouchHelepr(Window window) {
+        mWindow = window;
     }
 
-    private Context getContext(){
+    private Context getContext() {
         return mWindow.getContext();
     }
 
 
     //决定是否拦截事件
-    public boolean processTouchEvent(MotionEvent event){
-        if(isAnimating) return true;
-        float x=event.getRawX();
-        switch (event.getAction()){
+    public boolean processTouchEvent(MotionEvent event) {
+        if (isAnimating) return true;
+        float x = event.getRawX();
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                if(x<=triggerWidth){
-                    isIdle=false;
-                    isSlinding=true;
+                if (x <= triggerWidth) {
+                    isIdle = false;
+                    isSlinding = true;
                     startSlide();
                     return true;
                 }
                 break;
             case MotionEvent.ACTION_POINTER_DOWN:
-                if(isSlinding) return true;
+                if (isSlinding) return true;
                 break;
             case MotionEvent.ACTION_MOVE:
-                if(isSlinding){
-                    if(event.getActionIndex()!=0) return true;
+                if (isSlinding) {
+                    if (event.getActionIndex() != 0) return true;
                     sliding(x);
                 }
                 break;
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP:
-                if(!isSlinding) return false;
-                int width=getContext().getResources().getDisplayMetrics().widthPixels;
-                isAnimating=true;
-                isSlinding=false;
-                startAnimating(width/x<=3,x);
+                if (!isSlinding) return false;
+                int width = getContext().getResources().getDisplayMetrics().widthPixels;
+                isSlinding = false;
+                isAnimating = true;
+                startAnimating(width / x <= 3, x);
                 return true;
             default:
                 break;
@@ -89,8 +89,12 @@ public class TouchHelepr {
     }
 
     private void startAnimating(final boolean isFinishing, float x) {
-        int width=getContext().getResources().getDisplayMetrics().widthPixels;
-        ValueAnimator animator=ValueAnimator.ofFloat(x,isFinishing?width:0);
+
+        /*if(!isFinishing){
+            preView.setX( - xx / 3);
+        }*/
+        int width = getContext().getResources().getDisplayMetrics().widthPixels;
+        ValueAnimator animator = ValueAnimator.ofFloat(x, isFinishing ? width : 0);
         animator.setInterpolator(new DecelerateInterpolator());
         animator.setDuration(200);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -102,7 +106,6 @@ public class TouchHelepr {
         animator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
-
             }
 
             @Override
@@ -123,93 +126,117 @@ public class TouchHelepr {
         animator.start();
     }
 
-    private void doEndWorks(boolean isFinishing) {
-        if(preActivity==null) return;
-        if(isFinishing){
+    public void doEndWorks(boolean isFinishing) {
+        if (preActivity == null) return;
+        if (isFinishing) {
             //更改当前activity的底view为preView,防止当前activity finish时的白屏闪烁
-            BackView view=new BackView(getContext());
+            BackView view = new BackView(getContext());
             view.cacheView(preView);
-            curContentView.addView(view,0);
+            curContentView.addView(view, 0);
+            if(!isSlinding && isAnimating){
+                preView.setX(0);
+            }
+        }
+        if(!isFinishing){
+            preView.setX(0);
         }
         curContentView.removeView(mShadowView);
-        if(curContentView==null||preContentView==null) return;
+        if (curContentView == null || preContentView == null) return;
         curContentView.removeView(preView);
         preContentView.addView(preView);
-        if(isFinishing){
-            ((Activity)getContext()).finish();
-            ((Activity)getContext()).overridePendingTransition(0,0);
+        if (isFinishing) {
+            ((Activity) getContext()).finish();
+            ((Activity) getContext()).overridePendingTransition(0, 0);
         }
-        isAnimating=false;
-        isSlinding=false;
-        isIdle=true;
-        preView=null;
-        curView=null;
+        isAnimating = false;
+        isSlinding = false;
+        isIdle = true;
+        preView = null;
+        curView = null;
     }
 
     private void sliding(float rawX) {
-        if(preActivity==null) return;
+        xx = rawX;
+        if (preActivity == null) return;
         curView.setX(rawX);
-        preView.setX(-preView.getWidth()/3+rawX/3);
-        mShadowView.setX(-SHADOW_WIDTH+rawX);
+        preView.setX(-preView.getWidth() / 3 + rawX / 3);
+        mShadowView.setX(-SHADOW_WIDTH + rawX);
     }
 
     private void startSlide() {
-        preActivity=((MyApplication)getContext().getApplicationContext()).getHelper().getPreActivity();
-        if(preActivity==null) return;
-        preContentView=(ViewGroup) preActivity.getWindow().findViewById(Window.ID_ANDROID_CONTENT);
-        preView= (ViewGroup) preContentView.getChildAt(0);
+        //获得前一个页面的activity
+        preActivity = ((MyApplication) getContext().getApplicationContext()).getHelper().getPreActivity();
+        if (preActivity == null) return;
+
+        //获得前一个页面activity的视图
+        preContentView = (ViewGroup) preActivity.getWindow().findViewById(Window.ID_ANDROID_CONTENT);
+        preView = (ViewGroup) preContentView.getChildAt(0);
+
+        //将前一个页面的视图移除
         preContentView.removeView(preView);
-        curContentView=(ViewGroup) mWindow.findViewById(Window.ID_ANDROID_CONTENT);
-        curView= (ViewGroup) curContentView.getChildAt(0);
-        preView.setX(-preView.getWidth()/3);
+
+        //获取当前页面的视图
+        curContentView = (ViewGroup) mWindow.findViewById(Window.ID_ANDROID_CONTENT);
+        curView = (ViewGroup) curContentView.getChildAt(0);
+
+        //将前一个页面的视图向左移动1/3
+        preView.setX(-preView.getWidth() / 3);
+        //preView.setX(0);
         //经过实际验证,addView中的index越大,则显示的越靠上,即越靠后绘制
-        curContentView.addView(preView,0);
-        if(mShadowView==null){
-            mShadowView=new ShadowView(getContext());
+
+        //重新将视图添加回当前activity
+        curContentView.addView(preView, 0);
+
+        //添加一层阴影层，给人分离感
+        if (mShadowView == null) {
+            mShadowView = new ShadowView(getContext());
         }
-        FrameLayout.LayoutParams params=new FrameLayout.LayoutParams(SHADOW_WIDTH, FrameLayout.LayoutParams.MATCH_PARENT);
-        curContentView.addView(mShadowView,1,params);
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(SHADOW_WIDTH, FrameLayout.LayoutParams.MATCH_PARENT);
+        curContentView.addView(mShadowView, 1, params);
+
+        //移动的位置
         mShadowView.setX(-SHADOW_WIDTH);
     }
 }
 
 //用于防止白屏闪烁
-class BackView extends View{
+class BackView extends View {
 
     private View mView;
+
     public BackView(Context context) {
         super(context);
     }
 
-    public void cacheView(View view){
-        mView=view;
+    public void cacheView(View view) {
+        mView = view;
         invalidate();
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if(mView!=null){
+        if (mView != null) {
             mView.draw(canvas);
-            mView=null;
+            mView = null;
         }
     }
 }
 
-class ShadowView extends View{
+class ShadowView extends View {
 
     private Drawable mDrawable;
 
     public ShadowView(Context context) {
         super(context);
-        int[] colors=new int[]{0x00000000, 0x17000000, 0x43000000};
-        mDrawable=new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,colors);
+        int[] colors = new int[]{0x00000000, 0x17000000, 0x43000000};
+        mDrawable = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, colors);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mDrawable.setBounds(0,0,getMeasuredWidth(),getMeasuredHeight());
+        mDrawable.setBounds(0, 0, getMeasuredWidth(), getMeasuredHeight());
         mDrawable.draw(canvas);
     }
 }

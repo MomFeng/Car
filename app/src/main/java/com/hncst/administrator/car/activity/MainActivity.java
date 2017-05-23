@@ -307,7 +307,7 @@ public class MainActivity extends MyFeagmentAvtivity{
                         MainActivity.this.finish();
                     }
                 });
-        normalDialog.setNegativeButton("在玩一会",
+        normalDialog.setNegativeButton("再逛逛",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
