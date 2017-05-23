@@ -92,7 +92,4 @@ public class LoginActivity extends MyActivity {
 
         }
     }
-
-
-
 }

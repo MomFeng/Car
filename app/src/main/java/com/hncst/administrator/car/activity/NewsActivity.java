@@ -246,7 +246,8 @@ public class NewsActivity extends MyActivity{
                 break;
             //查看评论点击事件
             case R.id.btn_news_comment:
-
+                Intent i = new Intent(NewsActivity.this , CommentActivity.class);
+                startActivity(i);
                 break;
         }
     }

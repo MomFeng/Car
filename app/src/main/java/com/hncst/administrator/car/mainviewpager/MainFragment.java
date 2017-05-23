@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 import com.example.administrator.car.R;
 import com.hncst.administrator.car.activity.IllegalAvtivity;
+import com.hncst.administrator.car.activity.KotlinActivity;
 import com.hncst.administrator.car.activity.PhotoActivity;
 import com.hncst.administrator.car.application.MyApplication;
 import com.hncst.administrator.car.carrealtime.CarrealtimeActivity;
@@ -103,7 +104,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 break;
             //违章查询
             case R.id.lea_main_illegal:
-                SimpleUtil.ToIntent(getContext() , IllegalAvtivity.class);
+                SimpleUtil.ToIntent(getContext() , KotlinActivity.class);
                 break;
         }
     }

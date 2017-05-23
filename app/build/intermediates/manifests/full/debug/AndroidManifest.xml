@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="25" />
+
     <!-- 允许程序读取或写入系统设置 -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!-- 允许程序访问网络 -->
@@ -45,6 +46,8 @@
         <activity android:name="com.hncst.administrator.car.activity.AboutUsActivity" />
         <activity android:name="com.hncst.administrator.car.activity.IllegalAvtivity" />
         <activity android:name="com.hncst.administrator.car.activity.NewsActivity" />
+        <activity android:name="com.hncst.administrator.car.activity.KotlinActivity" />
+        <activity android:name="com.hncst.administrator.car.activity.CommentActivity" />
 
         <service android:name="com.hncst.administrator.car.service.LockscreenService" />
 

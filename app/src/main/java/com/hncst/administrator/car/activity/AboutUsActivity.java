@@ -12,9 +12,8 @@ import com.example.administrator.car.R;
 
 /**
  * 关于我们
+ * Language:JAVA
  * Created by MomFeng on 2017/5/17 0017.
- *
- * /**
  *
  *----------Dragon be here!----------/
  * 　　　┏┓　　　┏┓
