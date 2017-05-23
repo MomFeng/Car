@@ -17,7 +17,8 @@ import android.widget.FrameLayout;
 import com.hncst.administrator.car.application.MyApplication;
 
 /**
- * Created by Administrator on 2017/5/22 0022.
+ * 捕获点击事件决定是否滑动返回
+ * Created by MomFeng on 2017/5/22 0022.
  */
 
 public class TouchHelepr {

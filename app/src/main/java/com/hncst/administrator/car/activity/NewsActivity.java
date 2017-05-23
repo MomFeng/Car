@@ -8,6 +8,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.Html;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -20,6 +23,7 @@ import com.hncst.administrator.car.Interface.BindView;
 import com.hncst.administrator.car.Interface.BindonClick;
 import com.hncst.administrator.car.Interface.MyActivity;
 import com.kogitune.activity_transition.ExitActivityTransition;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -57,10 +61,21 @@ public class NewsActivity extends MyActivity{
     private TextView tv_three_title;
     @BindView(R.id.rel_news_loading)
     private RelativeLayout rel_news_loading;
+    @BindView(R.id.avi_news_contentloading)
+    private AVLoadingIndicatorView avi_news_contentloading;
+    @BindView(R.id.tv_news_contentloading)
+    private TextView tv_news_contentloading;
+    @BindView(R.id.btn_news_comment)
+    private Button btn_news_comment;
+
+    @BindView(R.id.web_news_news)
+    private WebView web_news_news;
+
     private ExitActivityTransition exitTransition;
 
     private String id;
     private String url = "http://news-at.zhihu.com/api/4/news/";
+    private String share_url = "";
 
     final Handler handler = new Handler(){
         @Override
@@ -70,10 +85,10 @@ public class NewsActivity extends MyActivity{
             switch(msg.what){
                 case 1:
                     JSONObject jsonObject = null;
-                    String json_stories = "";
+                    //String json_stories = "";
                     try {
                         jsonObject = new JSONObject((String) msg.obj);
-                        json_stories = jsonObject.getString("body");
+                        share_url = jsonObject.getString("share_url");
                     } catch (JSONException e1) {
                         e1.printStackTrace();
                     }
@@ -88,9 +103,29 @@ public class NewsActivity extends MyActivity{
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+
+                    /**
+                     * 运用网页的加载方式加载数据
+                     */
+                    /*web_news_news.loadUrl(share_url);
+                    web_news_news.setWebViewClient(new WebViewClient() {
+
+                        @Override
+                        // 覆盖WebView默认使用第三方或系统默认浏览器打开网页的行为，使网页用WebView打开
+                        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                            // TODO Auto-generated method stub
+                            view.loadUrl(share_url);
+                            // 返回值是true的时候控制去WebView打开，为false调用系统浏览器或第三方浏览器
+                            return true;
+                        }
+                    });*/
                     break;
                 case 0x12:
+                    avi_news_contentloading.setVisibility(View.GONE);
+                    tv_news_contentloading.setVisibility(View.GONE);
+                    btn_news_comment.setVisibility(View.VISIBLE);
                     tv_news_content.setText(((CharSequence) msg.obj));
+
                     //textview.setText((CharSequence) msg.obj);
                     break;
             }
@@ -101,8 +136,17 @@ public class NewsActivity extends MyActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /**
+         * 加载网页
+         */
+        web_news_news.getSettings().setJavaScriptEnabled(true);// 开启对javascript支持
+        web_news_news.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);//开启缓存
+        web_news_news.setFocusable(true);
+
+
         //ActivityTransition.with(getIntent()).to(findViewById(R.id.img_news_photo)).start(savedInstanceState);
         tv_news_title.setVisibility(View.GONE);
+        btn_news_comment.setVisibility(View.GONE);
         Intent intent=getIntent();
         if(intent != null)
         {
@@ -172,9 +216,9 @@ public class NewsActivity extends MyActivity{
                             //int screenWidth = getWindowManager().getDefaultDisplay().getWidth(); // 屏幕宽（像素，如：480px）
                             //int screenHeight = getWindowManager().getDefaultDisplay().getHeight(); // 屏幕高（像素，
                             //int w=screenWidth;
-                            //int h=w/(drawable.getIntrinsicWidth()/drawable.getIntrinsicHeight());
+                            //float h=w/(drawable.getIntrinsicWidth()/drawable.getIntrinsicHeight());
 
-                            //drawable.setBounds(0, 0,w,h);
+                            //drawable.setBounds(0, 0,screenWidth,(int)h);
                             drawable.setBounds(0, 0,(drawable.getIntrinsicWidth())*5,(drawable.getIntrinsicHeight())*5);
 
                         } catch (MalformedURLException e) {
@@ -194,15 +238,16 @@ public class NewsActivity extends MyActivity{
         t.start();
     }
 
-    @BindonClick({R.id.btn_news_back})
+    @BindonClick({R.id.btn_news_back , R.id.btn_news_comment})
     public void myonclick(View v){
         switch(v.getId()){
             case R.id.btn_news_back:
                 NewsActivity.this.finish();
                 break;
+            //查看评论点击事件
+            case R.id.btn_news_comment:
+
+                break;
         }
-
     }
-
-
 }

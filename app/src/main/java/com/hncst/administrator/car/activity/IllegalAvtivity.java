@@ -15,6 +15,26 @@ import com.example.administrator.car.R;
  * 79cb00054f112aacf3cc63b0faf708d9
  * http://v.juhe.cn/wz/citys?province=JS&key=79cb00054f112aacf3cc63b0faf708d9
  * Created by MomFeng on 2017/5/18 0018.
+ *
+ * *----------Dragon be here!----------/
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ * ━━━━━━神兽出没━━━━━━by:coder-pig
  */
 @BindLayout(R.layout.activity_illegal)
 public class IllegalAvtivity extends MyActivity{
