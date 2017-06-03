@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -25,10 +26,13 @@ import com.hncst.administrator.car.Interface.MyActivity;
 import com.kogitune.activity_transition.ExitActivityTransition;
 import com.wang.avi.AVLoadingIndicatorView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -75,7 +79,8 @@ public class NewsActivity extends MyActivity{
 
     private String id;
     private String url = "http://news-at.zhihu.com/api/4/news/";
-    private String share_url = "";
+    private String share_html = "";
+    private String share_css = "";
 
     final Handler handler = new Handler(){
         @Override
@@ -88,7 +93,11 @@ public class NewsActivity extends MyActivity{
                     //String json_stories = "";
                     try {
                         jsonObject = new JSONObject((String) msg.obj);
-                        share_url = jsonObject.getString("share_url");
+                        share_html = jsonObject.getString("body");
+
+                        /*String filePath = "/sdcard/Test/";
+                        String fileName = "log.txt";
+                        writeTxtToFile(share_html, filePath, fileName);*/
                     } catch (JSONException e1) {
                         e1.printStackTrace();
                     }
@@ -107,26 +116,28 @@ public class NewsActivity extends MyActivity{
                     /**
                      * 运用网页的加载方式加载数据
                      */
-                    /*web_news_news.loadUrl(share_url);
+                    //<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />;
+                    //share_css = "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />"+share_css;
+                    //web_news_news.loadUrl(share_html);
+                    web_news_news.loadDataWithBaseURL(null , share_html , "text/html", "UTF-8", null);
                     web_news_news.setWebViewClient(new WebViewClient() {
 
                         @Override
                         // 覆盖WebView默认使用第三方或系统默认浏览器打开网页的行为，使网页用WebView打开
                         public boolean shouldOverrideUrlLoading(WebView view, String url) {
                             // TODO Auto-generated method stub
-                            view.loadUrl(share_url);
+                            //view.loadUrl(share_html);
+                            view.loadDataWithBaseURL(null , share_html , "text/html", "UTF-8", null);
                             // 返回值是true的时候控制去WebView打开，为false调用系统浏览器或第三方浏览器
                             return true;
                         }
-                    });*/
+                    });
                     break;
                 case 0x12:
                     avi_news_contentloading.setVisibility(View.GONE);
                     tv_news_contentloading.setVisibility(View.GONE);
                     btn_news_comment.setVisibility(View.VISIBLE);
-                    tv_news_content.setText(((CharSequence) msg.obj));
-
-                    //textview.setText((CharSequence) msg.obj);
+                    //tv_news_content.setText(((CharSequence) msg.obj));
                     break;
             }
         }
@@ -150,7 +161,6 @@ public class NewsActivity extends MyActivity{
         Intent intent=getIntent();
         if(intent != null)
         {
-            String bitmapurl = intent.getStringExtra("bitmapurl");
             tv_three_title.setText(intent.getStringExtra("title"));
             tv_news_title.setText(intent.getStringExtra("title"));
             id = intent.getStringExtra("_id");
@@ -185,6 +195,14 @@ public class NewsActivity extends MyActivity{
         String json = response.body().string();
 
         JSONObject j = new JSONObject(json);
+        String urk_css = j.getString("css");
+        JSONArray url_css = new JSONArray(urk_css);
+        String css = (String) url_css.get(0);
+        Request request1 = new Request.Builder().url(css).build();
+        Response response1 = client.newCall(request1).execute();
+        String share_css = response1.body().string();
+        System.out.println("json1---------" + share_css);
+
         htmlWebPic(j.getString("body"));
 
         Message m = new Message();
@@ -251,4 +269,58 @@ public class NewsActivity extends MyActivity{
                 break;
         }
     }
+
+
+    // 将字符串写入到文本文件中
+    public void writeTxtToFile(String strcontent, String filePath, String fileName) {
+        //生成文件夹之后，再生成文件，不然会出错
+        makeFilePath(filePath, fileName);
+
+        String strFilePath = filePath+fileName;
+        // 每次写入时，都换行写
+        String strContent = strcontent + "\r\n";
+        try {
+            File file = new File(strFilePath);
+            if (!file.exists()) {
+                Log.d("TestFile", "Create the file:" + strFilePath);
+                file.getParentFile().mkdirs();
+                file.createNewFile();
+            }
+            RandomAccessFile raf = new RandomAccessFile(file, "rwd");
+            raf.seek(file.length());
+            raf.write(strContent.getBytes());
+            raf.close();
+        } catch (Exception e) {
+            Log.e("TestFile", "Error on write File:" + e);
+        }
+    }
+
+    // 生成文件
+    public File makeFilePath(String filePath, String fileName) {
+        File file = null;
+        makeRootDirectory(filePath);
+        try {
+            file = new File(filePath + fileName);
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return file;
+    }
+
+    // 生成文件夹
+    public static void makeRootDirectory(String filePath) {
+        File file = null;
+        try {
+            file = new File(filePath);
+            if (!file.exists()) {
+                file.mkdir();
+            }
+        } catch (Exception e) {
+            Log.i("error:", e+"");
+        }
+    }
+
 }

@@ -20,7 +20,6 @@ import android.view.View;
  * 画用于展示速度的仪表盘
  * Created by MomFeng on 2017/4/12 0012.
  */
-
 public class MycarView extends View{
 
     private String[] mSpeed = new String[]{"0","20","40","60","80","100","120","140","160","180","200","220","240"};

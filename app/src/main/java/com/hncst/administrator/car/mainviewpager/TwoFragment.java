@@ -17,7 +17,6 @@ import com.jude.rollviewpager.hintview.ColorPointHintView;
  * APP主界面的第二个Fragment（免费）
  * Created by MomFeng on 2017/4/14 0014.
  */
-
 public class TwoFragment extends Fragment {
 
     private RollPagerView roll_view_pager;

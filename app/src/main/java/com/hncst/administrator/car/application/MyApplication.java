@@ -15,11 +15,9 @@ import java.util.Locale;
 /**
  * 全局的一个变量，方法
  * Created by MomFeng on 2017/4/17 0017.
- * <p>
  * 2017/5/5
- * 3880行代码
+ * 10066行代码
  */
-
 public class MyApplication extends Application {
 
     private boolean isStart;
@@ -110,7 +108,6 @@ public class MyApplication extends Application {
         Intent i = new Intent(this, LockscreenService.class);
         startService(i);
     }
-
 
     /**
      * 关闭锁屏服务

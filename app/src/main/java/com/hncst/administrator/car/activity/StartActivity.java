@@ -39,13 +39,11 @@ public class StartActivity extends MyActivity {
             @Override
             public void onAnimationStart(Animation arg0) {
                 // TODO Auto-generated method stub
-
             }
 
             @Override
             public void onAnimationRepeat(Animation arg0) {
                 // TODO Auto-generated method stub
-
             }
 
             @Override

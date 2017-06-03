@@ -17,7 +17,6 @@ import java.util.List;
  * 写启动页面的FragmentActivity
  * Created by MomFeng on 2017/5/16 0016.
  */
-
 public class Glide extends FragmentActivity{
 
     private ViewPager viewpager;

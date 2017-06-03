@@ -47,7 +47,6 @@ public class LoginActivity extends MyActivity {
             update();
             SimpleUtil.SetShareBoolean("config" , "isupdate" , true , this);
         }
-
     }
 
     @BindonClick({R.id.btn_login_registered , R.id.btn_login_login})
