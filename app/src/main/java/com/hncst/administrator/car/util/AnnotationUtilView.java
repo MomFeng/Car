@@ -15,7 +15,6 @@ import java.lang.reflect.Method;
  * 运用反射查找activity的方法
  * Created by MomFeng on 2017/5/8 0008.
  */
-
 public class AnnotationUtilView {
     public static void injectActivity(Activity activity) {
         if (null == activity) {

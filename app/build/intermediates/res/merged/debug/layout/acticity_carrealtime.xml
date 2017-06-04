@@ -36,7 +36,7 @@
         <ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="#4af" />
+            android:background="@mipmap/ic_title_right"/>
     </LinearLayout>
 
     <android.support.design.widget.TabLayout

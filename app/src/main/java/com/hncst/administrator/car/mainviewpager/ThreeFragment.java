@@ -86,7 +86,6 @@ import static com.example.administrator.car.R.string.intent;
  * notifyItemRangeInserted(int positionStart, int itemCount)
  * notifyItemRangeRemoved(int positionStart, int itemCount)
  */
-
 public class ThreeFragment extends Fragment {
 
     private RecyclerView review_three;

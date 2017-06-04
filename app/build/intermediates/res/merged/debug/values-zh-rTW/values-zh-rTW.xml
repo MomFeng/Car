@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="Alcohol_test"> 酒精測試</string>
+    <string name="Look_at_the_car"> 看圖猜車</string>
+    <string name="Parking_view">車位查看</string>
+    <string name="Please_look_forward_to">敬請期待</string>
     <string name="WIFI_only_under_the_network">僅WIFI下聯網</string>
+    <string name="Wheel_loss">車輪損耗</string>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"瀏覽首頁"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s：%2$s"</string>
     <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s - %2$s：%3$s"</string>
@@ -32,7 +37,8 @@
     <string name="cool_lock_screen">炫酷鎖屏</string>
     <string name="download_path">下載路徑</string>
     <string name="follow_the_system_language">跟隨系統語言</string>
-    <string name="free">免費</string>
+    <string name="free">保養</string>
+    <string name="gps">汽車導航</string>
     <string name="help_with_feedback">幫助與反饋</string>
     <string name="illegal_inquiries">違章查詢</string>
     <string name="index">首頁</string>

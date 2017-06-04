@@ -145,7 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="@string/gps"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -169,7 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="@string/Parking_view"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -193,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="@string/Alcohol_test"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -216,7 +216,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="@string/Look_at_the_car"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -248,7 +248,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="@string/Wheel_loss"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -272,7 +272,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="@string/Please_look_forward_to"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -296,7 +296,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/case_of_car"
+                        android:text="@string/Please_look_forward_to"
                         android:textColor="#4AF"
                         android:textSize="14sp" />
                 </LinearLayout>

@@ -3,7 +3,7 @@
     <string name="index">Index</string>
     <string name="case_of_car">Case of car</string>
     <string name="more_content">More content</string>
-    <string name="free">Free</string>
+    <string name="free">Maintenance</string>
     <string name="information">Information</string>
     <string name="my">My</string>
     <string name="system_settings">System Settings</string>
@@ -30,4 +30,10 @@
     <string name="clean_up_cache">Clean up cache</string>
     <string name="download_path">Download path</string>
     <string name="illegal_inquiries">Illegal inquiries</string>
+    <string name="gps">GPS</string>
+    <string name="Parking_view">Parking view</string>
+    <string name="Alcohol_test">Alcohol Test</string>
+    <string name="Look_at_the_car"> Look at the car</string>
+    <string name="Wheel_loss">Wheel loss</string>
+    <string name="Please_look_forward_to">Please look forward to</string>
 </resources>

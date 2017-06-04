@@ -1,6 +1,42 @@
 [
     {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag4.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag4.jpg"
+    },
+    {
         "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\people.jpg",
         "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\people.jpg"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag7.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag7.jpg"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag2.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag2.jpg"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag5.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag5.jpg"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag8.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag8.jpg"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag1.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag1.jpg"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag9.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag9.jpg"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag3.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag3.jpg"
+    },
+    {
+        "merged": "E:\\git\\Car\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pag6.jpg",
+        "source": "E:\\git\\Car\\app\\src\\main\\res\\mipmap-hdpi\\pag6.jpg"
     }
 ]

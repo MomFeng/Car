@@ -22,4 +22,5 @@ public class LockdcreenReceiver extends BroadcastReceiver{
             context.startActivity(lockscreen);
         }
     }
+
 }

@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.Window;
+import android.view.WindowManager;
 
 import com.hncst.administrator.car.util.ActivityManager;
 import com.hncst.administrator.car.util.AnnotationUtilView;
+import com.hncst.administrator.car.util.AnnotationUtilView_kotlin;
 import com.hncst.administrator.car.util.TouchHelepr;
 
 import java.util.List;
@@ -26,6 +28,8 @@ public class MyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         AnnotationUtilView.injectActivity(this);
         ActivityManager.OnCreateActivity(this); //添加到ActivityManager中
         super.onCreate(savedInstanceState);

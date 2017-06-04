@@ -19,6 +19,7 @@ import com.hncst.administrator.car.application.MyApplication;
 import com.hncst.administrator.car.mainviewpager.FourFragment;
 import com.hncst.administrator.car.mainviewpager.MainFragment;
 import com.hncst.administrator.car.mainviewpager.ThreeFragment;
+import com.hncst.administrator.car.mainviewpager.ThreeFragmentsi;
 import com.hncst.administrator.car.mainviewpager.TwoFragment;
 import com.hncst.administrator.car.view.MyView;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -73,6 +74,8 @@ public class MainActivity extends MyFeagmentAvtivity{
         initViewPager();
         //所有的监听事件
         initEvent();
+
+        vpg_pager.setOffscreenPageLimit(4);
 
         //启动锁屏服务
         SharedPreferences sp = getSharedPreferences("config" , MODE_PRIVATE);
@@ -190,7 +193,8 @@ public class MainActivity extends MyFeagmentAvtivity{
         //吧所有的fragment加入一个集合当中
         MainFragment fragment1 = new MainFragment();
         TwoFragment fragment2 = new TwoFragment();
-        ThreeFragment fragment3 = new ThreeFragment();
+        //ThreeFragment fragment3 = new ThreeFragment();
+        ThreeFragmentsi fragment3 = new ThreeFragmentsi();
         FourFragment fragment4 = new FourFragment();
         mFragment.add(fragment1);
         mFragment.add(fragment2);

@@ -3,12 +3,11 @@ package com.hncst.administrator.car.Interface;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.MotionEvent;
 import android.view.Window;
 
 import com.hncst.administrator.car.util.ActivityManager;
 import com.hncst.administrator.car.util.AnnotationUtilView;
-import com.hncst.administrator.car.util.TouchHelepr;
+import com.hncst.administrator.car.util.AnnotationUtilView_kotlin;
 
 import java.util.List;
 

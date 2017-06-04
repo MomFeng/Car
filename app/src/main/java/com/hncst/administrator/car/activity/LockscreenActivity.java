@@ -1,5 +1,6 @@
 package com.hncst.administrator.car.activity;
 
+import android.database.Cursor;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,7 +23,6 @@ import com.hncst.administrator.car.view.PullDoorView;
  * 2017/04/30
  * 修复了当前界面解锁闪退的bug
  */
-
 @BindLayout(R.layout.activity_lockscreen)
 public class LockscreenActivity extends MyActivity {
 

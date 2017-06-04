@@ -3,7 +3,7 @@
     <string name="index">首页</string>
     <string name="case_of_car">实时车况</string>
     <string name="more_content">更多内容</string>
-    <string name="free">免费</string>
+    <string name="free">保养</string>
     <string name="information">资讯</string>
     <string name="my">我的</string>
     <string name="system_settings">系统设置</string>
@@ -30,4 +30,10 @@
     <string name="clean_up_cache">清理缓存</string>
     <string name="download_path">下载路径</string>
     <string name="illegal_inquiries">违章查询</string>
+    <string name="gps">汽车导航</string>
+    <string name="Parking_view">车位查看</string>
+    <string name="Alcohol_test">酒精测试</string>
+    <string name="Look_at_the_car">看图猜车</string>
+    <string name="Wheel_loss">车轮损耗</string>
+    <string name="Please_look_forward_to">敬请期待</string>
 </resources>

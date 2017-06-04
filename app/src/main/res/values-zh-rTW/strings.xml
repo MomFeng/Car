@@ -3,7 +3,7 @@
     <string name="index">首頁</string>
     <string name="case_of_car">實時車況</string>
     <string name="more_content">更多内容</string>
-    <string name="free">免費</string>
+    <string name="free">保養</string>
     <string name="information">資訊</string>
     <string name="my">我的</string>
     <string name="system_settings">系統設置</string>
@@ -30,4 +30,10 @@
     <string name="clean_up_cache">清理緩存</string>
     <string name="download_path">下載路徑</string>
     <string name="illegal_inquiries">違章查詢</string>
+    <string name="gps">汽車導航</string>
+    <string name="Parking_view">車位查看</string>
+    <string name="Alcohol_test"> 酒精測試</string>
+    <string name="Look_at_the_car"> 看圖猜車</string>
+    <string name="Wheel_loss">車輪損耗</string>
+    <string name="Please_look_forward_to">敬請期待</string>
 </resources>
