@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">汽车秘书</string>
+    <string name="app_name">爱车APP</string>
     <string name="index">首页</string>
     <string name="case_of_car">实时车况</string>
     <string name="more_content">更多内容</string>
@@ -36,4 +36,5 @@
     <string name="Look_at_the_car">看图猜车</string>
     <string name="Wheel_loss">车轮损耗</string>
     <string name="Please_look_forward_to">敬请期待</string>
+    <string name="car_detection">汽车检测</string>
 </resources>

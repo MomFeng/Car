@@ -8,10 +8,11 @@
     <string name="Wheel_loss">Wheel loss</string>
     <string name="about">About</string>
     <string name="about_us">About us</string>
-    <string name="app_name">Car</string>
+    <string name="app_name">爱车APP</string>
     <string name="automatically_turn_on_the_Bluetooth_connection_vehicle">Automatically turn on the Bluetooth connection vehicle</string>
     <string name="bind_the_device">Bind the device</string>
     <string name="browsing_history">Browsing history</string>
+    <string name="car_detection">Car detection</string>
     <string name="car_wallpaper">Car wallpaper</string>
     <string name="case_of_car">Case of car</string>
     <string name="clean_up_cache">Clean up cache</string>

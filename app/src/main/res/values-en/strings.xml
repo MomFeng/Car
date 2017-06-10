@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Car</string>
+    <string name="app_name">爱车APP</string>
     <string name="index">Index</string>
     <string name="case_of_car">Case of car</string>
     <string name="more_content">More content</string>
@@ -36,4 +36,5 @@
     <string name="Look_at_the_car"> Look at the car</string>
     <string name="Wheel_loss">Wheel loss</string>
     <string name="Please_look_forward_to">Please look forward to</string>
+    <string name="car_detection">Car detection</string>
 </resources>

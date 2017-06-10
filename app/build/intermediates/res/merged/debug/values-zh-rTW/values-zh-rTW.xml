@@ -27,10 +27,11 @@
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"收合"</string>
     <string name="about">關於</string>
     <string name="about_us">關於我們</string>
-    <string name="app_name">Car</string>
+    <string name="app_name">爱车APP</string>
     <string name="automatically_turn_on_the_Bluetooth_connection_vehicle">自動開啟藍牙連接車輛</string>
     <string name="bind_the_device">綁定設備</string>
     <string name="browsing_history">瀏覽記錄</string>
+    <string name="car_detection">汽車檢測</string>
     <string name="car_wallpaper">汽車壁紙</string>
     <string name="case_of_car">實時車況</string>
     <string name="clean_up_cache">清理緩存</string>

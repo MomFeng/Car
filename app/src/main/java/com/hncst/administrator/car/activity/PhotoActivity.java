@@ -93,9 +93,6 @@ public class PhotoActivity extends MyActivity {
         //创建一个网络请求的对象，如果没有写请求方式，默认的是get
         //在请求对象里面传入链接的URL地址
         Request request = new Request.Builder()
-                //    http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1493886460543_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=%E6%B1%BD%E8%BD%A6
-                //    http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=star.cate&fr=&sf=1&fmq=&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=%E6%B1%BD%E8%BD%A6&oq=%E6%B1%BD%E8%BD%A6&rsp=-1
-                //.url("http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1493886460543_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=%E6%B1%BD%E8%BD%A6").build();
                 .url("https://image.baidu.com/search/index?tn=baiduimage&st=-1&ipn=r&ct=201326592&nc=1&lm=-1&cl=2&ie=utf-8&word=%E6%B1%BD%E8%BD%A6&ie=utf-8&istype=2&fm=se0").build();
         //call就是我们可以执行的请求类
         Call call = client.newCall(request);

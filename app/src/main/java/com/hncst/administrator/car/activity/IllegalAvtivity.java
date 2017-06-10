@@ -45,6 +45,8 @@ public class IllegalAvtivity extends MyActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
     }
 
     @BindonClick({R.id.btn_illegal_back})

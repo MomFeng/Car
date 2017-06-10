@@ -104,7 +104,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 break;
             //违章查询
             case R.id.lea_main_illegal:
-                SimpleUtil.ToIntent(getContext() , KotlinActivity.class);
+                SimpleUtil.ToIntent(getContext() , IllegalAvtivity.class);
                 break;
         }
     }

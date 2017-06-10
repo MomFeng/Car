@@ -43,19 +43,6 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.wang.avi.AVLoadingIndicatorView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:indicator="BallPulse"
-                app:indicator_color="#f00"
-                />
-
-            <com.wang.avi.AVLoadingIndicatorView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:indicator="LineScale"
-                app:indicator_color="#f00"
-                />
 
         </LinearLayout>
 
