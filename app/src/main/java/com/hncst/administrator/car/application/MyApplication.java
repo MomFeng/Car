@@ -7,8 +7,11 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
 
+import com.hncst.administrator.car.activity.MainActivity;
 import com.hncst.administrator.car.service.LockscreenService;
 import com.hncst.administrator.car.util.ActivityLifeCycleHelper;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import java.util.Locale;
 
@@ -26,6 +29,11 @@ public class MyApplication extends Application {
     private boolean isrunleft = true;
     private boolean isrunright = true;
 
+    //微信APP_ID
+    private String APP_ID = "wxa119176e777bfdfc";
+
+    public IWXAPI api;
+
     private ActivityLifeCycleHelper mHelper;
 
     public static Application instance;
@@ -33,6 +41,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        regToWx();
         mHelper=new ActivityLifeCycleHelper();
         //store all the activities
         registerActivityLifecycleCallbacks(mHelper);
@@ -121,5 +130,12 @@ public class MyApplication extends Application {
         return mHelper;
     }
 
+    //注册应用id到微信
+    private void regToWx() {
+        //通过WXAPIFactory工厂，获取IWXAPI的实例
+        api = WXAPIFactory.createWXAPI(this, APP_ID);
+        //将应用的appId注册到微信
+        api.registerApp(APP_ID);
+    }
 
 }

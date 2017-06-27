@@ -34,6 +34,7 @@
             android:textSize="18sp" />
 
         <ImageButton
+            android:id="@+id/img_title_share"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@mipmap/ic_title_right" />

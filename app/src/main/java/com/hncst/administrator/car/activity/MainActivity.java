@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hncst.administrator.car.Interface.BindLayout;
@@ -23,6 +24,12 @@ import com.hncst.administrator.car.mainviewpager.ThreeFragmentsi;
 import com.hncst.administrator.car.mainviewpager.TwoFragment;
 import com.hncst.administrator.car.view.MyView;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.opensdk.modelmsg.WXTextObject;
+import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +56,8 @@ public class MainActivity extends MyFeagmentAvtivity{
 
     @BindView(R.id.tv_title_mian)
     TextView tv_title_mian;
+    @BindView(R.id.img_title_share)
+    ImageView img_title_share;
 
     private List<Fragment> mFragment = new ArrayList<Fragment>();
     private FragmentPagerAdapter fragmentadapter;
@@ -193,8 +202,8 @@ public class MainActivity extends MyFeagmentAvtivity{
         //吧所有的fragment加入一个集合当中
         MainFragment fragment1 = new MainFragment();
         TwoFragment fragment2 = new TwoFragment();
-        //ThreeFragment fragment3 = new ThreeFragment();
-        ThreeFragmentsi fragment3 = new ThreeFragmentsi();
+        ThreeFragment fragment3 = new ThreeFragment();
+        //ThreeFragmentsi fragment3 = new ThreeFragmentsi();
         FourFragment fragment4 = new FourFragment();
         mFragment.add(fragment1);
         mFragment.add(fragment2);
@@ -264,7 +273,7 @@ public class MainActivity extends MyFeagmentAvtivity{
         vpg_pager.setAdapter(fragmentadapter);
     }
 
-    @BindonClick({R.id.tv_tab_main,R.id.tv_tab_two,R.id.tv_tab_three,R.id.tv_tab_four})
+    @BindonClick({R.id.tv_tab_main,R.id.tv_tab_two,R.id.tv_tab_three,R.id.tv_tab_four,R.id.img_title_share})
     public void myonClick(View v) {
         switch (v.getId()) {
             case R.id.tv_tab_main:
@@ -294,6 +303,36 @@ public class MainActivity extends MyFeagmentAvtivity{
                 tv_tab_two.setAlpha(0);
                 tv_tab_three.setAlpha(0);
                 tv_tab_main.setAlpha(0);
+                break;
+            //微信分享
+            case R.id.img_title_share:
+                //weiChat(1);
+                MyApplication app = (MyApplication) MainActivity.this.getApplication();
+                WXTextObject textObj = new WXTextObject();
+                textObj.text = "微信分享测试";
+                // 用WXTextObject对象初始化一个WXMediaMessage对象
+                WXMediaMessage msg = new WXMediaMessage();
+                msg.mediaObject = textObj;
+                // 发送文本类型的消息时，title字段不起作用
+                msg.title = "微信分享测试";
+                msg.description = "微信分享测试";
+
+                System.out.println("1111111111111111111111111");
+                // 构造一个Req
+                SendMessageToWX.Req req = new SendMessageToWX.Req();
+                req.transaction = buildTransaction("text"); // transaction字段用于唯一标识一个请求
+                System.out.println("1111111111111111111111111");
+                req.message = msg;
+                System.out.println("1111111111111111111111111");
+
+                //分享给好友
+                //req.scene = SendMessageToWX.Req.WXSceneSession;
+                //分享到收藏
+                //req.scene = SendMessageToWX.Req.WXSceneFavorite;
+                //分享到朋友圈
+                req.scene = SendMessageToWX.Req.WXSceneTimeline;
+                // 调用api接口发送数据到微信
+                app.api.sendReq(req);
                 break;
         }
     }
@@ -326,4 +365,33 @@ public class MainActivity extends MyFeagmentAvtivity{
         super.onWindowFocusChanged(hasFocus);
     }
 
+    /**
+     * 构建一个唯一标志
+     *
+     * @param type 分享的类型分字符串
+     * @return 返回唯一字符串
+     */
+    private static String buildTransaction(String type) {
+        return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
+    }
+
+    /*private void weiChat(int flag) {
+        MyApplication app = (MyApplication) MainActivity.this.getApplication();
+        if (!app.api.isWXAppInstalled()) {
+            return;
+        }
+        //创建一个WXWebPageObject对象，用于封装要发送的Url
+        WXWebpageObject webpage = new WXWebpageObject();
+        //webpage.webpageUrl = "http://www.baidu.com/";
+        //创建一个WXMediaMessage对象
+        WXMediaMessage msg = new WXMediaMessage(webpage);
+        msg.title = "测试";
+        msg.description = "ceshi ";
+        SendMessageToWX.Req req = new SendMessageToWX.Req();
+        req.transaction = String.valueOf(System.currentTimeMillis());//transaction字段用于唯一标识一个请求，这个必须有，否则会出错
+        req.message = msg;
+        //表示发送给朋友圈 WXSceneTimeline 表示发送给朋友 WXSceneSession
+        req.scene = flag == 0 ? SendMessageToWX.Req.WXSceneSession : SendMessageToWX.Req.WXSceneTimeline;
+        app.api.sendReq(req);
+    }*/
 }

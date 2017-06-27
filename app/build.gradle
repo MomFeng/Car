@@ -2,6 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
+    signingConfigs {
+        car {
+            keyAlias 'key0'
+            keyPassword '971211'
+            storeFile file('C:/Users/Administrator.SC-201703201458/Desktop/car_appid/car.jks')
+            storePassword '971211'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
@@ -16,12 +24,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.car
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -52,6 +61,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     /*kotlin依赖*/
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    /*微信分享jar包*/
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
 }
 repositories {
     mavenCentral()

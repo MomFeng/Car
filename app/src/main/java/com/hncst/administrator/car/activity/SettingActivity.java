@@ -367,7 +367,7 @@ public class SettingActivity extends MyActivity {
                 AlertDialog.Builder updateDialog = new AlertDialog.Builder(SettingActivity.this);
                 updateDialog.setTitle("更新介绍");
                 updateDialog.setMessage("2017/5/23更新 ----> V1.0.1\n\n1.新增了更新介绍功能\n2.修复了加载咨讯的几个bug\n3.增加了部分功能的用户体验效果\n4.修复了Android6.0跳转闪退问题" +
-                        "\n5.增加了滑动返回\n6.修复了滑动返回文字错乱bug\n7.修复了滑动导致页面显示不完整的bug\n8.采用了Kotlin跟Java混编技术");
+                        "\n5.增加了滑动返回\n6.修复了滑动返回文字错乱bug\n7.修复了滑动导致页面显示不完整的bug\n8.采用了Kotlin跟Java混编技术\n9.新增了分享到微信朋友圈功能");
                 updateDialog.setPositiveButton("OK",
                         new DialogInterface.OnClickListener() {
                             @Override

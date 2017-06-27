@@ -16,7 +16,12 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <!-- 允许一个程序修改当前设置，如本地化 -->
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- 微信分享需要的权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <meta-data
         android:name="android.support.VERSION"
